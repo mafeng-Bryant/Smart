@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Light</string>
+            <string>Avenir-Roman</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SPConfigureHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv8-iL-taD">
+                    <rect key="frame" x="20" y="27" width="34" height="23.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEV-xq-qSt">
+                    <rect key="frame" x="311" y="18" width="20" height="41"/>
+                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Tv8-iL-taD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CKp-6w-lHH"/>
+                <constraint firstItem="fEV-xq-qSt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VPD-WY-kVL"/>
+                <constraint firstAttribute="trailing" secondItem="fEV-xq-qSt" secondAttribute="trailing" constant="20" id="Vub-Kh-nwB"/>
+                <constraint firstItem="Tv8-iL-taD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="lwb-40-z3S"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addLbl" destination="fEV-xq-qSt" id="h8e-8Y-543"/>
+                <outlet property="sectionLbl" destination="Tv8-iL-taD" id="k59-c7-fZ8"/>
+            </connections>
+            <point key="canvasLocation" x="-628" y="-532"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SPTriggerNameView">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="143"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ps-wJ-DYp">
+                    <rect key="frame" x="10" y="0.0" width="413" height="143"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOS-Wg-uPe">
+                            <rect key="frame" x="20" y="5" width="373" height="133"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="SOS-Wg-uPe" firstAttribute="leading" secondItem="9Ps-wJ-DYp" secondAttribute="leading" constant="20" id="1Wf-ji-WYq"/>
+                        <constraint firstAttribute="trailing" secondItem="SOS-Wg-uPe" secondAttribute="trailing" constant="20" id="Q0B-T1-DrF"/>
+                        <constraint firstItem="SOS-Wg-uPe" firstAttribute="top" secondItem="9Ps-wJ-DYp" secondAttribute="top" constant="5" id="SxK-nm-3qJ"/>
+                        <constraint firstAttribute="bottom" secondItem="SOS-Wg-uPe" secondAttribute="bottom" constant="5" id="fvF-WE-mPn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9Ps-wJ-DYp" secondAttribute="trailing" constant="10" id="68s-aK-XcF"/>
+                <constraint firstAttribute="bottom" secondItem="9Ps-wJ-DYp" secondAttribute="bottom" id="JNy-8s-rYZ"/>
+                <constraint firstItem="9Ps-wJ-DYp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X4s-tW-WUb"/>
+                <constraint firstItem="9Ps-wJ-DYp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="fmN-ss-OgV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgView" destination="9Ps-wJ-DYp" id="VUu-qa-zrb"/>
+                <outlet property="textField" destination="SOS-Wg-uPe" id="yVC-N6-jTA"/>
+            </connections>
+            <point key="canvasLocation" x="-121.5" y="-338.5"/>
+        </view>
+    </objects>
+</document>

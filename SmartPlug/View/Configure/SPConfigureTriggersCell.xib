@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="SPConfigureTriggersCell">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="120.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYf-iz-nIr">
+                        <rect key="frame" x="30" y="33.5" width="25" height="23.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="启东时间:11-12-12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEk-BV-lbx">
+                        <rect key="frame" x="30" y="57" width="137" height="23.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="0X5-5x-BrS">
+                        <rect key="frame" x="283" y="54.5" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="rGZ-DO-1U5"/>
+                            <constraint firstAttribute="height" constant="12" id="syw-uu-ds4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REt-oc-vrj" userLabel="lineLbl">
+                        <rect key="frame" x="20" y="119.5" width="295" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="281-FT-dZD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AYf-iz-nIr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="1XV-qb-sq2"/>
+                    <constraint firstAttribute="trailing" secondItem="0X5-5x-BrS" secondAttribute="trailing" constant="40" id="ApA-HA-lbC"/>
+                    <constraint firstAttribute="trailing" secondItem="REt-oc-vrj" secondAttribute="trailing" constant="20" id="FIK-Ax-2Ig"/>
+                    <constraint firstItem="IEk-BV-lbx" firstAttribute="leading" secondItem="AYf-iz-nIr" secondAttribute="leading" id="NaG-b1-smx"/>
+                    <constraint firstItem="IEk-BV-lbx" firstAttribute="top" secondItem="AYf-iz-nIr" secondAttribute="bottom" id="Ynu-dh-Iyv"/>
+                    <constraint firstItem="REt-oc-vrj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="blg-wi-rhF"/>
+                    <constraint firstAttribute="bottom" secondItem="REt-oc-vrj" secondAttribute="bottom" id="la1-iD-cH5"/>
+                    <constraint firstItem="AYf-iz-nIr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-15" id="pBq-Ol-HZw"/>
+                    <constraint firstItem="0X5-5x-BrS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ukw-Gj-2CC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="arrowIamgeView" destination="0X5-5x-BrS" id="hth-9Q-5TX"/>
+                <outlet property="lineHeight" destination="281-FT-dZD" id="kGt-0w-SS2"/>
+                <outlet property="lineLbl" destination="REt-oc-vrj" id="GfV-Pa-zcX"/>
+                <outlet property="nameLbl" destination="AYf-iz-nIr" id="HGe-aY-upM"/>
+                <outlet property="timeLbl" destination="IEk-BV-lbx" id="cZ6-8M-uT0"/>
+            </connections>
+            <point key="canvasLocation" x="224" y="-80"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow" width="12" height="12"/>
+    </resources>
+</document>

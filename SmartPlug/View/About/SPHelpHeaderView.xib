@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SPHelpHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="197"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help" translatesAutoresizingMaskIntoConstraints="NO" id="Ecn-ca-fbH">
+                    <rect key="frame" x="20" y="88" width="21" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="21" id="Q39-jU-KFZ"/>
+                        <constraint firstAttribute="height" constant="21" id="TCl-rl-Qdu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如何使用我们的App控制" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQI-xE-C3q">
+                    <rect key="frame" x="51" y="87" width="185.5" height="24"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PQI-xE-C3q" secondAttribute="trailing" constant="20" id="Qjf-hU-ngV"/>
+                <constraint firstItem="Ecn-ca-fbH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="VMb-QM-YUl"/>
+                <constraint firstItem="PQI-xE-C3q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Yim-GO-URX"/>
+                <constraint firstItem="Ecn-ca-fbH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Z0F-SM-miT"/>
+                <constraint firstItem="PQI-xE-C3q" firstAttribute="leading" secondItem="Ecn-ca-fbH" secondAttribute="trailing" constant="10" id="r8m-fU-jDh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="helpImageView" destination="Ecn-ca-fbH" id="Y45-y2-d97"/>
+                <outlet property="titleLbl" destination="PQI-xE-C3q" id="2Rb-OL-tJN"/>
+            </connections>
+            <point key="canvasLocation" x="-459" y="-393"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="help" width="21" height="21"/>
+    </resources>
+</document>

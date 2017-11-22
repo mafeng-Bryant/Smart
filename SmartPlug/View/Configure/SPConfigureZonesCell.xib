@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="SPConfigureZonesCell">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="82.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeV-uj-1OH">
+                        <rect key="frame" x="28" y="8" width="34.5" height="22"/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房间: m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27t-jF-kST">
+                        <rect key="frame" x="28" y="35" width="47.5" height="20"/>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veg-3F-Ikw" userLabel="lineLbl">
+                        <rect key="frame" x="18" y="81.5" width="305" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="OPa-Tb-Rjc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Nxa-5d-yOT">
+                        <rect key="frame" x="301" y="35.5" width="12" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="12" id="kDU-wX-T0P"/>
+                            <constraint firstAttribute="height" constant="12" id="ncP-db-nrS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="veg-3F-Ikw" secondAttribute="bottom" id="30W-xG-2xE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Nxa-5d-yOT" secondAttribute="trailing" constant="20" id="Ei3-pM-NMa"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="27t-jF-kST" secondAttribute="trailing" constant="20" id="UQf-81-cuf"/>
+                    <constraint firstItem="veg-3F-Ikw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="aTZ-UM-gPV"/>
+                    <constraint firstItem="WeV-uj-1OH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="b1U-L4-5Sw"/>
+                    <constraint firstItem="27t-jF-kST" firstAttribute="top" secondItem="WeV-uj-1OH" secondAttribute="bottom" constant="5" id="bkq-a9-Hgq"/>
+                    <constraint firstItem="27t-jF-kST" firstAttribute="leading" secondItem="WeV-uj-1OH" secondAttribute="leading" id="mSe-WY-6VI"/>
+                    <constraint firstItem="WeV-uj-1OH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="yMY-A1-ZIe"/>
+                    <constraint firstItem="Nxa-5d-yOT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yXs-fG-K27"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="veg-3F-Ikw" secondAttribute="trailing" constant="10" id="z86-Dr-esF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="arrowImageView" destination="Nxa-5d-yOT" id="T56-xP-sT2"/>
+                <outlet property="lineLbl" destination="veg-3F-Ikw" id="wPb-zN-Vpf"/>
+                <outlet property="roomLbl" destination="27t-jF-kST" id="CMe-yv-Fg1"/>
+                <outlet property="zoneNameLbl" destination="WeV-uj-1OH" id="zWA-tb-gET"/>
+            </connections>
+            <point key="canvasLocation" x="-593.5" y="-274.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow" width="12" height="12"/>
+    </resources>
+</document>

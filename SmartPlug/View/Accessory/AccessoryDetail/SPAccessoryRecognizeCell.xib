@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="KGk-i7-Jjw" customClass="SPAccessoryRecognizeCell">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="69"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="68.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqg-Np-k6a" userLabel="bgView">
+                        <rect key="frame" x="13" y="0.0" width="324" height="68.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击识别设备" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNv-9b-6HJ">
+                                <rect key="frame" x="126" y="47" width="72" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npm-bL-U6w">
+                                <rect key="frame" x="141" y="5" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="8ac-zH-b7x"/>
+                                    <constraint firstAttribute="height" constant="42" id="pBX-cX-TD6"/>
+                                </constraints>
+                                <state key="normal" image="chazuo"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YNv-9b-6HJ" firstAttribute="centerX" secondItem="jqg-Np-k6a" secondAttribute="centerX" id="2MV-If-c7O"/>
+                            <constraint firstItem="npm-bL-U6w" firstAttribute="top" secondItem="jqg-Np-k6a" secondAttribute="top" constant="5" id="4Uz-2L-kcV"/>
+                            <constraint firstItem="npm-bL-U6w" firstAttribute="centerX" secondItem="jqg-Np-k6a" secondAttribute="centerX" id="5CM-U0-cwe"/>
+                            <constraint firstItem="YNv-9b-6HJ" firstAttribute="top" secondItem="npm-bL-U6w" secondAttribute="bottom" id="zuk-ZH-ot8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jqg-Np-k6a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="4RT-cg-ZMZ"/>
+                    <constraint firstItem="jqg-Np-k6a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XL0-Md-BIf"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jqg-Np-k6a" secondAttribute="trailing" constant="5" id="q8l-YM-ITL"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jqg-Np-k6a" secondAttribute="bottomMargin" id="wci-gv-DUD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="jqg-Np-k6a" id="TdI-68-qVB"/>
+                <outlet property="nameLbl" destination="YNv-9b-6HJ" id="qdt-IY-4jm"/>
+            </connections>
+            <point key="canvasLocation" x="-155" y="-63.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chazuo" width="42" height="42"/>
+    </resources>
+</document>

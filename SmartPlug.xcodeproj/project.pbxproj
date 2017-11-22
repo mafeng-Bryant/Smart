@@ -7,14 +7,139 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E21C1C491FC54B120057B748 /* SPSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C481FC54B120057B748 /* SPSetting.m */; };
+		E21C1C4C1FC54BCC0057B748 /* SPPopUpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C4B1FC54BCC0057B748 /* SPPopUpManager.m */; };
+		E21C1C501FC54E190057B748 /* SPStoreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C4F1FC54E190057B748 /* SPStoreHelper.m */; };
+		E21C1C531FC54EB60057B748 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C521FC54EB60057B748 /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E21C1C571FC551610057B748 /* SPShowGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C561FC551610057B748 /* SPShowGuideController.m */; };
+		E21C1C5A1FC551CC0057B748 /* NSObject+SPURLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C591FC551CC0057B748 /* NSObject+SPURLRoute.m */; };
+		E271F4CA1FB2E13C002488BB /* SPAccessoryDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4C91FB2E13C002488BB /* SPAccessoryDetailHeadView.m */; };
+		E271F4CE1FB2FE92002488BB /* SPConfigureController.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4CC1FB2FE92002488BB /* SPConfigureController.m */; };
+		E271F4CF1FB2FE92002488BB /* SPConfigureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4CD1FB2FE92002488BB /* SPConfigureController.xib */; };
+		E271F4D21FB2FFEB002488BB /* SPConfigureDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4D11FB2FFEB002488BB /* SPConfigureDataSource.m */; };
+		E271F4D51FB30081002488BB /* SPConfigureTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4D41FB30081002488BB /* SPConfigureTableViewInfo.m */; };
+		E271F4DA1FB30DB8002488BB /* SPConfigureUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4D81FB30DB8002488BB /* SPConfigureUserCell.m */; };
+		E271F4DB1FB30DB8002488BB /* SPConfigureUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4D91FB30DB8002488BB /* SPConfigureUserCell.xib */; };
+		E271F4DF1FB30DD1002488BB /* SPConfigureZonesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4DD1FB30DD1002488BB /* SPConfigureZonesCell.m */; };
+		E271F4E01FB30DD1002488BB /* SPConfigureZonesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4DE1FB30DD1002488BB /* SPConfigureZonesCell.xib */; };
+		E271F4E41FB30DF2002488BB /* SPConfigureServiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4E21FB30DF2002488BB /* SPConfigureServiceCell.m */; };
+		E271F4E51FB30DF2002488BB /* SPConfigureServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4E31FB30DF2002488BB /* SPConfigureServiceCell.xib */; };
+		E271F4E91FB30E0C002488BB /* SPConfigureTriggersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4E71FB30E0C002488BB /* SPConfigureTriggersCell.m */; };
+		E271F4EA1FB30E0C002488BB /* SPConfigureTriggersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4E81FB30E0C002488BB /* SPConfigureTriggersCell.xib */; };
+		E271F4ED1FB31D72002488BB /* SPConfigureHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4EC1FB31D72002488BB /* SPConfigureHeadView.m */; };
+		E271F4EF1FB31D81002488BB /* SPConfigureHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4EE1FB31D81002488BB /* SPConfigureHeadView.xib */; };
+		E271F4F21FB3D29D002488BB /* PPSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4F01FB3D29D002488BB /* PPSwitch.m */; };
+		E271F4F61FB3F75B002488BB /* SPConfigureChooseRoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4F41FB3F75B002488BB /* SPConfigureChooseRoomController.m */; };
+		E271F4F71FB3F75B002488BB /* SPConfigureChooseRoomController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4F51FB3F75B002488BB /* SPConfigureChooseRoomController.xib */; };
+		E271F4FA1FB3FD08002488BB /* SPConfigureZoneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4F91FB3FD08002488BB /* SPConfigureZoneModel.m */; };
+		E271F4FE1FB44916002488BB /* SPConfigureChooseServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4FC1FB44916002488BB /* SPConfigureChooseServiceController.m */; };
+		E271F4FF1FB44916002488BB /* SPConfigureChooseServiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4FD1FB44916002488BB /* SPConfigureChooseServiceController.xib */; };
+		E271F5031FB453FC002488BB /* SPScenesController.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F5011FB453FC002488BB /* SPScenesController.m */; };
+		E271F5041FB453FC002488BB /* SPScenesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F5021FB453FC002488BB /* SPScenesController.xib */; };
+		E271F50D1FB4604C002488BB /* SPBaseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F50C1FB4604C002488BB /* SPBaseCollectionCell.m */; };
+		E271F5111FB460BA002488BB /* SPScenesActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F50F1FB460BA002488BB /* SPScenesActionCell.m */; };
+		E271F5121FB460BA002488BB /* SPScenesActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F5101FB460BA002488BB /* SPScenesActionCell.xib */; };
+		E271F5151FB476C3002488BB /* SPActionSetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F5141FB476C3002488BB /* SPActionSetModel.m */; };
+		E271F5181FB483F6002488BB /* SPSceneButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F5171FB483F6002488BB /* SPSceneButton.m */; };
+		E276E6C51FBD55DF00A23796 /* SPDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E276E6C41FBD55DF00A23796 /* SPDatePicker.m */; };
+		E276E6C81FBD561000A23796 /* SPDatePicker_DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E276E6C71FBD561000A23796 /* SPDatePicker_DateModel.m */; };
+		E27714631FB52AB600279426 /* SPSceneSetActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E27714611FB52AB600279426 /* SPSceneSetActionController.m */; };
+		E27714641FB52AB600279426 /* SPSceneSetActionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27714621FB52AB600279426 /* SPSceneSetActionController.xib */; };
+		E2889CE51FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2889CE41FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.m */; };
+		E2889CE91FAF0BEF00590DD2 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2889CE81FAF0BEF00590DD2 /* UIView+Extensions.m */; };
+		E2889CEC1FAF0D6E00590DD2 /* SPBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2889CEB1FAF0D6E00590DD2 /* SPBaseNavigationController.m */; };
+		E2889D0D1FAF399B00590DD2 /* SPTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2889D0C1FAF399B00590DD2 /* SPTitleView.m */; };
+		E2889D111FAF3FA100590DD2 /* SPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2889D0F1FAF3FA100590DD2 /* SPHomeController.m */; };
+		E2889D121FAF3FA100590DD2 /* SPHomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2889D101FAF3FA100590DD2 /* SPHomeController.xib */; };
+		E2889D171FAF438000590DD2 /* SPShowHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2889D151FAF438000590DD2 /* SPShowHomeCell.m */; };
+		E2889D181FAF438000590DD2 /* SPShowHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2889D161FAF438000590DD2 /* SPShowHomeCell.xib */; };
+		E2889D1C1FAF439800590DD2 /* SPAddHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2889D1A1FAF439800590DD2 /* SPAddHomeCell.m */; };
+		E2889D1D1FAF439800590DD2 /* SPAddHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2889D1B1FAF439800590DD2 /* SPAddHomeCell.xib */; };
+		E2889D231FAF444400590DD2 /* SPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2889D221FAF444400590DD2 /* SPCell.m */; };
 		E2A948071FAF02C000922445 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A948061FAF02C000922445 /* AppDelegate.m */; };
-		E2A9480A1FAF02C000922445 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A948091FAF02C000922445 /* ViewController.m */; };
-		E2A9480D1FAF02C000922445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A9480B1FAF02C000922445 /* Main.storyboard */; };
 		E2A9480F1FAF02C000922445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A9480E1FAF02C000922445 /* Assets.xcassets */; };
-		E2A948121FAF02C000922445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2A948101FAF02C000922445 /* LaunchScreen.storyboard */; };
 		E2A948151FAF02C000922445 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A948141FAF02C000922445 /* main.m */; };
 		E2A9481F1FAF02C000922445 /* SmartPlugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A9481E1FAF02C000922445 /* SmartPlugTests.m */; };
 		E2A9482A1FAF02C000922445 /* SmartPlugUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A948291FAF02C000922445 /* SmartPlugUITests.m */; };
+		E2A948481FAF071500922445 /* SPBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2A948471FAF071500922445 /* SPBaseController.m */; };
+		E2C92A9A1FAF560C0011246E /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C92A991FAF560C0011246E /* HomeKit.framework */; };
+		E2C92A9D1FAF58940011246E /* SPHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C92A9C1FAF58940011246E /* SPHomeModel.m */; };
+		E2C92AA11FB0AA6B0011246E /* SPAccessoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C92A9F1FB0AA6B0011246E /* SPAccessoryController.m */; };
+		E2C92AA21FB0AA6B0011246E /* SPAccessoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C92AA01FB0AA6B0011246E /* SPAccessoryController.xib */; };
+		E2C92AA71FB0B1830011246E /* SPAddRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C92AA51FB0B1830011246E /* SPAddRoomCell.m */; };
+		E2C92AA81FB0B1830011246E /* SPAddRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C92AA61FB0B1830011246E /* SPAddRoomCell.xib */; };
+		E2C92AAC1FB0B25C0011246E /* SPRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C92AAA1FB0B25C0011246E /* SPRoomCell.m */; };
+		E2C92AAD1FB0B25C0011246E /* SPRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C92AAB1FB0B25C0011246E /* SPRoomCell.xib */; };
+		E2C92AB11FB0B29B0011246E /* SPAccessoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C92AAF1FB0B29B0011246E /* SPAccessoryCell.m */; };
+		E2C92AB21FB0B29B0011246E /* SPAccessoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C92AB01FB0B29B0011246E /* SPAccessoryCell.xib */; };
+		E2C92AB51FB0B53C0011246E /* SPAccessoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C92AB41FB0B53C0011246E /* SPAccessoryInfo.m */; };
+		E2C9F9D01FB7480E00859BDD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9CD1FB7473400859BDD /* MBProgressHUD.m */; };
+		E2C9F9D41FB7DBA200859BDD /* SPAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9D21FB7DBA200859BDD /* SPAboutController.m */; };
+		E2C9F9D51FB7DBA200859BDD /* SPAboutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9F9D31FB7DBA200859BDD /* SPAboutController.xib */; };
+		E2C9F9D91FB7E2F100859BDD /* WarningController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9D71FB7E2F100859BDD /* WarningController.m */; };
+		E2C9F9DA1FB7E2F100859BDD /* WarningController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9F9D81FB7E2F100859BDD /* WarningController.xib */; };
+		E2C9F9DE1FB82A3E00859BDD /* SPAboutUSController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9DC1FB82A3E00859BDD /* SPAboutUSController.m */; };
+		E2C9F9DF1FB82A3E00859BDD /* SPAboutUSController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9F9DD1FB82A3E00859BDD /* SPAboutUSController.xib */; };
+		E2C9F9E31FB82F7B00859BDD /* SPVersionController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9E11FB82F7B00859BDD /* SPVersionController.m */; };
+		E2C9F9E41FB82F7B00859BDD /* SPVersionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9F9E21FB82F7B00859BDD /* SPVersionController.xib */; };
+		E2C9F9E81FB833AE00859BDD /* SPHelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9E61FB833AE00859BDD /* SPHelpController.m */; };
+		E2C9F9E91FB833AE00859BDD /* SPHelpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9F9E71FB833AE00859BDD /* SPHelpController.xib */; };
+		E2C9F9EC1FB88A6700859BDD /* SPHelpTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9EB1FB88A6700859BDD /* SPHelpTableViewInfo.m */; };
+		E2C9F9EF1FB8903D00859BDD /* SPHelpDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9EE1FB8903D00859BDD /* SPHelpDataSource.m */; };
+		E2C9F9F41FB9426200859BDD /* SPHelpDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9F21FB9426200859BDD /* SPHelpDetailsCell.m */; };
+		E2C9F9F51FB9426200859BDD /* SPHelpDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9F9F31FB9426200859BDD /* SPHelpDetailsCell.xib */; };
+		E2C9F9F81FB945B600859BDD /* SPHelpHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9F71FB945B600859BDD /* SPHelpHeaderView.m */; };
+		E2C9F9FA1FB945D100859BDD /* SPHelpHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9F9F91FB945D100859BDD /* SPHelpHeaderView.xib */; };
+		E2C9F9FE1FB98FD000859BDD /* SPSetTriggerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9F9FC1FB98FD000859BDD /* SPSetTriggerController.m */; };
+		E2C9F9FF1FB98FD000859BDD /* SPSetTriggerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9F9FD1FB98FD000859BDD /* SPSetTriggerController.xib */; };
+		E2C9FA021FB9927300859BDD /* SPTriggerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9FA011FB9927300859BDD /* SPTriggerDataSource.m */; };
+		E2C9FA051FB9931C00859BDD /* SPTriggerTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9FA041FB9931C00859BDD /* SPTriggerTableViewInfo.m */; };
+		E2C9FA091FB999A200859BDD /* SPTriggerNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9FA071FB999A200859BDD /* SPTriggerNormalCell.m */; };
+		E2C9FA0A1FB999A200859BDD /* SPTriggerNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9FA081FB999A200859BDD /* SPTriggerNormalCell.xib */; };
+		E2C9FA0E1FB9E4E400859BDD /* SPTriggerPickDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9FA0C1FB9E4E400859BDD /* SPTriggerPickDateCell.m */; };
+		E2C9FA0F1FB9E4E400859BDD /* SPTriggerPickDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9FA0D1FB9E4E400859BDD /* SPTriggerPickDateCell.xib */; };
+		E2C9FA131FBA6B2100859BDD /* SPTriggerNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9FA121FBA6B2100859BDD /* SPTriggerNameView.m */; };
+		E2C9FA151FBA6B2D00859BDD /* SPTriggerNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9FA141FBA6B2D00859BDD /* SPTriggerNameView.xib */; };
+		E2C9FA181FBA6CEC00859BDD /* SPTriggerSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9FA171FBA6CEC00859BDD /* SPTriggerSettingView.m */; };
+		E2C9FA1A1FBA6CF800859BDD /* SPTriggerSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9FA191FBA6CF800859BDD /* SPTriggerSettingView.xib */; };
+		E2C9FA1D1FBA6D2300859BDD /* SPTriggerNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C9FA1C1FBA6D2300859BDD /* SPTriggerNormalView.m */; };
+		E2C9FA1F1FBA6D2F00859BDD /* SPTriggerNormalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C9FA1E1FBA6D2F00859BDD /* SPTriggerNormalView.xib */; };
+		E2CD36AA1FB1E2410013FA50 /* SPAccessoryDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD36A81FB1E2410013FA50 /* SPAccessoryDetailController.m */; };
+		E2CD36AB1FB1E2410013FA50 /* SPAccessoryDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CD36A91FB1E2410013FA50 /* SPAccessoryDetailController.xib */; };
+		E2CD36B11FB1E7210013FA50 /* SPAccessoryTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD36B01FB1E7210013FA50 /* SPAccessoryTableViewInfo.m */; };
+		E2CD36B41FB27CFF0013FA50 /* SPAccessoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD36B31FB27CFF0013FA50 /* SPAccessoryDataSource.m */; };
+		E2CD36B71FB27D220013FA50 /* SPTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD36B61FB27D220013FA50 /* SPTableViewDataSource.m */; };
+		E2CD36BC1FB2842F0013FA50 /* SPAccessoryStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD36BA1FB2842F0013FA50 /* SPAccessoryStatusCell.m */; };
+		E2CD36BD1FB2842F0013FA50 /* SPAccessoryStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CD36BB1FB2842F0013FA50 /* SPAccessoryStatusCell.xib */; };
+		E2CD36C11FB284540013FA50 /* SPAccessoryCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD36BF1FB284540013FA50 /* SPAccessoryCommonCell.m */; };
+		E2CD36C21FB284540013FA50 /* SPAccessoryCommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CD36C01FB284540013FA50 /* SPAccessoryCommonCell.xib */; };
+		E2CD36C61FB2850F0013FA50 /* SPAccessoryTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD36C41FB2850F0013FA50 /* SPAccessoryTypeCell.m */; };
+		E2CD36C71FB2850F0013FA50 /* SPAccessoryTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CD36C51FB2850F0013FA50 /* SPAccessoryTypeCell.xib */; };
+		E2CD36CB1FB285490013FA50 /* SPAccessoryRecognizeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CD36C91FB285490013FA50 /* SPAccessoryRecognizeCell.m */; };
+		E2CD36CC1FB285490013FA50 /* SPAccessoryRecognizeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CD36CA1FB285490013FA50 /* SPAccessoryRecognizeCell.xib */; };
+		E2D30DEC1FBFE1F2000A088A /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DC01FBFE03A000A088A /* MJRefreshAutoFooter.m */; };
+		E2D30DED1FBFE1F2000A088A /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DC21FBFE03A000A088A /* MJRefreshBackFooter.m */; };
+		E2D30DEE1FBFE1F2000A088A /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DC41FBFE03A000A088A /* MJRefreshComponent.m */; };
+		E2D30DEF1FBFE1F2000A088A /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DC61FBFE03A000A088A /* MJRefreshFooter.m */; };
+		E2D30DF01FBFE1F2000A088A /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DC81FBFE03A000A088A /* MJRefreshHeader.m */; };
+		E2D30DF11FBFE1F2000A088A /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DCD1FBFE03A000A088A /* MJRefreshAutoGifFooter.m */; };
+		E2D30DF21FBFE1F2000A088A /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DCF1FBFE03A000A088A /* MJRefreshAutoNormalFooter.m */; };
+		E2D30DF31FBFE1F2000A088A /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DD11FBFE03A000A088A /* MJRefreshAutoStateFooter.m */; };
+		E2D30DF41FBFE1F2000A088A /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DD41FBFE03A000A088A /* MJRefreshBackGifFooter.m */; };
+		E2D30DF51FBFE1F2000A088A /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DD61FBFE03A000A088A /* MJRefreshBackNormalFooter.m */; };
+		E2D30DF61FBFE1F2000A088A /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DD81FBFE03A000A088A /* MJRefreshBackStateFooter.m */; };
+		E2D30DF71FBFE1F2000A088A /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DDB1FBFE03A000A088A /* MJRefreshGifHeader.m */; };
+		E2D30DF81FBFE1F2000A088A /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DDD1FBFE03A000A088A /* MJRefreshNormalHeader.m */; };
+		E2D30DF91FBFE1F2000A088A /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DDF1FBFE03A000A088A /* MJRefreshStateHeader.m */; };
+		E2D30DFA1FBFE1F2000A088A /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DE31FBFE03A000A088A /* MJRefreshConst.m */; };
+		E2D30DFB1FBFE1F2000A088A /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DE51FBFE03A000A088A /* NSBundle+MJRefresh.m */; };
+		E2D30DFC1FBFE1F2000A088A /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DE71FBFE03A000A088A /* UIScrollView+MJExtension.m */; };
+		E2D30DFD1FBFE1F2000A088A /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DE91FBFE03A000A088A /* UIScrollView+MJRefresh.m */; };
+		E2D30DFE1FBFE1F2000A088A /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E2D30DEB1FBFE03A000A088A /* UIView+MJExtension.m */; };
+		E2DB226B1FB5F36900AEA6A9 /* SPActionSetTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB226A1FB5F36900AEA6A9 /* SPActionSetTableViewInfo.m */; };
+		E2DB226E1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB226D1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.m */; };
+		E2DB22721FB5F6FF00AEA6A9 /* SPSceneSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB22701FB5F6FF00AEA6A9 /* SPSceneSetCell.m */; };
+		E2DB22731FB5F70000AEA6A9 /* SPSceneSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2DB22711FB5F6FF00AEA6A9 /* SPSceneSetCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,14 +160,99 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E21C1C471FC54B120057B748 /* SPSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSetting.h; sourceTree = "<group>"; };
+		E21C1C481FC54B120057B748 /* SPSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSetting.m; sourceTree = "<group>"; };
+		E21C1C4A1FC54BCC0057B748 /* SPPopUpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPopUpManager.h; sourceTree = "<group>"; };
+		E21C1C4B1FC54BCC0057B748 /* SPPopUpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPopUpManager.m; sourceTree = "<group>"; };
+		E21C1C4E1FC54E190057B748 /* SPStoreHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPStoreHelper.h; sourceTree = "<group>"; };
+		E21C1C4F1FC54E190057B748 /* SPStoreHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPStoreHelper.m; sourceTree = "<group>"; };
+		E21C1C511FC54EB60057B748 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		E21C1C521FC54EB60057B748 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		E21C1C551FC551610057B748 /* SPShowGuideController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPShowGuideController.h; sourceTree = "<group>"; };
+		E21C1C561FC551610057B748 /* SPShowGuideController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPShowGuideController.m; sourceTree = "<group>"; };
+		E21C1C581FC551CC0057B748 /* NSObject+SPURLRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPURLRoute.h"; sourceTree = "<group>"; };
+		E21C1C591FC551CC0057B748 /* NSObject+SPURLRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPURLRoute.m"; sourceTree = "<group>"; };
+		E271F4C81FB2E13C002488BB /* SPAccessoryDetailHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryDetailHeadView.h; sourceTree = "<group>"; };
+		E271F4C91FB2E13C002488BB /* SPAccessoryDetailHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryDetailHeadView.m; sourceTree = "<group>"; };
+		E271F4CB1FB2FE92002488BB /* SPConfigureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureController.h; sourceTree = "<group>"; };
+		E271F4CC1FB2FE92002488BB /* SPConfigureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureController.m; sourceTree = "<group>"; };
+		E271F4CD1FB2FE92002488BB /* SPConfigureController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPConfigureController.xib; sourceTree = "<group>"; };
+		E271F4D01FB2FFEB002488BB /* SPConfigureDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureDataSource.h; sourceTree = "<group>"; };
+		E271F4D11FB2FFEB002488BB /* SPConfigureDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureDataSource.m; sourceTree = "<group>"; };
+		E271F4D31FB30081002488BB /* SPConfigureTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureTableViewInfo.h; sourceTree = "<group>"; };
+		E271F4D41FB30081002488BB /* SPConfigureTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureTableViewInfo.m; sourceTree = "<group>"; };
+		E271F4D71FB30DB8002488BB /* SPConfigureUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureUserCell.h; sourceTree = "<group>"; };
+		E271F4D81FB30DB8002488BB /* SPConfigureUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureUserCell.m; sourceTree = "<group>"; };
+		E271F4D91FB30DB8002488BB /* SPConfigureUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPConfigureUserCell.xib; sourceTree = "<group>"; };
+		E271F4DC1FB30DD1002488BB /* SPConfigureZonesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureZonesCell.h; sourceTree = "<group>"; };
+		E271F4DD1FB30DD1002488BB /* SPConfigureZonesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureZonesCell.m; sourceTree = "<group>"; };
+		E271F4DE1FB30DD1002488BB /* SPConfigureZonesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPConfigureZonesCell.xib; sourceTree = "<group>"; };
+		E271F4E11FB30DF2002488BB /* SPConfigureServiceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureServiceCell.h; sourceTree = "<group>"; };
+		E271F4E21FB30DF2002488BB /* SPConfigureServiceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureServiceCell.m; sourceTree = "<group>"; };
+		E271F4E31FB30DF2002488BB /* SPConfigureServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPConfigureServiceCell.xib; sourceTree = "<group>"; };
+		E271F4E61FB30E0C002488BB /* SPConfigureTriggersCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureTriggersCell.h; sourceTree = "<group>"; };
+		E271F4E71FB30E0C002488BB /* SPConfigureTriggersCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureTriggersCell.m; sourceTree = "<group>"; };
+		E271F4E81FB30E0C002488BB /* SPConfigureTriggersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPConfigureTriggersCell.xib; sourceTree = "<group>"; };
+		E271F4EB1FB31D72002488BB /* SPConfigureHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureHeadView.h; sourceTree = "<group>"; };
+		E271F4EC1FB31D72002488BB /* SPConfigureHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureHeadView.m; sourceTree = "<group>"; };
+		E271F4EE1FB31D81002488BB /* SPConfigureHeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPConfigureHeadView.xib; sourceTree = "<group>"; };
+		E271F4F01FB3D29D002488BB /* PPSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPSwitch.m; sourceTree = "<group>"; };
+		E271F4F11FB3D29D002488BB /* PPSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPSwitch.h; sourceTree = "<group>"; };
+		E271F4F31FB3F75B002488BB /* SPConfigureChooseRoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureChooseRoomController.h; sourceTree = "<group>"; };
+		E271F4F41FB3F75B002488BB /* SPConfigureChooseRoomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureChooseRoomController.m; sourceTree = "<group>"; };
+		E271F4F51FB3F75B002488BB /* SPConfigureChooseRoomController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPConfigureChooseRoomController.xib; sourceTree = "<group>"; };
+		E271F4F81FB3FD08002488BB /* SPConfigureZoneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureZoneModel.h; sourceTree = "<group>"; };
+		E271F4F91FB3FD08002488BB /* SPConfigureZoneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureZoneModel.m; sourceTree = "<group>"; };
+		E271F4FB1FB44916002488BB /* SPConfigureChooseServiceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureChooseServiceController.h; sourceTree = "<group>"; };
+		E271F4FC1FB44916002488BB /* SPConfigureChooseServiceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPConfigureChooseServiceController.m; sourceTree = "<group>"; };
+		E271F4FD1FB44916002488BB /* SPConfigureChooseServiceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPConfigureChooseServiceController.xib; sourceTree = "<group>"; };
+		E271F5001FB453FC002488BB /* SPScenesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPScenesController.h; sourceTree = "<group>"; };
+		E271F5011FB453FC002488BB /* SPScenesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPScenesController.m; sourceTree = "<group>"; };
+		E271F5021FB453FC002488BB /* SPScenesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPScenesController.xib; sourceTree = "<group>"; };
+		E271F50B1FB4604C002488BB /* SPBaseCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPBaseCollectionCell.h; sourceTree = "<group>"; };
+		E271F50C1FB4604C002488BB /* SPBaseCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBaseCollectionCell.m; sourceTree = "<group>"; };
+		E271F50E1FB460BA002488BB /* SPScenesActionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPScenesActionCell.h; sourceTree = "<group>"; };
+		E271F50F1FB460BA002488BB /* SPScenesActionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPScenesActionCell.m; sourceTree = "<group>"; };
+		E271F5101FB460BA002488BB /* SPScenesActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPScenesActionCell.xib; sourceTree = "<group>"; };
+		E271F5131FB476C3002488BB /* SPActionSetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPActionSetModel.h; sourceTree = "<group>"; };
+		E271F5141FB476C3002488BB /* SPActionSetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPActionSetModel.m; sourceTree = "<group>"; };
+		E271F5161FB483F6002488BB /* SPSceneButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSceneButton.h; sourceTree = "<group>"; };
+		E271F5171FB483F6002488BB /* SPSceneButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSceneButton.m; sourceTree = "<group>"; };
+		E271F5191FB498D3002488BB /* UIView+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
+		E271F51A1FB498D3002488BB /* UIView+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
+		E276E6C31FBD55DF00A23796 /* SPDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPDatePicker.h; sourceTree = "<group>"; };
+		E276E6C41FBD55DF00A23796 /* SPDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPDatePicker.m; sourceTree = "<group>"; };
+		E276E6C61FBD561000A23796 /* SPDatePicker_DateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPDatePicker_DateModel.h; sourceTree = "<group>"; };
+		E276E6C71FBD561000A23796 /* SPDatePicker_DateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPDatePicker_DateModel.m; sourceTree = "<group>"; };
+		E27714601FB52AB600279426 /* SPSceneSetActionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSceneSetActionController.h; sourceTree = "<group>"; };
+		E27714611FB52AB600279426 /* SPSceneSetActionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSceneSetActionController.m; sourceTree = "<group>"; };
+		E27714621FB52AB600279426 /* SPSceneSetActionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPSceneSetActionController.xib; sourceTree = "<group>"; };
+		E2889CE31FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SPUIViewControllerExtensions.h"; sourceTree = "<group>"; };
+		E2889CE41FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SPUIViewControllerExtensions.m"; sourceTree = "<group>"; };
+		E2889CE71FAF0BEF00590DD2 /* UIView+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
+		E2889CE81FAF0BEF00590DD2 /* UIView+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
+		E2889CEA1FAF0D6E00590DD2 /* SPBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPBaseNavigationController.h; sourceTree = "<group>"; };
+		E2889CEB1FAF0D6E00590DD2 /* SPBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBaseNavigationController.m; sourceTree = "<group>"; };
+		E2889CF11FAF0EA400590DD2 /* UIImage+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
+		E2889CF21FAF0EA400590DD2 /* UIImage+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
+		E2889CF41FAF0F3500590DD2 /* Help.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Help.h; sourceTree = "<group>"; };
+		E2889D0B1FAF399B00590DD2 /* SPTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTitleView.h; sourceTree = "<group>"; };
+		E2889D0C1FAF399B00590DD2 /* SPTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTitleView.m; sourceTree = "<group>"; };
+		E2889D0E1FAF3FA100590DD2 /* SPHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeController.h; sourceTree = "<group>"; };
+		E2889D0F1FAF3FA100590DD2 /* SPHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeController.m; sourceTree = "<group>"; };
+		E2889D101FAF3FA100590DD2 /* SPHomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHomeController.xib; sourceTree = "<group>"; };
+		E2889D141FAF438000590DD2 /* SPShowHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPShowHomeCell.h; sourceTree = "<group>"; };
+		E2889D151FAF438000590DD2 /* SPShowHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPShowHomeCell.m; sourceTree = "<group>"; };
+		E2889D161FAF438000590DD2 /* SPShowHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPShowHomeCell.xib; sourceTree = "<group>"; };
+		E2889D191FAF439800590DD2 /* SPAddHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAddHomeCell.h; sourceTree = "<group>"; };
+		E2889D1A1FAF439800590DD2 /* SPAddHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAddHomeCell.m; sourceTree = "<group>"; };
+		E2889D1B1FAF439800590DD2 /* SPAddHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAddHomeCell.xib; sourceTree = "<group>"; };
+		E2889D211FAF444400590DD2 /* SPCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCell.h; sourceTree = "<group>"; };
+		E2889D221FAF444400590DD2 /* SPCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCell.m; sourceTree = "<group>"; };
 		E2A948021FAF02C000922445 /* SmartPlug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartPlug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A948051FAF02C000922445 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E2A948061FAF02C000922445 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E2A948081FAF02C000922445 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E2A948091FAF02C000922445 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E2A9480C1FAF02C000922445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2A9480E1FAF02C000922445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E2A948111FAF02C000922445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2A948131FAF02C000922445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A948141FAF02C000922445 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2A9481A1FAF02C000922445 /* SmartPlugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPlugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +261,145 @@
 		E2A948251FAF02C000922445 /* SmartPlugUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPlugUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A948291FAF02C000922445 /* SmartPlugUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartPlugUITests.m; sourceTree = "<group>"; };
 		E2A9482B1FAF02C000922445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2A948461FAF071500922445 /* SPBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPBaseController.h; sourceTree = "<group>"; };
+		E2A948471FAF071500922445 /* SPBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBaseController.m; sourceTree = "<group>"; };
+		E2C92A971FAF560C0011246E /* SmartPlug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartPlug.entitlements; sourceTree = "<group>"; };
+		E2C92A991FAF560C0011246E /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		E2C92A9B1FAF58940011246E /* SPHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHomeModel.h; sourceTree = "<group>"; };
+		E2C92A9C1FAF58940011246E /* SPHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHomeModel.m; sourceTree = "<group>"; };
+		E2C92A9E1FB0AA6B0011246E /* SPAccessoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryController.h; sourceTree = "<group>"; };
+		E2C92A9F1FB0AA6B0011246E /* SPAccessoryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryController.m; sourceTree = "<group>"; };
+		E2C92AA01FB0AA6B0011246E /* SPAccessoryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAccessoryController.xib; sourceTree = "<group>"; };
+		E2C92AA41FB0B1830011246E /* SPAddRoomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAddRoomCell.h; sourceTree = "<group>"; };
+		E2C92AA51FB0B1830011246E /* SPAddRoomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAddRoomCell.m; sourceTree = "<group>"; };
+		E2C92AA61FB0B1830011246E /* SPAddRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAddRoomCell.xib; sourceTree = "<group>"; };
+		E2C92AA91FB0B25C0011246E /* SPRoomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPRoomCell.h; sourceTree = "<group>"; };
+		E2C92AAA1FB0B25C0011246E /* SPRoomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPRoomCell.m; sourceTree = "<group>"; };
+		E2C92AAB1FB0B25C0011246E /* SPRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPRoomCell.xib; sourceTree = "<group>"; };
+		E2C92AAE1FB0B29B0011246E /* SPAccessoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryCell.h; sourceTree = "<group>"; };
+		E2C92AAF1FB0B29B0011246E /* SPAccessoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryCell.m; sourceTree = "<group>"; };
+		E2C92AB01FB0B29B0011246E /* SPAccessoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAccessoryCell.xib; sourceTree = "<group>"; };
+		E2C92AB31FB0B53C0011246E /* SPAccessoryInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryInfo.h; sourceTree = "<group>"; };
+		E2C92AB41FB0B53C0011246E /* SPAccessoryInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryInfo.m; sourceTree = "<group>"; };
+		E2C92AB61FB1326E0011246E /* PPUIFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPUIFont.m; sourceTree = "<group>"; };
+		E2C92AB71FB1326E0011246E /* PPUIFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPUIFont.h; sourceTree = "<group>"; };
+		E2C9F9CD1FB7473400859BDD /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		E2C9F9CE1FB7473400859BDD /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		E2C9F9D11FB7DBA200859BDD /* SPAboutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAboutController.h; sourceTree = "<group>"; };
+		E2C9F9D21FB7DBA200859BDD /* SPAboutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAboutController.m; sourceTree = "<group>"; };
+		E2C9F9D31FB7DBA200859BDD /* SPAboutController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAboutController.xib; sourceTree = "<group>"; };
+		E2C9F9D61FB7E2F100859BDD /* WarningController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WarningController.h; sourceTree = "<group>"; };
+		E2C9F9D71FB7E2F100859BDD /* WarningController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WarningController.m; sourceTree = "<group>"; };
+		E2C9F9D81FB7E2F100859BDD /* WarningController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WarningController.xib; sourceTree = "<group>"; };
+		E2C9F9DB1FB82A3E00859BDD /* SPAboutUSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAboutUSController.h; sourceTree = "<group>"; };
+		E2C9F9DC1FB82A3E00859BDD /* SPAboutUSController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAboutUSController.m; sourceTree = "<group>"; };
+		E2C9F9DD1FB82A3E00859BDD /* SPAboutUSController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAboutUSController.xib; sourceTree = "<group>"; };
+		E2C9F9E01FB82F7B00859BDD /* SPVersionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPVersionController.h; sourceTree = "<group>"; };
+		E2C9F9E11FB82F7B00859BDD /* SPVersionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPVersionController.m; sourceTree = "<group>"; };
+		E2C9F9E21FB82F7B00859BDD /* SPVersionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPVersionController.xib; sourceTree = "<group>"; };
+		E2C9F9E51FB833AE00859BDD /* SPHelpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHelpController.h; sourceTree = "<group>"; };
+		E2C9F9E61FB833AE00859BDD /* SPHelpController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHelpController.m; sourceTree = "<group>"; };
+		E2C9F9E71FB833AE00859BDD /* SPHelpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHelpController.xib; sourceTree = "<group>"; };
+		E2C9F9EA1FB88A6700859BDD /* SPHelpTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHelpTableViewInfo.h; sourceTree = "<group>"; };
+		E2C9F9EB1FB88A6700859BDD /* SPHelpTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHelpTableViewInfo.m; sourceTree = "<group>"; };
+		E2C9F9ED1FB8903D00859BDD /* SPHelpDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHelpDataSource.h; sourceTree = "<group>"; };
+		E2C9F9EE1FB8903D00859BDD /* SPHelpDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHelpDataSource.m; sourceTree = "<group>"; };
+		E2C9F9F11FB9426200859BDD /* SPHelpDetailsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHelpDetailsCell.h; sourceTree = "<group>"; };
+		E2C9F9F21FB9426200859BDD /* SPHelpDetailsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHelpDetailsCell.m; sourceTree = "<group>"; };
+		E2C9F9F31FB9426200859BDD /* SPHelpDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHelpDetailsCell.xib; sourceTree = "<group>"; };
+		E2C9F9F61FB945B600859BDD /* SPHelpHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPHelpHeaderView.h; sourceTree = "<group>"; };
+		E2C9F9F71FB945B600859BDD /* SPHelpHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPHelpHeaderView.m; sourceTree = "<group>"; };
+		E2C9F9F91FB945D100859BDD /* SPHelpHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPHelpHeaderView.xib; sourceTree = "<group>"; };
+		E2C9F9FB1FB98FD000859BDD /* SPSetTriggerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSetTriggerController.h; sourceTree = "<group>"; };
+		E2C9F9FC1FB98FD000859BDD /* SPSetTriggerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSetTriggerController.m; sourceTree = "<group>"; };
+		E2C9F9FD1FB98FD000859BDD /* SPSetTriggerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPSetTriggerController.xib; sourceTree = "<group>"; };
+		E2C9FA001FB9927300859BDD /* SPTriggerDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTriggerDataSource.h; sourceTree = "<group>"; };
+		E2C9FA011FB9927300859BDD /* SPTriggerDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTriggerDataSource.m; sourceTree = "<group>"; };
+		E2C9FA031FB9931C00859BDD /* SPTriggerTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTriggerTableViewInfo.h; sourceTree = "<group>"; };
+		E2C9FA041FB9931C00859BDD /* SPTriggerTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTriggerTableViewInfo.m; sourceTree = "<group>"; };
+		E2C9FA061FB999A200859BDD /* SPTriggerNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTriggerNormalCell.h; sourceTree = "<group>"; };
+		E2C9FA071FB999A200859BDD /* SPTriggerNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTriggerNormalCell.m; sourceTree = "<group>"; };
+		E2C9FA081FB999A200859BDD /* SPTriggerNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPTriggerNormalCell.xib; sourceTree = "<group>"; };
+		E2C9FA0B1FB9E4E400859BDD /* SPTriggerPickDateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTriggerPickDateCell.h; sourceTree = "<group>"; };
+		E2C9FA0C1FB9E4E400859BDD /* SPTriggerPickDateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTriggerPickDateCell.m; sourceTree = "<group>"; };
+		E2C9FA0D1FB9E4E400859BDD /* SPTriggerPickDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPTriggerPickDateCell.xib; sourceTree = "<group>"; };
+		E2C9FA111FBA6B2100859BDD /* SPTriggerNameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTriggerNameView.h; sourceTree = "<group>"; };
+		E2C9FA121FBA6B2100859BDD /* SPTriggerNameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTriggerNameView.m; sourceTree = "<group>"; };
+		E2C9FA141FBA6B2D00859BDD /* SPTriggerNameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPTriggerNameView.xib; sourceTree = "<group>"; };
+		E2C9FA161FBA6CEC00859BDD /* SPTriggerSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTriggerSettingView.h; sourceTree = "<group>"; };
+		E2C9FA171FBA6CEC00859BDD /* SPTriggerSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTriggerSettingView.m; sourceTree = "<group>"; };
+		E2C9FA191FBA6CF800859BDD /* SPTriggerSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPTriggerSettingView.xib; sourceTree = "<group>"; };
+		E2C9FA1B1FBA6D2300859BDD /* SPTriggerNormalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTriggerNormalView.h; sourceTree = "<group>"; };
+		E2C9FA1C1FBA6D2300859BDD /* SPTriggerNormalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTriggerNormalView.m; sourceTree = "<group>"; };
+		E2C9FA1E1FBA6D2F00859BDD /* SPTriggerNormalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPTriggerNormalView.xib; sourceTree = "<group>"; };
+		E2CD36A71FB1E2410013FA50 /* SPAccessoryDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryDetailController.h; sourceTree = "<group>"; };
+		E2CD36A81FB1E2410013FA50 /* SPAccessoryDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryDetailController.m; sourceTree = "<group>"; };
+		E2CD36A91FB1E2410013FA50 /* SPAccessoryDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAccessoryDetailController.xib; sourceTree = "<group>"; };
+		E2CD36AF1FB1E7210013FA50 /* SPAccessoryTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryTableViewInfo.h; sourceTree = "<group>"; };
+		E2CD36B01FB1E7210013FA50 /* SPAccessoryTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryTableViewInfo.m; sourceTree = "<group>"; };
+		E2CD36B21FB27CFF0013FA50 /* SPAccessoryDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryDataSource.h; sourceTree = "<group>"; };
+		E2CD36B31FB27CFF0013FA50 /* SPAccessoryDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryDataSource.m; sourceTree = "<group>"; };
+		E2CD36B51FB27D220013FA50 /* SPTableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTableViewDataSource.h; sourceTree = "<group>"; };
+		E2CD36B61FB27D220013FA50 /* SPTableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTableViewDataSource.m; sourceTree = "<group>"; };
+		E2CD36B91FB2842F0013FA50 /* SPAccessoryStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryStatusCell.h; sourceTree = "<group>"; };
+		E2CD36BA1FB2842F0013FA50 /* SPAccessoryStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryStatusCell.m; sourceTree = "<group>"; };
+		E2CD36BB1FB2842F0013FA50 /* SPAccessoryStatusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAccessoryStatusCell.xib; sourceTree = "<group>"; };
+		E2CD36BE1FB284540013FA50 /* SPAccessoryCommonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryCommonCell.h; sourceTree = "<group>"; };
+		E2CD36BF1FB284540013FA50 /* SPAccessoryCommonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryCommonCell.m; sourceTree = "<group>"; };
+		E2CD36C01FB284540013FA50 /* SPAccessoryCommonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAccessoryCommonCell.xib; sourceTree = "<group>"; };
+		E2CD36C31FB2850F0013FA50 /* SPAccessoryTypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryTypeCell.h; sourceTree = "<group>"; };
+		E2CD36C41FB2850F0013FA50 /* SPAccessoryTypeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryTypeCell.m; sourceTree = "<group>"; };
+		E2CD36C51FB2850F0013FA50 /* SPAccessoryTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAccessoryTypeCell.xib; sourceTree = "<group>"; };
+		E2CD36C81FB285490013FA50 /* SPAccessoryRecognizeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryRecognizeCell.h; sourceTree = "<group>"; };
+		E2CD36C91FB285490013FA50 /* SPAccessoryRecognizeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryRecognizeCell.m; sourceTree = "<group>"; };
+		E2CD36CA1FB285490013FA50 /* SPAccessoryRecognizeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAccessoryRecognizeCell.xib; sourceTree = "<group>"; };
+		E2D30DBF1FBFE03A000A088A /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
+		E2D30DC01FBFE03A000A088A /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
+		E2D30DC11FBFE03A000A088A /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackFooter.h; sourceTree = "<group>"; };
+		E2D30DC21FBFE03A000A088A /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackFooter.m; sourceTree = "<group>"; };
+		E2D30DC31FBFE03A000A088A /* MJRefreshComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
+		E2D30DC41FBFE03A000A088A /* MJRefreshComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshComponent.m; sourceTree = "<group>"; };
+		E2D30DC51FBFE03A000A088A /* MJRefreshFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooter.h; sourceTree = "<group>"; };
+		E2D30DC61FBFE03A000A088A /* MJRefreshFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooter.m; sourceTree = "<group>"; };
+		E2D30DC71FBFE03A000A088A /* MJRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeader.h; sourceTree = "<group>"; };
+		E2D30DC81FBFE03A000A088A /* MJRefreshHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeader.m; sourceTree = "<group>"; };
+		E2D30DCC1FBFE03A000A088A /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
+		E2D30DCD1FBFE03A000A088A /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
+		E2D30DCE1FBFE03A000A088A /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
+		E2D30DCF1FBFE03A000A088A /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
+		E2D30DD01FBFE03A000A088A /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
+		E2D30DD11FBFE03A000A088A /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
+		E2D30DD31FBFE03A000A088A /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
+		E2D30DD41FBFE03A000A088A /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
+		E2D30DD51FBFE03A000A088A /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
+		E2D30DD61FBFE03A000A088A /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
+		E2D30DD71FBFE03A000A088A /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
+		E2D30DD81FBFE03A000A088A /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
+		E2D30DDA1FBFE03A000A088A /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshGifHeader.h; sourceTree = "<group>"; };
+		E2D30DDB1FBFE03A000A088A /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshGifHeader.m; sourceTree = "<group>"; };
+		E2D30DDC1FBFE03A000A088A /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshNormalHeader.h; sourceTree = "<group>"; };
+		E2D30DDD1FBFE03A000A088A /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshNormalHeader.m; sourceTree = "<group>"; };
+		E2D30DDE1FBFE03A000A088A /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshStateHeader.h; sourceTree = "<group>"; };
+		E2D30DDF1FBFE03A000A088A /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshStateHeader.m; sourceTree = "<group>"; };
+		E2D30DE01FBFE03A000A088A /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		E2D30DE11FBFE03A000A088A /* MJRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		E2D30DE21FBFE03A000A088A /* MJRefreshConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		E2D30DE31FBFE03A000A088A /* MJRefreshConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		E2D30DE41FBFE03A000A088A /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
+		E2D30DE51FBFE03A000A088A /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
+		E2D30DE61FBFE03A000A088A /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
+		E2D30DE71FBFE03A000A088A /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
+		E2D30DE81FBFE03A000A088A /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		E2D30DE91FBFE03A000A088A /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		E2D30DEA1FBFE03A000A088A /* UIView+MJExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
+		E2D30DEB1FBFE03A000A088A /* UIView+MJExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
+		E2DB22691FB5F36900AEA6A9 /* SPActionSetTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPActionSetTableViewInfo.h; sourceTree = "<group>"; };
+		E2DB226A1FB5F36900AEA6A9 /* SPActionSetTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPActionSetTableViewInfo.m; sourceTree = "<group>"; };
+		E2DB226C1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSceneSetActionDataSource.h; sourceTree = "<group>"; };
+		E2DB226D1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSceneSetActionDataSource.m; sourceTree = "<group>"; };
+		E2DB226F1FB5F6FF00AEA6A9 /* SPSceneSetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSceneSetCell.h; sourceTree = "<group>"; };
+		E2DB22701FB5F6FF00AEA6A9 /* SPSceneSetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSceneSetCell.m; sourceTree = "<group>"; };
+		E2DB22711FB5F6FF00AEA6A9 /* SPSceneSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPSceneSetCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +407,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C92A9A1FAF560C0011246E /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +428,211 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E21C1C461FC54AF00057B748 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				E21C1C471FC54B120057B748 /* SPSetting.h */,
+				E21C1C481FC54B120057B748 /* SPSetting.m */,
+				E21C1C4A1FC54BCC0057B748 /* SPPopUpManager.h */,
+				E21C1C4B1FC54BCC0057B748 /* SPPopUpManager.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		E21C1C4D1FC54DBF0057B748 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E21C1C4E1FC54E190057B748 /* SPStoreHelper.h */,
+				E21C1C4F1FC54E190057B748 /* SPStoreHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E21C1C541FC550F00057B748 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				E21C1C551FC551610057B748 /* SPShowGuideController.h */,
+				E21C1C561FC551610057B748 /* SPShowGuideController.m */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		E271F4D61FB30D66002488BB /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				E271F4D71FB30DB8002488BB /* SPConfigureUserCell.h */,
+				E271F4D81FB30DB8002488BB /* SPConfigureUserCell.m */,
+				E271F4D91FB30DB8002488BB /* SPConfigureUserCell.xib */,
+				E271F4DC1FB30DD1002488BB /* SPConfigureZonesCell.h */,
+				E271F4DD1FB30DD1002488BB /* SPConfigureZonesCell.m */,
+				E271F4DE1FB30DD1002488BB /* SPConfigureZonesCell.xib */,
+				E271F4E11FB30DF2002488BB /* SPConfigureServiceCell.h */,
+				E271F4E21FB30DF2002488BB /* SPConfigureServiceCell.m */,
+				E271F4E31FB30DF2002488BB /* SPConfigureServiceCell.xib */,
+				E271F4E61FB30E0C002488BB /* SPConfigureTriggersCell.h */,
+				E271F4E71FB30E0C002488BB /* SPConfigureTriggersCell.m */,
+				E271F4E81FB30E0C002488BB /* SPConfigureTriggersCell.xib */,
+				E271F4EB1FB31D72002488BB /* SPConfigureHeadView.h */,
+				E271F4EC1FB31D72002488BB /* SPConfigureHeadView.m */,
+				E271F4EE1FB31D81002488BB /* SPConfigureHeadView.xib */,
+				E2C9FA061FB999A200859BDD /* SPTriggerNormalCell.h */,
+				E2C9FA071FB999A200859BDD /* SPTriggerNormalCell.m */,
+				E2C9FA081FB999A200859BDD /* SPTriggerNormalCell.xib */,
+				E2C9FA0B1FB9E4E400859BDD /* SPTriggerPickDateCell.h */,
+				E2C9FA0C1FB9E4E400859BDD /* SPTriggerPickDateCell.m */,
+				E2C9FA0D1FB9E4E400859BDD /* SPTriggerPickDateCell.xib */,
+			);
+			path = Configure;
+			sourceTree = "<group>";
+		};
+		E271F5051FB45F97002488BB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E2C9FA101FBA6AE700859BDD /* Trigger */,
+				E271F50E1FB460BA002488BB /* SPScenesActionCell.h */,
+				E271F50F1FB460BA002488BB /* SPScenesActionCell.m */,
+				E271F5101FB460BA002488BB /* SPScenesActionCell.xib */,
+				E271F5161FB483F6002488BB /* SPSceneButton.h */,
+				E271F5171FB483F6002488BB /* SPSceneButton.m */,
+				E2DB226F1FB5F6FF00AEA6A9 /* SPSceneSetCell.h */,
+				E2DB22701FB5F6FF00AEA6A9 /* SPSceneSetCell.m */,
+				E2DB22711FB5F6FF00AEA6A9 /* SPSceneSetCell.xib */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E276E6BD1FBD2A5000A23796 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				E276E6C31FBD55DF00A23796 /* SPDatePicker.h */,
+				E276E6C41FBD55DF00A23796 /* SPDatePicker.m */,
+				E276E6C61FBD561000A23796 /* SPDatePicker_DateModel.h */,
+				E276E6C71FBD561000A23796 /* SPDatePicker_DateModel.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		E2889CE61FAF0BE600590DD2 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				E21C1C511FC54EB60057B748 /* SFHFKeychainUtils.h */,
+				E21C1C521FC54EB60057B748 /* SFHFKeychainUtils.m */,
+				E2889CE71FAF0BEF00590DD2 /* UIView+Extensions.h */,
+				E2889CE81FAF0BEF00590DD2 /* UIView+Extensions.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		E2889CED1FAF0E3400590DD2 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				E21C1C4D1FC54DBF0057B748 /* Helper */,
+				E21C1C461FC54AF00057B748 /* Setting */,
+				E2D30DBD1FBFE03A000A088A /* MJRefresh */,
+				E276E6BD1FBD2A5000A23796 /* NSDate */,
+				E2889CF31FAF0F1C00590DD2 /* Macro */,
+				E2889CF01FAF0E5A00590DD2 /* Category */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		E2889CF01FAF0E5A00590DD2 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				E271F5191FB498D3002488BB /* UIView+Extensions.h */,
+				E271F51A1FB498D3002488BB /* UIView+Extensions.m */,
+				E2C92AB71FB1326E0011246E /* PPUIFont.h */,
+				E2C92AB61FB1326E0011246E /* PPUIFont.m */,
+				E2889CF21FAF0EA400590DD2 /* UIImage+Common.h */,
+				E2889CF11FAF0EA400590DD2 /* UIImage+Common.m */,
+				E21C1C581FC551CC0057B748 /* NSObject+SPURLRoute.h */,
+				E21C1C591FC551CC0057B748 /* NSObject+SPURLRoute.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		E2889CF31FAF0F1C00590DD2 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				E2C9F9CE1FB7473400859BDD /* MBProgressHUD.h */,
+				E2C9F9CD1FB7473400859BDD /* MBProgressHUD.m */,
+				E2889CF41FAF0F3500590DD2 /* Help.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		E2889CF51FAF10C800590DD2 /* Accessory */ = {
+			isa = PBXGroup;
+			children = (
+				E2C92A9E1FB0AA6B0011246E /* SPAccessoryController.h */,
+				E2C92A9F1FB0AA6B0011246E /* SPAccessoryController.m */,
+				E2C92AA01FB0AA6B0011246E /* SPAccessoryController.xib */,
+				E2CD36A71FB1E2410013FA50 /* SPAccessoryDetailController.h */,
+				E2CD36A81FB1E2410013FA50 /* SPAccessoryDetailController.m */,
+				E2CD36A91FB1E2410013FA50 /* SPAccessoryDetailController.xib */,
+				E2CD36B21FB27CFF0013FA50 /* SPAccessoryDataSource.h */,
+				E2CD36B31FB27CFF0013FA50 /* SPAccessoryDataSource.m */,
+			);
+			path = Accessory;
+			sourceTree = "<group>";
+		};
+		E2889CF61FAF10C800590DD2 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E2C9F9D11FB7DBA200859BDD /* SPAboutController.h */,
+				E2C9F9D21FB7DBA200859BDD /* SPAboutController.m */,
+				E2C9F9D31FB7DBA200859BDD /* SPAboutController.xib */,
+				E2C9F9D61FB7E2F100859BDD /* WarningController.h */,
+				E2C9F9D71FB7E2F100859BDD /* WarningController.m */,
+				E2C9F9D81FB7E2F100859BDD /* WarningController.xib */,
+				E2C9F9DB1FB82A3E00859BDD /* SPAboutUSController.h */,
+				E2C9F9DC1FB82A3E00859BDD /* SPAboutUSController.m */,
+				E2C9F9DD1FB82A3E00859BDD /* SPAboutUSController.xib */,
+				E2C9F9E01FB82F7B00859BDD /* SPVersionController.h */,
+				E2C9F9E11FB82F7B00859BDD /* SPVersionController.m */,
+				E2C9F9E21FB82F7B00859BDD /* SPVersionController.xib */,
+				E2C9F9E51FB833AE00859BDD /* SPHelpController.h */,
+				E2C9F9E61FB833AE00859BDD /* SPHelpController.m */,
+				E2C9F9E71FB833AE00859BDD /* SPHelpController.xib */,
+				E2C9F9ED1FB8903D00859BDD /* SPHelpDataSource.h */,
+				E2C9F9EE1FB8903D00859BDD /* SPHelpDataSource.m */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		E2889D0A1FAF397800590DD2 /* SPTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				E2889D0B1FAF399B00590DD2 /* SPTitleView.h */,
+				E2889D0C1FAF399B00590DD2 /* SPTitleView.m */,
+			);
+			path = SPTitleView;
+			sourceTree = "<group>";
+		};
+		E2889D131FAF434800590DD2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E2889D141FAF438000590DD2 /* SPShowHomeCell.h */,
+				E2889D151FAF438000590DD2 /* SPShowHomeCell.m */,
+				E2889D161FAF438000590DD2 /* SPShowHomeCell.xib */,
+				E2889D191FAF439800590DD2 /* SPAddHomeCell.h */,
+				E2889D1A1FAF439800590DD2 /* SPAddHomeCell.m */,
+				E2889D1B1FAF439800590DD2 /* SPAddHomeCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E2889D1E1FAF43E600590DD2 /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				E2889D211FAF444400590DD2 /* SPCell.h */,
+				E2889D221FAF444400590DD2 /* SPCell.m */,
+				E271F50B1FB4604C002488BB /* SPBaseCollectionCell.h */,
+				E271F50C1FB4604C002488BB /* SPBaseCollectionCell.m */,
+			);
+			path = BaseCell;
+			sourceTree = "<group>";
+		};
 		E2A947F91FAF02C000922445 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +640,7 @@
 				E2A9481D1FAF02C000922445 /* SmartPlugTests */,
 				E2A948281FAF02C000922445 /* SmartPlugUITests */,
 				E2A948031FAF02C000922445 /* Products */,
+				E2C92A981FAF560C0011246E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,13 +657,15 @@
 		E2A948041FAF02C000922445 /* SmartPlug */ = {
 			isa = PBXGroup;
 			children = (
+				E2C92A971FAF560C0011246E /* SmartPlug.entitlements */,
+				E2889CED1FAF0E3400590DD2 /* General */,
+				E2889CE61FAF0BE600590DD2 /* tools */,
+				E2A9483F1FAF06BD00922445 /* Controller */,
+				E2A9483D1FAF06BD00922445 /* Model */,
+				E2A9483E1FAF06BD00922445 /* View */,
 				E2A948051FAF02C000922445 /* AppDelegate.h */,
 				E2A948061FAF02C000922445 /* AppDelegate.m */,
-				E2A948081FAF02C000922445 /* ViewController.h */,
-				E2A948091FAF02C000922445 /* ViewController.m */,
-				E2A9480B1FAF02C000922445 /* Main.storyboard */,
 				E2A9480E1FAF02C000922445 /* Assets.xcassets */,
-				E2A948101FAF02C000922445 /* LaunchScreen.storyboard */,
 				E2A948131FAF02C000922445 /* Info.plist */,
 				E2A948141FAF02C000922445 /* main.m */,
 			);
@@ -130,6 +688,294 @@
 				E2A9482B1FAF02C000922445 /* Info.plist */,
 			);
 			path = SmartPlugUITests;
+			sourceTree = "<group>";
+		};
+		E2A9483D1FAF06BD00922445 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2C92A9B1FAF58940011246E /* SPHomeModel.h */,
+				E2C92A9C1FAF58940011246E /* SPHomeModel.m */,
+				E2C92AB31FB0B53C0011246E /* SPAccessoryInfo.h */,
+				E2C92AB41FB0B53C0011246E /* SPAccessoryInfo.m */,
+				E2CD36AF1FB1E7210013FA50 /* SPAccessoryTableViewInfo.h */,
+				E2CD36B01FB1E7210013FA50 /* SPAccessoryTableViewInfo.m */,
+				E271F4D31FB30081002488BB /* SPConfigureTableViewInfo.h */,
+				E271F4D41FB30081002488BB /* SPConfigureTableViewInfo.m */,
+				E271F4F81FB3FD08002488BB /* SPConfigureZoneModel.h */,
+				E271F4F91FB3FD08002488BB /* SPConfigureZoneModel.m */,
+				E271F5131FB476C3002488BB /* SPActionSetModel.h */,
+				E271F5141FB476C3002488BB /* SPActionSetModel.m */,
+				E2DB22691FB5F36900AEA6A9 /* SPActionSetTableViewInfo.h */,
+				E2DB226A1FB5F36900AEA6A9 /* SPActionSetTableViewInfo.m */,
+				E2C9F9EA1FB88A6700859BDD /* SPHelpTableViewInfo.h */,
+				E2C9F9EB1FB88A6700859BDD /* SPHelpTableViewInfo.m */,
+				E2C9FA031FB9931C00859BDD /* SPTriggerTableViewInfo.h */,
+				E2C9FA041FB9931C00859BDD /* SPTriggerTableViewInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2A9483E1FAF06BD00922445 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2C9F9F01FB93AB600859BDD /* About */,
+				E271F5051FB45F97002488BB /* Scenes */,
+				E271F4D61FB30D66002488BB /* Configure */,
+				E2C92AA31FB0B1530011246E /* Accessory */,
+				E2889D1E1FAF43E600590DD2 /* BaseCell */,
+				E2889D131FAF434800590DD2 /* Home */,
+				E2889D0A1FAF397800590DD2 /* SPTitleView */,
+				E2A948451FAF06EB00922445 /* Base */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2A9483F1FAF06BD00922445 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E21C1C541FC550F00057B748 /* Guide */,
+				E2A948431FAF06BE00922445 /* Home */,
+				E2889CF51FAF10C800590DD2 /* Accessory */,
+				E2889CF61FAF10C800590DD2 /* About */,
+				E2A948421FAF06BE00922445 /* Configure */,
+				E2A948441FAF06BE00922445 /* Scenes */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2A948421FAF06BE00922445 /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				E271F4CB1FB2FE92002488BB /* SPConfigureController.h */,
+				E271F4CC1FB2FE92002488BB /* SPConfigureController.m */,
+				E271F4CD1FB2FE92002488BB /* SPConfigureController.xib */,
+				E271F4D01FB2FFEB002488BB /* SPConfigureDataSource.h */,
+				E271F4D11FB2FFEB002488BB /* SPConfigureDataSource.m */,
+				E2C9F9FB1FB98FD000859BDD /* SPSetTriggerController.h */,
+				E2C9F9FC1FB98FD000859BDD /* SPSetTriggerController.m */,
+				E2C9F9FD1FB98FD000859BDD /* SPSetTriggerController.xib */,
+				E2C9FA001FB9927300859BDD /* SPTriggerDataSource.h */,
+				E2C9FA011FB9927300859BDD /* SPTriggerDataSource.m */,
+				E271F4F31FB3F75B002488BB /* SPConfigureChooseRoomController.h */,
+				E271F4F41FB3F75B002488BB /* SPConfigureChooseRoomController.m */,
+				E271F4F51FB3F75B002488BB /* SPConfigureChooseRoomController.xib */,
+				E271F4FB1FB44916002488BB /* SPConfigureChooseServiceController.h */,
+				E271F4FC1FB44916002488BB /* SPConfigureChooseServiceController.m */,
+				E271F4FD1FB44916002488BB /* SPConfigureChooseServiceController.xib */,
+			);
+			path = Configure;
+			sourceTree = "<group>";
+		};
+		E2A948431FAF06BE00922445 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E2889D0E1FAF3FA100590DD2 /* SPHomeController.h */,
+				E2889D0F1FAF3FA100590DD2 /* SPHomeController.m */,
+				E2889D101FAF3FA100590DD2 /* SPHomeController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E2A948441FAF06BE00922445 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E271F5001FB453FC002488BB /* SPScenesController.h */,
+				E271F5011FB453FC002488BB /* SPScenesController.m */,
+				E271F5021FB453FC002488BB /* SPScenesController.xib */,
+				E27714601FB52AB600279426 /* SPSceneSetActionController.h */,
+				E27714611FB52AB600279426 /* SPSceneSetActionController.m */,
+				E27714621FB52AB600279426 /* SPSceneSetActionController.xib */,
+				E2DB226C1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.h */,
+				E2DB226D1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.m */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E2A948451FAF06EB00922445 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E2CD36B51FB27D220013FA50 /* SPTableViewDataSource.h */,
+				E2CD36B61FB27D220013FA50 /* SPTableViewDataSource.m */,
+				E2889CE31FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.h */,
+				E2889CE41FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.m */,
+				E2A948461FAF071500922445 /* SPBaseController.h */,
+				E2A948471FAF071500922445 /* SPBaseController.m */,
+				E2889CEA1FAF0D6E00590DD2 /* SPBaseNavigationController.h */,
+				E2889CEB1FAF0D6E00590DD2 /* SPBaseNavigationController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E2C92A981FAF560C0011246E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2C92A991FAF560C0011246E /* HomeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2C92AA31FB0B1530011246E /* Accessory */ = {
+			isa = PBXGroup;
+			children = (
+				E2CD36B81FB283900013FA50 /* AccessoryDetail */,
+				E2C92AA91FB0B25C0011246E /* SPRoomCell.h */,
+				E2C92AAA1FB0B25C0011246E /* SPRoomCell.m */,
+				E2C92AAB1FB0B25C0011246E /* SPRoomCell.xib */,
+				E2C92AA41FB0B1830011246E /* SPAddRoomCell.h */,
+				E2C92AA51FB0B1830011246E /* SPAddRoomCell.m */,
+				E2C92AA61FB0B1830011246E /* SPAddRoomCell.xib */,
+				E2C92AAE1FB0B29B0011246E /* SPAccessoryCell.h */,
+				E2C92AAF1FB0B29B0011246E /* SPAccessoryCell.m */,
+				E2C92AB01FB0B29B0011246E /* SPAccessoryCell.xib */,
+			);
+			path = Accessory;
+			sourceTree = "<group>";
+		};
+		E2C9F9F01FB93AB600859BDD /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E2C9F9F61FB945B600859BDD /* SPHelpHeaderView.h */,
+				E2C9F9F71FB945B600859BDD /* SPHelpHeaderView.m */,
+				E2C9F9F91FB945D100859BDD /* SPHelpHeaderView.xib */,
+				E2C9F9F11FB9426200859BDD /* SPHelpDetailsCell.h */,
+				E2C9F9F21FB9426200859BDD /* SPHelpDetailsCell.m */,
+				E2C9F9F31FB9426200859BDD /* SPHelpDetailsCell.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		E2C9FA101FBA6AE700859BDD /* Trigger */ = {
+			isa = PBXGroup;
+			children = (
+				E2C9FA111FBA6B2100859BDD /* SPTriggerNameView.h */,
+				E2C9FA121FBA6B2100859BDD /* SPTriggerNameView.m */,
+				E2C9FA141FBA6B2D00859BDD /* SPTriggerNameView.xib */,
+				E2C9FA161FBA6CEC00859BDD /* SPTriggerSettingView.h */,
+				E2C9FA171FBA6CEC00859BDD /* SPTriggerSettingView.m */,
+				E2C9FA191FBA6CF800859BDD /* SPTriggerSettingView.xib */,
+				E2C9FA1B1FBA6D2300859BDD /* SPTriggerNormalView.h */,
+				E2C9FA1C1FBA6D2300859BDD /* SPTriggerNormalView.m */,
+				E2C9FA1E1FBA6D2F00859BDD /* SPTriggerNormalView.xib */,
+			);
+			path = Trigger;
+			sourceTree = "<group>";
+		};
+		E2CD36B81FB283900013FA50 /* AccessoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E271F4F11FB3D29D002488BB /* PPSwitch.h */,
+				E271F4F01FB3D29D002488BB /* PPSwitch.m */,
+				E2CD36B91FB2842F0013FA50 /* SPAccessoryStatusCell.h */,
+				E2CD36BA1FB2842F0013FA50 /* SPAccessoryStatusCell.m */,
+				E2CD36BB1FB2842F0013FA50 /* SPAccessoryStatusCell.xib */,
+				E2CD36BE1FB284540013FA50 /* SPAccessoryCommonCell.h */,
+				E2CD36BF1FB284540013FA50 /* SPAccessoryCommonCell.m */,
+				E2CD36C01FB284540013FA50 /* SPAccessoryCommonCell.xib */,
+				E2CD36C31FB2850F0013FA50 /* SPAccessoryTypeCell.h */,
+				E2CD36C41FB2850F0013FA50 /* SPAccessoryTypeCell.m */,
+				E2CD36C51FB2850F0013FA50 /* SPAccessoryTypeCell.xib */,
+				E2CD36C81FB285490013FA50 /* SPAccessoryRecognizeCell.h */,
+				E2CD36C91FB285490013FA50 /* SPAccessoryRecognizeCell.m */,
+				E2CD36CA1FB285490013FA50 /* SPAccessoryRecognizeCell.xib */,
+				E271F4C81FB2E13C002488BB /* SPAccessoryDetailHeadView.h */,
+				E271F4C91FB2E13C002488BB /* SPAccessoryDetailHeadView.m */,
+			);
+			path = AccessoryDetail;
+			sourceTree = "<group>";
+		};
+		E2D30DBD1FBFE03A000A088A /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DBE1FBFE03A000A088A /* Base */,
+				E2D30DC91FBFE03A000A088A /* Custom */,
+				E2D30DE01FBFE03A000A088A /* MJRefresh.bundle */,
+				E2D30DE11FBFE03A000A088A /* MJRefresh.h */,
+				E2D30DE21FBFE03A000A088A /* MJRefreshConst.h */,
+				E2D30DE31FBFE03A000A088A /* MJRefreshConst.m */,
+				E2D30DE41FBFE03A000A088A /* NSBundle+MJRefresh.h */,
+				E2D30DE51FBFE03A000A088A /* NSBundle+MJRefresh.m */,
+				E2D30DE61FBFE03A000A088A /* UIScrollView+MJExtension.h */,
+				E2D30DE71FBFE03A000A088A /* UIScrollView+MJExtension.m */,
+				E2D30DE81FBFE03A000A088A /* UIScrollView+MJRefresh.h */,
+				E2D30DE91FBFE03A000A088A /* UIScrollView+MJRefresh.m */,
+				E2D30DEA1FBFE03A000A088A /* UIView+MJExtension.h */,
+				E2D30DEB1FBFE03A000A088A /* UIView+MJExtension.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		E2D30DBE1FBFE03A000A088A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DBF1FBFE03A000A088A /* MJRefreshAutoFooter.h */,
+				E2D30DC01FBFE03A000A088A /* MJRefreshAutoFooter.m */,
+				E2D30DC11FBFE03A000A088A /* MJRefreshBackFooter.h */,
+				E2D30DC21FBFE03A000A088A /* MJRefreshBackFooter.m */,
+				E2D30DC31FBFE03A000A088A /* MJRefreshComponent.h */,
+				E2D30DC41FBFE03A000A088A /* MJRefreshComponent.m */,
+				E2D30DC51FBFE03A000A088A /* MJRefreshFooter.h */,
+				E2D30DC61FBFE03A000A088A /* MJRefreshFooter.m */,
+				E2D30DC71FBFE03A000A088A /* MJRefreshHeader.h */,
+				E2D30DC81FBFE03A000A088A /* MJRefreshHeader.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E2D30DC91FBFE03A000A088A /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DCA1FBFE03A000A088A /* Footer */,
+				E2D30DD91FBFE03A000A088A /* Header */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		E2D30DCA1FBFE03A000A088A /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DCB1FBFE03A000A088A /* Auto */,
+				E2D30DD21FBFE03A000A088A /* Back */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		E2D30DCB1FBFE03A000A088A /* Auto */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DCC1FBFE03A000A088A /* MJRefreshAutoGifFooter.h */,
+				E2D30DCD1FBFE03A000A088A /* MJRefreshAutoGifFooter.m */,
+				E2D30DCE1FBFE03A000A088A /* MJRefreshAutoNormalFooter.h */,
+				E2D30DCF1FBFE03A000A088A /* MJRefreshAutoNormalFooter.m */,
+				E2D30DD01FBFE03A000A088A /* MJRefreshAutoStateFooter.h */,
+				E2D30DD11FBFE03A000A088A /* MJRefreshAutoStateFooter.m */,
+			);
+			path = Auto;
+			sourceTree = "<group>";
+		};
+		E2D30DD21FBFE03A000A088A /* Back */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DD31FBFE03A000A088A /* MJRefreshBackGifFooter.h */,
+				E2D30DD41FBFE03A000A088A /* MJRefreshBackGifFooter.m */,
+				E2D30DD51FBFE03A000A088A /* MJRefreshBackNormalFooter.h */,
+				E2D30DD61FBFE03A000A088A /* MJRefreshBackNormalFooter.m */,
+				E2D30DD71FBFE03A000A088A /* MJRefreshBackStateFooter.h */,
+				E2D30DD81FBFE03A000A088A /* MJRefreshBackStateFooter.m */,
+			);
+			path = Back;
+			sourceTree = "<group>";
+		};
+		E2D30DD91FBFE03A000A088A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				E2D30DDA1FBFE03A000A088A /* MJRefreshGifHeader.h */,
+				E2D30DDB1FBFE03A000A088A /* MJRefreshGifHeader.m */,
+				E2D30DDC1FBFE03A000A088A /* MJRefreshNormalHeader.h */,
+				E2D30DDD1FBFE03A000A088A /* MJRefreshNormalHeader.m */,
+				E2D30DDE1FBFE03A000A088A /* MJRefreshStateHeader.h */,
+				E2D30DDF1FBFE03A000A088A /* MJRefreshStateHeader.m */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +1046,11 @@
 					E2A948011FAF02C000922445 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
 					};
 					E2A948191FAF02C000922445 = {
 						CreatedOnToolsVersion = 9.0;
@@ -238,9 +1089,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A948121FAF02C000922445 /* LaunchScreen.storyboard in Resources */,
+				E2CD36AB1FB1E2410013FA50 /* SPAccessoryDetailController.xib in Resources */,
+				E2C9FA1A1FBA6CF800859BDD /* SPTriggerSettingView.xib in Resources */,
+				E2C9F9FA1FB945D100859BDD /* SPHelpHeaderView.xib in Resources */,
+				E2889D181FAF438000590DD2 /* SPShowHomeCell.xib in Resources */,
+				E2C9F9E91FB833AE00859BDD /* SPHelpController.xib in Resources */,
+				E2CD36C21FB284540013FA50 /* SPAccessoryCommonCell.xib in Resources */,
+				E2C92AB21FB0B29B0011246E /* SPAccessoryCell.xib in Resources */,
+				E2C9F9DA1FB7E2F100859BDD /* WarningController.xib in Resources */,
+				E2C9F9DF1FB82A3E00859BDD /* SPAboutUSController.xib in Resources */,
+				E271F4E01FB30DD1002488BB /* SPConfigureZonesCell.xib in Resources */,
+				E2C9FA0A1FB999A200859BDD /* SPTriggerNormalCell.xib in Resources */,
+				E271F5041FB453FC002488BB /* SPScenesController.xib in Resources */,
+				E27714641FB52AB600279426 /* SPSceneSetActionController.xib in Resources */,
+				E2CD36CC1FB285490013FA50 /* SPAccessoryRecognizeCell.xib in Resources */,
+				E2889D121FAF3FA100590DD2 /* SPHomeController.xib in Resources */,
+				E2889D1D1FAF439800590DD2 /* SPAddHomeCell.xib in Resources */,
+				E271F5121FB460BA002488BB /* SPScenesActionCell.xib in Resources */,
+				E2C9FA151FBA6B2D00859BDD /* SPTriggerNameView.xib in Resources */,
+				E2C92AA81FB0B1830011246E /* SPAddRoomCell.xib in Resources */,
+				E2CD36C71FB2850F0013FA50 /* SPAccessoryTypeCell.xib in Resources */,
+				E2C9F9D51FB7DBA200859BDD /* SPAboutController.xib in Resources */,
+				E2CD36BD1FB2842F0013FA50 /* SPAccessoryStatusCell.xib in Resources */,
+				E2C9F9FF1FB98FD000859BDD /* SPSetTriggerController.xib in Resources */,
 				E2A9480F1FAF02C000922445 /* Assets.xcassets in Resources */,
-				E2A9480D1FAF02C000922445 /* Main.storyboard in Resources */,
+				E271F4DB1FB30DB8002488BB /* SPConfigureUserCell.xib in Resources */,
+				E271F4FF1FB44916002488BB /* SPConfigureChooseServiceController.xib in Resources */,
+				E271F4CF1FB2FE92002488BB /* SPConfigureController.xib in Resources */,
+				E271F4E51FB30DF2002488BB /* SPConfigureServiceCell.xib in Resources */,
+				E2C9F9F51FB9426200859BDD /* SPHelpDetailsCell.xib in Resources */,
+				E271F4EA1FB30E0C002488BB /* SPConfigureTriggersCell.xib in Resources */,
+				E2C92AA21FB0AA6B0011246E /* SPAccessoryController.xib in Resources */,
+				E2C9FA1F1FBA6D2F00859BDD /* SPTriggerNormalView.xib in Resources */,
+				E2C9FA0F1FB9E4E400859BDD /* SPTriggerPickDateCell.xib in Resources */,
+				E2DB22731FB5F70000AEA6A9 /* SPSceneSetCell.xib in Resources */,
+				E271F4F71FB3F75B002488BB /* SPConfigureChooseRoomController.xib in Resources */,
+				E271F4EF1FB31D81002488BB /* SPConfigureHeadView.xib in Resources */,
+				E2C92AAD1FB0B25C0011246E /* SPRoomCell.xib in Resources */,
+				E2C9F9E41FB82F7B00859BDD /* SPVersionController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,9 +1151,98 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A9480A1FAF02C000922445 /* ViewController.m in Sources */,
+				E2D30DEC1FBFE1F2000A088A /* MJRefreshAutoFooter.m in Sources */,
+				E2D30DED1FBFE1F2000A088A /* MJRefreshBackFooter.m in Sources */,
+				E2D30DEE1FBFE1F2000A088A /* MJRefreshComponent.m in Sources */,
+				E2D30DEF1FBFE1F2000A088A /* MJRefreshFooter.m in Sources */,
+				E2D30DF01FBFE1F2000A088A /* MJRefreshHeader.m in Sources */,
+				E2D30DF11FBFE1F2000A088A /* MJRefreshAutoGifFooter.m in Sources */,
+				E2D30DF21FBFE1F2000A088A /* MJRefreshAutoNormalFooter.m in Sources */,
+				E2D30DF31FBFE1F2000A088A /* MJRefreshAutoStateFooter.m in Sources */,
+				E21C1C531FC54EB60057B748 /* SFHFKeychainUtils.m in Sources */,
+				E21C1C491FC54B120057B748 /* SPSetting.m in Sources */,
+				E2D30DF41FBFE1F2000A088A /* MJRefreshBackGifFooter.m in Sources */,
+				E2D30DF51FBFE1F2000A088A /* MJRefreshBackNormalFooter.m in Sources */,
+				E21C1C501FC54E190057B748 /* SPStoreHelper.m in Sources */,
+				E2D30DF61FBFE1F2000A088A /* MJRefreshBackStateFooter.m in Sources */,
+				E2D30DF71FBFE1F2000A088A /* MJRefreshGifHeader.m in Sources */,
+				E2D30DF81FBFE1F2000A088A /* MJRefreshNormalHeader.m in Sources */,
+				E2D30DF91FBFE1F2000A088A /* MJRefreshStateHeader.m in Sources */,
+				E2D30DFA1FBFE1F2000A088A /* MJRefreshConst.m in Sources */,
+				E2D30DFB1FBFE1F2000A088A /* NSBundle+MJRefresh.m in Sources */,
+				E2D30DFC1FBFE1F2000A088A /* UIScrollView+MJExtension.m in Sources */,
+				E2D30DFD1FBFE1F2000A088A /* UIScrollView+MJRefresh.m in Sources */,
+				E2D30DFE1FBFE1F2000A088A /* UIView+MJExtension.m in Sources */,
+				E2C9F9F41FB9426200859BDD /* SPHelpDetailsCell.m in Sources */,
+				E21C1C4C1FC54BCC0057B748 /* SPPopUpManager.m in Sources */,
+				E2C9FA051FB9931C00859BDD /* SPTriggerTableViewInfo.m in Sources */,
+				E2C9F9D01FB7480E00859BDD /* MBProgressHUD.m in Sources */,
+				E2889D0D1FAF399B00590DD2 /* SPTitleView.m in Sources */,
+				E2A948481FAF071500922445 /* SPBaseController.m in Sources */,
+				E2C92AB51FB0B53C0011246E /* SPAccessoryInfo.m in Sources */,
+				E2CD36B41FB27CFF0013FA50 /* SPAccessoryDataSource.m in Sources */,
+				E2C9F9E31FB82F7B00859BDD /* SPVersionController.m in Sources */,
+				E2C92AA71FB0B1830011246E /* SPAddRoomCell.m in Sources */,
+				E271F4DF1FB30DD1002488BB /* SPConfigureZonesCell.m in Sources */,
+				E2889D1C1FAF439800590DD2 /* SPAddHomeCell.m in Sources */,
+				E2C9F9F81FB945B600859BDD /* SPHelpHeaderView.m in Sources */,
+				E2C9F9EC1FB88A6700859BDD /* SPHelpTableViewInfo.m in Sources */,
+				E271F4E41FB30DF2002488BB /* SPConfigureServiceCell.m in Sources */,
+				E2CD36BC1FB2842F0013FA50 /* SPAccessoryStatusCell.m in Sources */,
+				E2C9FA021FB9927300859BDD /* SPTriggerDataSource.m in Sources */,
+				E2C92AAC1FB0B25C0011246E /* SPRoomCell.m in Sources */,
+				E271F4FE1FB44916002488BB /* SPConfigureChooseServiceController.m in Sources */,
+				E2C9F9FE1FB98FD000859BDD /* SPSetTriggerController.m in Sources */,
+				E271F50D1FB4604C002488BB /* SPBaseCollectionCell.m in Sources */,
+				E2CD36CB1FB285490013FA50 /* SPAccessoryRecognizeCell.m in Sources */,
+				E2C92AA11FB0AA6B0011246E /* SPAccessoryController.m in Sources */,
+				E271F4E91FB30E0C002488BB /* SPConfigureTriggersCell.m in Sources */,
+				E2CD36B11FB1E7210013FA50 /* SPAccessoryTableViewInfo.m in Sources */,
+				E2C92A9D1FAF58940011246E /* SPHomeModel.m in Sources */,
+				E2C9F9DE1FB82A3E00859BDD /* SPAboutUSController.m in Sources */,
+				E2C9FA131FBA6B2100859BDD /* SPTriggerNameView.m in Sources */,
+				E271F4F21FB3D29D002488BB /* PPSwitch.m in Sources */,
+				E271F4FA1FB3FD08002488BB /* SPConfigureZoneModel.m in Sources */,
+				E271F5111FB460BA002488BB /* SPScenesActionCell.m in Sources */,
+				E2889CEC1FAF0D6E00590DD2 /* SPBaseNavigationController.m in Sources */,
+				E2CD36C11FB284540013FA50 /* SPAccessoryCommonCell.m in Sources */,
+				E271F5151FB476C3002488BB /* SPActionSetModel.m in Sources */,
+				E2C9FA181FBA6CEC00859BDD /* SPTriggerSettingView.m in Sources */,
+				E276E6C51FBD55DF00A23796 /* SPDatePicker.m in Sources */,
+				E2C9FA0E1FB9E4E400859BDD /* SPTriggerPickDateCell.m in Sources */,
+				E271F5181FB483F6002488BB /* SPSceneButton.m in Sources */,
+				E2889D111FAF3FA100590DD2 /* SPHomeController.m in Sources */,
+				E2889D171FAF438000590DD2 /* SPShowHomeCell.m in Sources */,
+				E2CD36C61FB2850F0013FA50 /* SPAccessoryTypeCell.m in Sources */,
+				E2DB226E1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.m in Sources */,
+				E271F4CA1FB2E13C002488BB /* SPAccessoryDetailHeadView.m in Sources */,
+				E2C92AB11FB0B29B0011246E /* SPAccessoryCell.m in Sources */,
+				E2C9F9D41FB7DBA200859BDD /* SPAboutController.m in Sources */,
+				E271F4DA1FB30DB8002488BB /* SPConfigureUserCell.m in Sources */,
+				E271F4CE1FB2FE92002488BB /* SPConfigureController.m in Sources */,
+				E2CD36AA1FB1E2410013FA50 /* SPAccessoryDetailController.m in Sources */,
+				E2C9F9E81FB833AE00859BDD /* SPHelpController.m in Sources */,
+				E2889D231FAF444400590DD2 /* SPCell.m in Sources */,
 				E2A948151FAF02C000922445 /* main.m in Sources */,
+				E271F4D51FB30081002488BB /* SPConfigureTableViewInfo.m in Sources */,
+				E27714631FB52AB600279426 /* SPSceneSetActionController.m in Sources */,
+				E271F5031FB453FC002488BB /* SPScenesController.m in Sources */,
+				E21C1C571FC551610057B748 /* SPShowGuideController.m in Sources */,
+				E2CD36B71FB27D220013FA50 /* SPTableViewDataSource.m in Sources */,
+				E2C9F9EF1FB8903D00859BDD /* SPHelpDataSource.m in Sources */,
+				E276E6C81FBD561000A23796 /* SPDatePicker_DateModel.m in Sources */,
+				E2C9FA1D1FBA6D2300859BDD /* SPTriggerNormalView.m in Sources */,
+				E271F4F61FB3F75B002488BB /* SPConfigureChooseRoomController.m in Sources */,
+				E2DB22721FB5F6FF00AEA6A9 /* SPSceneSetCell.m in Sources */,
+				E2DB226B1FB5F36900AEA6A9 /* SPActionSetTableViewInfo.m in Sources */,
+				E2889CE91FAF0BEF00590DD2 /* UIView+Extensions.m in Sources */,
+				E2C9FA091FB999A200859BDD /* SPTriggerNormalCell.m in Sources */,
+				E271F4D21FB2FFEB002488BB /* SPConfigureDataSource.m in Sources */,
 				E2A948071FAF02C000922445 /* AppDelegate.m in Sources */,
+				E21C1C5A1FC551CC0057B748 /* NSObject+SPURLRoute.m in Sources */,
+				E2889CE51FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.m in Sources */,
+				E2C9F9D91FB7E2F100859BDD /* WarningController.m in Sources */,
+				E271F4ED1FB31D72002488BB /* SPConfigureHeadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,25 +1276,6 @@
 			targetProxy = E2A948261FAF02C000922445 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E2A9480B1FAF02C000922445 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E2A9480C1FAF02C000922445 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E2A948101FAF02C000922445 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E2A948111FAF02C000922445 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E2A9482C1FAF02C000922445 /* Debug */ = {
@@ -430,12 +1386,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = SmartPlug/SmartPlug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AJP77DB44;
 				INFOPLIST_FILE = SmartPlug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.SmartPlug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -443,12 +1404,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = SmartPlug/SmartPlug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AJP77DB44;
 				INFOPLIST_FILE = SmartPlug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.SmartPlug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -457,6 +1423,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AJP77DB44;
 				INFOPLIST_FILE = SmartPlugTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.SmartPlugTests;
@@ -471,6 +1438,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6AJP77DB44;
 				INFOPLIST_FILE = SmartPlugTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.SmartPlugTests;

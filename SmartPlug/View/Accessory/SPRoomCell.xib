@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Roman</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="KGk-i7-Jjw" customClass="SPRoomCell">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="325" height="102.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPV-ap-n6X">
+                        <rect key="frame" x="18" y="8" width="289" height="86.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4g-eQ-xv6">
+                                <rect key="frame" x="10" y="16" width="46" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choose_select" translatesAutoresizingMaskIntoConstraints="NO" id="RsA-Zy-Bu4">
+                                <rect key="frame" x="256" y="32" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="XwC-bU-9pl"/>
+                                    <constraint firstAttribute="height" constant="23" id="mni-tB-imK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RsA-Zy-Bu4" firstAttribute="centerY" secondItem="JPV-ap-n6X" secondAttribute="centerY" id="DKA-mf-NV9"/>
+                            <constraint firstItem="N4g-eQ-xv6" firstAttribute="centerY" secondItem="JPV-ap-n6X" secondAttribute="centerY" id="ryS-fe-HJ1"/>
+                            <constraint firstItem="N4g-eQ-xv6" firstAttribute="leading" secondItem="JPV-ap-n6X" secondAttribute="leading" constant="15" id="y0H-6t-gqr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RsA-Zy-Bu4" secondAttribute="trailing" constant="2" id="yh8-Ap-jOV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="JPV-ap-n6X" secondAttribute="trailing" constant="10" id="23D-1v-PI8"/>
+                    <constraint firstItem="JPV-ap-n6X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="AVd-cW-gqv"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JPV-ap-n6X" secondAttribute="bottom" id="JV9-qy-teB"/>
+                    <constraint firstItem="JPV-ap-n6X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="nsh-pH-8B1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="JPV-ap-n6X" id="iAG-Ke-3Vk"/>
+                <outlet property="chooseImageView" destination="RsA-Zy-Bu4" id="vEy-aD-P8p"/>
+                <outlet property="roomLbl" destination="N4g-eQ-xv6" id="kdb-C2-nNZ"/>
+            </connections>
+            <point key="canvasLocation" x="-248.5" y="-123.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="choose_select" width="24" height="24"/>
+    </resources>
+</document>

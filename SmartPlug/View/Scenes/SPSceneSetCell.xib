@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Roman</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="95" id="KGk-i7-Jjw" customClass="SPSceneSetCell">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="95"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="94.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9h6-WH-iPr" userLabel="bgView">
+                        <rect key="frame" x="20" y="0.0" width="302" height="94.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="电源状态:  开" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-YJ-ATe">
+                                <rect key="frame" x="10" y="33" width="103" height="26"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choose" translatesAutoresizingMaskIntoConstraints="NO" id="EzE-t4-VqE">
+                                <rect key="frame" x="275" y="39" width="17" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="GYY-gd-bAd"/>
+                                    <constraint firstAttribute="height" constant="17" id="V1y-bT-urx"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EzE-t4-VqE" firstAttribute="centerY" secondItem="9h6-WH-iPr" secondAttribute="centerY" id="S7g-F7-TPj"/>
+                            <constraint firstItem="nH0-YJ-ATe" firstAttribute="leading" secondItem="9h6-WH-iPr" secondAttribute="leading" constant="10" id="a4F-uS-PVq"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nH0-YJ-ATe" secondAttribute="trailing" constant="10" id="cUc-sw-8Py"/>
+                            <constraint firstItem="nH0-YJ-ATe" firstAttribute="centerY" secondItem="9h6-WH-iPr" secondAttribute="centerY" id="rkg-PH-e46"/>
+                            <constraint firstAttribute="trailing" secondItem="EzE-t4-VqE" secondAttribute="trailing" constant="10" id="wJD-Tw-S96"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9h6-WH-iPr" secondAttribute="trailing" constant="20" id="A5P-f2-f9O"/>
+                    <constraint firstAttribute="bottom" secondItem="9h6-WH-iPr" secondAttribute="bottom" id="dIU-Pq-DFv"/>
+                    <constraint firstItem="9h6-WH-iPr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="gZ0-cN-FR1"/>
+                    <constraint firstItem="9h6-WH-iPr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ndm-Kl-hwu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bgView" destination="9h6-WH-iPr" id="sod-Zf-oTz"/>
+                <outlet property="selectImageView" destination="EzE-t4-VqE" id="1CQ-UE-ohf"/>
+                <outlet property="stateLbl" destination="nH0-YJ-ATe" id="527-sl-ICr"/>
+            </connections>
+            <point key="canvasLocation" x="-229" y="-81.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="choose" width="17" height="17"/>
+    </resources>
+</document>
