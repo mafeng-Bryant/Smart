@@ -17,6 +17,8 @@
 #import "SPAccessoryDetailController.h"
 #import "SPBaseNavigationController.h"
 #import "MJRefresh.h"
+#import "SPSettingController.h"
+#import "SPStatisticalController.h"
 
 @interface SPAccessoryController()<HMHomeManagerDelegate,HMAccessoryBrowserDelegate>
 @property (strong, nonatomic)HMHomeManager * homeManager;
@@ -81,7 +83,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == self.datasArray.count) {
-        return 50.0;
+        return 60.0;
     }
     SPAccessoryInfo* info = self.datasArray[indexPath.row];
     if ([info.type isEqualToString:kTypeRoom]) {
@@ -100,12 +102,39 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  //  self.hidesBottomBarWhenPushed = YES;
     SPAccessoryInfo* info = self.datasArray[indexPath.row];
     if ([info.type isEqualToString:kTypeAccessory]) {
+        
         SPAccessoryDetailController* detailVC = [[SPAccessoryDetailController alloc]initWithNibName:@"SPAccessoryDetailController" bundle:nil];
         detailVC.accessory = info.accessory;
          SPBaseNavigationController* na = [[SPBaseNavigationController alloc]initWithRootViewController:detailVC];
-        [self presentViewController:na animated:YES completion:nil];
+        UIImage* homeImage = Image(@"home");
+        UITabBarItem *tabItem = [[UITabBarItem alloc]initWithTitle:@"控制" image:homeImage selectedImage:homeImage];
+        na.tabBarItem = tabItem;
+
+        SPStatisticalController* detailVC2 = [[SPStatisticalController alloc]initWithNibName:@"SPStatisticalController" bundle:nil];
+        detailVC2.accessory = info.accessory;
+        SPBaseNavigationController* na2 = [[SPBaseNavigationController alloc]initWithRootViewController:detailVC2];
+        UITabBarItem *tabItem2 = [[UITabBarItem alloc]initWithTitle:@"统计制" image:homeImage selectedImage:homeImage];
+        na2.tabBarItem = tabItem2;
+        
+        SPSettingController* detailVC3 = [[SPSettingController alloc]initWithNibName:@"SPSettingController" bundle:nil];
+        detailVC3.accessory = info.accessory;
+        SPBaseNavigationController* na3 = [[SPBaseNavigationController alloc]initWithRootViewController:detailVC3];
+        UITabBarItem *tabItem3 = [[UITabBarItem alloc]initWithTitle:@"设置" image:homeImage selectedImage:homeImage];
+        na3.tabBarItem = tabItem3;
+        
+        UITabBarController* tabBarController = [[UITabBarController alloc]init];
+        [tabBarController.tabBar setTintColor:[UIColor whiteColor]];
+        tabBarController.tabBar.backgroundImage = Image(@"tabbarbg");
+        tabBarController.tabBar.layer.borderWidth = 0.25;
+        tabBarController.tabBar.layer.borderColor = [UIColor blackColor].CGColor;
+        [tabBarController.tabBar setClipsToBounds:YES];
+        [tabBarController setViewControllers:@[na,na2,na3] animated:NO];
+        tabBarController.tabBar.barTintColor = [UIColor whiteColor];
+
+        [self presentViewController:tabBarController animated:YES completion:nil];
     }
 }
 
@@ -399,9 +428,9 @@
     [btn setTitle:@"添加" forState:UIControlStateNormal];
     btn.frame = CGRectMake(0, 0, 21, 21);
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:10];
+    btn.titleLabel.font = [UIFont systemFontOfSize:16];
     [btn addTarget:self action:@selector(addAccessory:) forControlEvents:UIControlEventTouchUpInside];
-    btn.backgroundColor = [UIColor blackColor];
+    btn.backgroundColor = [UIColor clearColor];
     ViewRadius(btn, 10);
     UIBarButtonItem* rightItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.rightBarButtonItem = rightItem;

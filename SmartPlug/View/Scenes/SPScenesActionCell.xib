@@ -40,20 +40,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdL-EU-lnV" customClass="SPSceneButton">
-                                <rect key="frame" x="183" y="2" width="24" height="24"/>
+                                <rect key="frame" x="186" y="2" width="21" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="J01-Sm-I6k"/>
-                                    <constraint firstAttribute="height" constant="24" id="f0J-MW-sPz"/>
+                                    <constraint firstAttribute="width" constant="21" id="J01-Sm-I6k"/>
+                                    <constraint firstAttribute="height" constant="21" id="f0J-MW-sPz"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="delete"/>
+                                <state key="normal" title="Button" image="deletescenes"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ1-D8-Ll3" customClass="SPSceneButton">
-                                <rect key="frame" x="2" y="2" width="24" height="24"/>
+                                <rect key="frame" x="2" y="2" width="21" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="Tyb-Fw-C2D"/>
-                                    <constraint firstAttribute="width" constant="24" id="buh-PH-FPW"/>
+                                    <constraint firstAttribute="height" constant="21" id="Tyb-Fw-C2D"/>
+                                    <constraint firstAttribute="width" constant="21" id="buh-PH-FPW"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="manager"/>
+                                <state key="normal" title="Button" image="managerscenes"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,15 +80,17 @@
             <connections>
                 <outlet property="bgView" destination="D1z-Vp-WoY" id="Y0y-K4-0hH"/>
                 <outlet property="deleteBtn" destination="CdL-EU-lnV" id="ULT-xq-c0n"/>
+                <outlet property="imageViewHeight" destination="RvO-aR-U3z" id="Qd6-Hb-uyn"/>
+                <outlet property="imageViewWidth" destination="pw3-XB-jiQ" id="hhr-8Y-6b6"/>
                 <outlet property="mainImageView" destination="3oE-ED-bB0" id="G9M-nm-l1V"/>
                 <outlet property="managerBtn" destination="mZ1-D8-Ll3" id="hdq-hm-rpo"/>
                 <outlet property="sceneNameLbl" destination="4er-Bc-plz" id="nSK-ro-wRI"/>
             </connections>
-            <point key="canvasLocation" x="-1022" y="-288"/>
+            <point key="canvasLocation" x="-1293" y="-434"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="delete" width="24" height="24"/>
-        <image name="manager" width="45" height="24"/>
+        <image name="deletescenes" width="32" height="32"/>
+        <image name="managerscenes" width="20" height="20"/>
     </resources>
 </document>

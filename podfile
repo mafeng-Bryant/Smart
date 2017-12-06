@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios,'8.1'
+inhibit_all_warnings!
+target ‘SmartPlug’ do
+    pod 'WHC_ModelSqliteKit'
+    pod 'Masonry'
+end

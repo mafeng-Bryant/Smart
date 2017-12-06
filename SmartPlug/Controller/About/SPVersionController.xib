@@ -24,23 +24,23 @@
             <rect key="frame" x="0.0" y="0.0" width="476" height="780"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vku-jv-bEB">
-                    <rect key="frame" x="163" y="50" width="150" height="150"/>
-                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vku-jv-bEB">
+                    <rect key="frame" x="182.5" y="50" width="112" height="112"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="150" id="bqs-tW-9Ik"/>
-                        <constraint firstAttribute="width" constant="150" id="zA9-wg-Z1A"/>
+                        <constraint firstAttribute="height" constant="112" id="bqs-tW-9Ik"/>
+                        <constraint firstAttribute="width" constant="112" id="zA9-wg-Z1A"/>
                     </constraints>
-                    <state key="normal" title="Logo"/>
+                    <state key="normal" title="Logo" image="version"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前版本:1.1.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaR-kJ-6v9">
-                    <rect key="frame" x="181" y="220" width="114.5" height="25"/>
+                    <rect key="frame" x="181" y="182" width="114.5" height="25"/>
                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深圳市欧普索科技有限公司" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y57-CR-4Gg">
-                    <rect key="frame" x="154" y="265" width="168" height="19.5"/>
+                    <rect key="frame" x="154" y="227" width="168" height="19.5"/>
                     <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -59,4 +59,7 @@
             <point key="canvasLocation" x="-348" y="56"/>
         </view>
     </objects>
+    <resources>
+        <image name="version" width="112" height="112"/>
+    </resources>
 </document>

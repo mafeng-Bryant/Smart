@@ -13,6 +13,7 @@
 #import "SPAboutUSController.h"
 #import "SPVersionController.h"
 #import "SPHelpController.h"
+#import "Help.h"
 
 @interface SPAboutController ()
 
@@ -23,6 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.titleView = [[SPTitleView alloc]initWithFrame:CGRectZero title:@"关于"];
+    self.helpView.backgroundColor = RGB(43, 228, 79,1.0);
+    self.warningView.backgroundColor = RGB(44, 154, 165,1.0);
+    self.aboutUsView.backgroundColor = RGB(172, 25, 66,1.0);
+    self.versionView.backgroundColor = RGB(95, 83, 182,1.0);
+    [self.helpView setImage:Image(@"issue") forState:UIControlStateNormal];
+    [self.warningView setImage:Image(@"warningabout") forState:UIControlStateNormal];
+    [self.aboutUsView setImage:Image(@"aboutus") forState:UIControlStateNormal];
+    [self.versionView setImage:Image(@"warningissue") forState:UIControlStateNormal];
+    self.helpLbl.textColor = [UIColor whiteColor];
+    self.warningLbl.textColor = [UIColor whiteColor];
+    self.aboutusLbl.textColor = [UIColor whiteColor];
+    self.versionLbl.textColor = [UIColor whiteColor];
+    
 }
 
 - (IBAction)helpAction:(id)sender

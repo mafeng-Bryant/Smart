@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *sceneNameLbl;
 @property (nonatomic,strong) SPActionSetModel* model;
 @property (weak, nonatomic) IBOutlet SPSceneButton *managerBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageViewWidth;
+
+
 
 
 + (CGSize)cellSize:(UICollectionView *)collectionView;

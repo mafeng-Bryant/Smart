@@ -38,7 +38,10 @@
     btn.frame = CGRectMake(0, 0, 24, 24);
     [btn addTarget:self action:@selector(closeAction:)
    forControlEvents:UIControlEventTouchUpInside];
-    [btn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    [btn setTitle:@"关闭" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont fontWithName:@"Avenir-Roman" size:14];
+   // [btn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
     UIBarButtonItem* leftItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = leftItem;
 }

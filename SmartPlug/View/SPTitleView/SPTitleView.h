@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPTitleView : UIButton
+@interface SPTitleView : UIView
 
 -(instancetype)initWithFrame:(CGRect)frame title:(NSString*)title;
 

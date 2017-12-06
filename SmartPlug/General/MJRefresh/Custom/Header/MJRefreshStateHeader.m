@@ -102,9 +102,10 @@
                                           @"上次更新:",
                                           time];
     } else {
-        self.lastUpdatedTimeLabel.text = [NSString stringWithFormat:@"%@%@",
-                                          [NSBundle mj_localizedStringForKey:MJRefreshHeaderLastTimeText],
-                                          [NSBundle mj_localizedStringForKey:MJRefreshHeaderNoneLastDateText]];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyy-MM-dd HH:mm";
+        NSString* nowTime = [formatter stringFromDate:[NSDate date]];
+        self.lastUpdatedTimeLabel.text = nowTime;
     }
 }
 

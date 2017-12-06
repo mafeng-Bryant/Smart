@@ -55,6 +55,11 @@ typedef enum {
     VMargin100 = 100
 }VMargin;
 
+#define kAccessoryUUID @"00000025-0000-1000-8000-0026BB765291"
+#define kAccessoryUseUUID @"00000026-0000-1000-8000-0026BB765291"
+#define kAccessoryRunning_Time @"4AAAF93F-0DEC-11E5-B939-0800200C9A66"
+#define kAccessoryRealTime_Energy @"4AAAF931-0DEC-11E5-B939-0800200C9A66"
+#define kAccessoryCurrentHourData @"4AAAF932-0DEC-11E5-B939-0800200C9A66"
 
 
 //沙盒路径
@@ -245,6 +250,24 @@ return shared##classname;                           \
 
 // 颜色(RGB)
 #define RGB(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a/255.0]
+#define CGRGB(r,g,b) RGB(r,g,b).CGColor
+#define iCGRGB(r,g,b) (id)CGRGB(r,g,b)
+#define CGRGBA(r,g,b,a) RGBA(r,g,b,a).CGColor
+#define iCGRGBA(r,g,b,a) (id)CGRGBA(r,g,b,a)
+
+#define PPC0 [UIColor clearColor]
+#define PPC1 RGB(241,67,90,1.0)
+#define PPC2 RGB(70,186,151,1.0)
+#define PPC3 RGB(68,68,68,1.0)
+#define PPC4 RGB(155,165,167,1.0)
+#define PPC5 RGB(205,210,211,1.0)
+#define PPC6 RGB(241,243,242,1.0)
+#define PPC7 RGB(255,255,255,1.0)
+#define PPC8 RGB(248,124,135,1.0)
+#define PPC9 RGB(249,251,252,1.0)
+#define PPC10 RGB(252,252,252,1.0)
+#define PPC11 RGB(67,147,241,1.0)
 
 // View 圆角和加边框
 #define ViewBorderRadius(View, Radius, Width, Color)\

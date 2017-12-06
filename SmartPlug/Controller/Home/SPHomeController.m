@@ -27,15 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.homeArray = [NSMutableArray array];
-//    UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    btn.frame = CGRectMake(0, 0, 135, 36);
-//   // [btn setImage:[UIImage imageNamed:@"btnbg"] forState:UIControlStateNormal];
-//    [btn setTitleColor:@"sssss" forState:UIControlStateNormal];
-//    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    self.navigationItem.titleView = btn;
-    
-
-    self.navigationItem.titleView = [[SPTitleView alloc]initWithFrame:CGRectMake(0, 0, 135, 36) title:@"家"];
+    self.navigationItem.titleView = [[SPTitleView alloc]initWithFrame:CGRectZero title:@"家"];
     self.tableView.tableHeaderView = [self headerView];
     [SPShowHomeCell registerNibToTableView:self.tableView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -269,7 +261,7 @@
 - (UIView*)headerView
 {
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.frame.size.width, 60)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 60)];
         _headerView.backgroundColor = [UIColor clearColor];
         UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:@"家" forState:UIControlStateNormal];

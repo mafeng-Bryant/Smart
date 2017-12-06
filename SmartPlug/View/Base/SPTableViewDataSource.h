@@ -19,6 +19,9 @@
 @property (nonatomic,assign)BOOL isRequesting;
 @property (nonatomic,weak)id<SPTableViewDataSourceAccessory>dataSourceAccessory;
 - (id)initWithTableView:(UITableView *)tableView;
+- (void)requestDatas:(id)params finished:(void(^)(BOOL result))block;
+- (BOOL)isEmpty;
+- (void)destroy;
 
 @end
 

@@ -52,7 +52,7 @@
 - (UIView*)headerView
 {
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.frame.size.width, 60)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 60)];
         _headerView.backgroundColor = [UIColor clearColor];
         UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:@"常见问题" forState:UIControlStateNormal];
@@ -74,7 +74,10 @@
     btn.frame = CGRectMake(0, 0, 24, 24);
     [btn addTarget:self action:@selector(closeAction:)
   forControlEvents:UIControlEventTouchUpInside];
-    [btn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    [btn setTitle:@"关闭" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont fontWithName:@"Avenir-Roman" size:14];
+   // [btn setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
     UIBarButtonItem* leftItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = leftItem;
 }

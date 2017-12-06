@@ -107,7 +107,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (self.primaryService.characteristics.count>0) {
-        return 60.0f;
+        return 70.0f;
     }
     return 0.01f;
 }
@@ -116,9 +116,9 @@
 {
     if (self.primaryService.characteristics.count>0) {
         SPActionSetTableViewSectionObject *sectionObject = self.dataSource[section];
-        UIView* view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 60)];
+        UIView* view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 70)];
         view.backgroundColor = [UIColor clearColor];
-        UIView* bgView = [[UIView alloc]initWithFrame:CGRectMake(20, 0, tableView.frame.size.width-40, 50)];
+        UIView* bgView = [[UIView alloc]initWithFrame:CGRectMake(20, 10, tableView.frame.size.width-40, 50)];
         bgView.backgroundColor = [UIColor blackColor];
         ViewRadius(bgView, 10);
         [view addSubview:bgView];

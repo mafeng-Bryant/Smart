@@ -36,6 +36,25 @@
     [_tableView reloadData];
 }
 
+- (void)requestDatas:(id)params finished:(void(^)(BOOL result))block
+{
+    //rewrite subclass    
+}
+
+- (BOOL)isEmpty
+{
+    return _dataSource.count>0?NO:YES;
+}
+
+- (void)destroy
+{
+    [_dataSource removeAllObjects];
+    [_tableView reloadData];
+    _tableView.dataSource = nil;
+    _tableView.delegate = nil;
+    _tableView = nil;
+}
+
 #pragma mark UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

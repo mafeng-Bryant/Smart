@@ -7,12 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6521F456D024DAFEB27C70A9 /* libPods-SmartPlug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0DBFF36D24FE167407080C /* libPods-SmartPlug.a */; };
+		E206F5A91FD4E6F1000CD7C5 /* SPPowerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E206F5A71FD4E6F0000CD7C5 /* SPPowerController.m */; };
+		E206F5AA1FD4E6F1000CD7C5 /* SPPowerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E206F5A81FD4E6F0000CD7C5 /* SPPowerController.xib */; };
+		E206F5AF1FD4F6B9000CD7C5 /* SPPowerDayController.m in Sources */ = {isa = PBXBuildFile; fileRef = E206F5AD1FD4F6B9000CD7C5 /* SPPowerDayController.m */; };
+		E206F5B01FD4F6B9000CD7C5 /* SPPowerDayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E206F5AE1FD4F6B9000CD7C5 /* SPPowerDayController.xib */; };
+		E206F5B41FD4F6EE000CD7C5 /* SPPowerWeekController.m in Sources */ = {isa = PBXBuildFile; fileRef = E206F5B21FD4F6EE000CD7C5 /* SPPowerWeekController.m */; };
+		E206F5B51FD4F6EE000CD7C5 /* SPPowerWeekController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E206F5B31FD4F6EE000CD7C5 /* SPPowerWeekController.xib */; };
+		E206F5B91FD4F706000CD7C5 /* SPPowerMonthController.m in Sources */ = {isa = PBXBuildFile; fileRef = E206F5B71FD4F706000CD7C5 /* SPPowerMonthController.m */; };
+		E206F5BA1FD4F706000CD7C5 /* SPPowerMonthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E206F5B81FD4F706000CD7C5 /* SPPowerMonthController.xib */; };
+		E206F5BE1FD4F71F000CD7C5 /* SPPowerYearController.m in Sources */ = {isa = PBXBuildFile; fileRef = E206F5BC1FD4F71F000CD7C5 /* SPPowerYearController.m */; };
+		E206F5BF1FD4F71F000CD7C5 /* SPPowerYearController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E206F5BD1FD4F71F000CD7C5 /* SPPowerYearController.xib */; };
+		E206F5C81FD51F61000CD7C5 /* SPScrollSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E206F5C61FD51F61000CD7C5 /* SPScrollSegmentControl.m */; };
 		E21C1C491FC54B120057B748 /* SPSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C481FC54B120057B748 /* SPSetting.m */; };
 		E21C1C4C1FC54BCC0057B748 /* SPPopUpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C4B1FC54BCC0057B748 /* SPPopUpManager.m */; };
 		E21C1C501FC54E190057B748 /* SPStoreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C4F1FC54E190057B748 /* SPStoreHelper.m */; };
 		E21C1C531FC54EB60057B748 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C521FC54EB60057B748 /* SFHFKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E21C1C571FC551610057B748 /* SPShowGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C561FC551610057B748 /* SPShowGuideController.m */; };
 		E21C1C5A1FC551CC0057B748 /* NSObject+SPURLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C591FC551CC0057B748 /* NSObject+SPURLRoute.m */; };
+		E21C1C5E1FC59EA30057B748 /* SPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E21C1C5D1FC59EA30057B748 /* SPTabBarController.m */; };
+		E22C6C061FD04F3500EEF8F5 /* SPSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C041FD04F3500EEF8F5 /* SPSettingController.m */; };
+		E22C6C071FD04F3500EEF8F5 /* SPSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22C6C051FD04F3500EEF8F5 /* SPSettingController.xib */; };
+		E22C6C0B1FD04F8300EEF8F5 /* SPStatisticalController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C091FD04F8300EEF8F5 /* SPStatisticalController.m */; };
+		E22C6C0C1FD04F8300EEF8F5 /* SPStatisticalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22C6C0A1FD04F8300EEF8F5 /* SPStatisticalController.xib */; };
+		E22C6C0F1FD0F29F00EEF8F5 /* SPGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C0E1FD0F29F00EEF8F5 /* SPGaugeView.m */; };
+		E22C6C151FD1325F00EEF8F5 /* PPNSString+NSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C141FD1325F00EEF8F5 /* PPNSString+NSDate.m */; };
+		E22C6C181FD132DE00EEF8F5 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C161FD132DE00EEF8F5 /* NSDate+Extensions.m */; };
+		E22C6C1B1FD15A4800EEF8F5 /* SPSettingDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C1A1FD15A4800EEF8F5 /* SPSettingDataSource.m */; };
+		E22C6C1E1FD15ABF00EEF8F5 /* SPSettingTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C1D1FD15ABF00EEF8F5 /* SPSettingTableViewInfo.m */; };
+		E22C6C221FD3C00100EEF8F5 /* SPSettingNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C201FD3C00100EEF8F5 /* SPSettingNormalCell.m */; };
+		E22C6C231FD3C00100EEF8F5 /* SPSettingNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22C6C211FD3C00100EEF8F5 /* SPSettingNormalCell.xib */; };
+		E22C6C291FD430B700EEF8F5 /* SPSynchTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C281FD430B700EEF8F5 /* SPSynchTimeModel.m */; };
+		E22C6C2C1FD432B400EEF8F5 /* SPDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C2B1FD432B400EEF8F5 /* SPDataManager.m */; };
 		E271F4CA1FB2E13C002488BB /* SPAccessoryDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4C91FB2E13C002488BB /* SPAccessoryDetailHeadView.m */; };
 		E271F4CE1FB2FE92002488BB /* SPConfigureController.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4CC1FB2FE92002488BB /* SPConfigureController.m */; };
 		E271F4CF1FB2FE92002488BB /* SPConfigureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4CD1FB2FE92002488BB /* SPConfigureController.xib */; };
@@ -140,6 +166,19 @@
 		E2DB226E1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB226D1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.m */; };
 		E2DB22721FB5F6FF00AEA6A9 /* SPSceneSetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB22701FB5F6FF00AEA6A9 /* SPSceneSetCell.m */; };
 		E2DB22731FB5F70000AEA6A9 /* SPSceneSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2DB22711FB5F6FF00AEA6A9 /* SPSceneSetCell.xib */; };
+		E2E9899A1FD6768F0003734B /* SPTabPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989971FD6768F0003734B /* SPTabPageScrollView.m */; };
+		E2E9899B1FD6768F0003734B /* PPTabPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989991FD6768F0003734B /* PPTabPageView.m */; };
+		E2E9899E1FD679DC0003734B /* SPPowerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E9899D1FD679DC0003734B /* SPPowerDataSource.m */; };
+		E2E989A11FD67A340003734B /* SPPowerListPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989A01FD67A340003734B /* SPPowerListPageView.m */; };
+		E2E989A51FD6A3FE0003734B /* PPLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2E989A31FD6A3FD0003734B /* PPLoadingView.xib */; };
+		E2E989A61FD6A3FE0003734B /* PPLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989A41FD6A3FE0003734B /* PPLoadingView.m */; };
+		E2E989A91FD6A4590003734B /* PPHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989A81FD6A4580003734B /* PPHUDView.m */; };
+		E2E989AD1FD6BED40003734B /* SPPowerInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989AB1FD6BED40003734B /* SPPowerInfoCell.m */; };
+		E2E989AE1FD6BED40003734B /* SPPowerInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2E989AC1FD6BED40003734B /* SPPowerInfoCell.xib */; };
+		E2E989B11FD6C4990003734B /* SPPowerTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989B01FD6C4990003734B /* SPPowerTableViewInfo.m */; };
+		E2E989B41FD6C4C70003734B /* SPYYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989B31FD6C4C70003734B /* SPYYModel.m */; };
+		E2E989BA1FD701270003734B /* SPXValueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989B91FD701270003734B /* SPXValueModel.m */; };
+		E2E989BF1FD7E74C0003734B /* SPPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E989BE1FD7E74C0003734B /* SPPopUpView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +199,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841D39E5296FFFE9ECE548E7 /* Pods-SmartPlug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPlug.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartPlug/Pods-SmartPlug.debug.xcconfig"; sourceTree = "<group>"; };
+		D4AD6208AF3F8D1B3A546368 /* Pods-SmartPlug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartPlug.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartPlug/Pods-SmartPlug.release.xcconfig"; sourceTree = "<group>"; };
+		E206F5A61FD4E6F0000CD7C5 /* SPPowerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerController.h; sourceTree = "<group>"; };
+		E206F5A71FD4E6F0000CD7C5 /* SPPowerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerController.m; sourceTree = "<group>"; };
+		E206F5A81FD4E6F0000CD7C5 /* SPPowerController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPPowerController.xib; sourceTree = "<group>"; };
+		E206F5AC1FD4F6B9000CD7C5 /* SPPowerDayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerDayController.h; sourceTree = "<group>"; };
+		E206F5AD1FD4F6B9000CD7C5 /* SPPowerDayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerDayController.m; sourceTree = "<group>"; };
+		E206F5AE1FD4F6B9000CD7C5 /* SPPowerDayController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPPowerDayController.xib; sourceTree = "<group>"; };
+		E206F5B11FD4F6EE000CD7C5 /* SPPowerWeekController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerWeekController.h; sourceTree = "<group>"; };
+		E206F5B21FD4F6EE000CD7C5 /* SPPowerWeekController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerWeekController.m; sourceTree = "<group>"; };
+		E206F5B31FD4F6EE000CD7C5 /* SPPowerWeekController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPPowerWeekController.xib; sourceTree = "<group>"; };
+		E206F5B61FD4F706000CD7C5 /* SPPowerMonthController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerMonthController.h; sourceTree = "<group>"; };
+		E206F5B71FD4F706000CD7C5 /* SPPowerMonthController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerMonthController.m; sourceTree = "<group>"; };
+		E206F5B81FD4F706000CD7C5 /* SPPowerMonthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPPowerMonthController.xib; sourceTree = "<group>"; };
+		E206F5BB1FD4F71F000CD7C5 /* SPPowerYearController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerYearController.h; sourceTree = "<group>"; };
+		E206F5BC1FD4F71F000CD7C5 /* SPPowerYearController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerYearController.m; sourceTree = "<group>"; };
+		E206F5BD1FD4F71F000CD7C5 /* SPPowerYearController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPPowerYearController.xib; sourceTree = "<group>"; };
+		E206F5C61FD51F61000CD7C5 /* SPScrollSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPScrollSegmentControl.m; sourceTree = "<group>"; };
+		E206F5C71FD51F61000CD7C5 /* SPScrollSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPScrollSegmentControl.h; sourceTree = "<group>"; };
 		E21C1C471FC54B120057B748 /* SPSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSetting.h; sourceTree = "<group>"; };
 		E21C1C481FC54B120057B748 /* SPSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSetting.m; sourceTree = "<group>"; };
 		E21C1C4A1FC54BCC0057B748 /* SPPopUpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPopUpManager.h; sourceTree = "<group>"; };
@@ -172,6 +230,35 @@
 		E21C1C561FC551610057B748 /* SPShowGuideController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPShowGuideController.m; sourceTree = "<group>"; };
 		E21C1C581FC551CC0057B748 /* NSObject+SPURLRoute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPURLRoute.h"; sourceTree = "<group>"; };
 		E21C1C591FC551CC0057B748 /* NSObject+SPURLRoute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPURLRoute.m"; sourceTree = "<group>"; };
+		E21C1C5C1FC59EA30057B748 /* SPTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTabBarController.h; sourceTree = "<group>"; };
+		E21C1C5D1FC59EA30057B748 /* SPTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTabBarController.m; sourceTree = "<group>"; };
+		E22C6C031FD04F3500EEF8F5 /* SPSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSettingController.h; sourceTree = "<group>"; };
+		E22C6C041FD04F3500EEF8F5 /* SPSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSettingController.m; sourceTree = "<group>"; };
+		E22C6C051FD04F3500EEF8F5 /* SPSettingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPSettingController.xib; sourceTree = "<group>"; };
+		E22C6C081FD04F8300EEF8F5 /* SPStatisticalController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPStatisticalController.h; sourceTree = "<group>"; };
+		E22C6C091FD04F8300EEF8F5 /* SPStatisticalController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPStatisticalController.m; sourceTree = "<group>"; };
+		E22C6C0A1FD04F8300EEF8F5 /* SPStatisticalController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPStatisticalController.xib; sourceTree = "<group>"; };
+		E22C6C0D1FD0F29F00EEF8F5 /* SPGaugeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPGaugeView.h; sourceTree = "<group>"; };
+		E22C6C0E1FD0F29F00EEF8F5 /* SPGaugeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPGaugeView.m; sourceTree = "<group>"; };
+		E22C6C131FD1325F00EEF8F5 /* PPNSString+NSDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PPNSString+NSDate.h"; sourceTree = "<group>"; };
+		E22C6C141FD1325F00EEF8F5 /* PPNSString+NSDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PPNSString+NSDate.m"; sourceTree = "<group>"; };
+		E22C6C161FD132DE00EEF8F5 /* NSDate+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
+		E22C6C171FD132DE00EEF8F5 /* NSDate+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
+		E22C6C191FD15A4800EEF8F5 /* SPSettingDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSettingDataSource.h; sourceTree = "<group>"; };
+		E22C6C1A1FD15A4800EEF8F5 /* SPSettingDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSettingDataSource.m; sourceTree = "<group>"; };
+		E22C6C1C1FD15ABF00EEF8F5 /* SPSettingTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSettingTableViewInfo.h; sourceTree = "<group>"; };
+		E22C6C1D1FD15ABF00EEF8F5 /* SPSettingTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSettingTableViewInfo.m; sourceTree = "<group>"; };
+		E22C6C1F1FD3C00100EEF8F5 /* SPSettingNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSettingNormalCell.h; sourceTree = "<group>"; };
+		E22C6C201FD3C00100EEF8F5 /* SPSettingNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSettingNormalCell.m; sourceTree = "<group>"; };
+		E22C6C211FD3C00100EEF8F5 /* SPSettingNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPSettingNormalCell.xib; sourceTree = "<group>"; };
+		E22C6C271FD430B700EEF8F5 /* SPSynchTimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSynchTimeModel.h; sourceTree = "<group>"; };
+		E22C6C281FD430B700EEF8F5 /* SPSynchTimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSynchTimeModel.m; sourceTree = "<group>"; };
+		E22C6C2A1FD432B400EEF8F5 /* SPDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPDataManager.h; sourceTree = "<group>"; };
+		E22C6C2B1FD432B400EEF8F5 /* SPDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPDataManager.m; sourceTree = "<group>"; };
+		E22C6C2D1FD4388E00EEF8F5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E22C6C2F1FD4392E00EEF8F5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		E22C6C311FD4395700EEF8F5 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		E22C6C331FD43ACD00EEF8F5 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		E271F4C81FB2E13C002488BB /* SPAccessoryDetailHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryDetailHeadView.h; sourceTree = "<group>"; };
 		E271F4C91FB2E13C002488BB /* SPAccessoryDetailHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryDetailHeadView.m; sourceTree = "<group>"; };
 		E271F4CB1FB2FE92002488BB /* SPConfigureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureController.h; sourceTree = "<group>"; };
@@ -400,6 +487,31 @@
 		E2DB226F1FB5F6FF00AEA6A9 /* SPSceneSetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSceneSetCell.h; sourceTree = "<group>"; };
 		E2DB22701FB5F6FF00AEA6A9 /* SPSceneSetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSceneSetCell.m; sourceTree = "<group>"; };
 		E2DB22711FB5F6FF00AEA6A9 /* SPSceneSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPSceneSetCell.xib; sourceTree = "<group>"; };
+		E2E989961FD6768F0003734B /* SPTabPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTabPageScrollView.h; sourceTree = "<group>"; };
+		E2E989971FD6768F0003734B /* SPTabPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTabPageScrollView.m; sourceTree = "<group>"; };
+		E2E989981FD6768F0003734B /* PPTabPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTabPageView.h; sourceTree = "<group>"; };
+		E2E989991FD6768F0003734B /* PPTabPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTabPageView.m; sourceTree = "<group>"; };
+		E2E9899C1FD679DC0003734B /* SPPowerDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerDataSource.h; sourceTree = "<group>"; };
+		E2E9899D1FD679DC0003734B /* SPPowerDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerDataSource.m; sourceTree = "<group>"; };
+		E2E9899F1FD67A340003734B /* SPPowerListPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerListPageView.h; sourceTree = "<group>"; };
+		E2E989A01FD67A340003734B /* SPPowerListPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerListPageView.m; sourceTree = "<group>"; };
+		E2E989A21FD6A3FD0003734B /* PPLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLoadingView.h; sourceTree = "<group>"; };
+		E2E989A31FD6A3FD0003734B /* PPLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPLoadingView.xib; sourceTree = "<group>"; };
+		E2E989A41FD6A3FE0003734B /* PPLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLoadingView.m; sourceTree = "<group>"; };
+		E2E989A71FD6A4580003734B /* PPHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPHUDView.h; sourceTree = "<group>"; };
+		E2E989A81FD6A4580003734B /* PPHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPHUDView.m; sourceTree = "<group>"; };
+		E2E989AA1FD6BED40003734B /* SPPowerInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerInfoCell.h; sourceTree = "<group>"; };
+		E2E989AB1FD6BED40003734B /* SPPowerInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerInfoCell.m; sourceTree = "<group>"; };
+		E2E989AC1FD6BED40003734B /* SPPowerInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPPowerInfoCell.xib; sourceTree = "<group>"; };
+		E2E989AF1FD6C4990003734B /* SPPowerTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerTableViewInfo.h; sourceTree = "<group>"; };
+		E2E989B01FD6C4990003734B /* SPPowerTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerTableViewInfo.m; sourceTree = "<group>"; };
+		E2E989B21FD6C4C70003734B /* SPYYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPYYModel.h; sourceTree = "<group>"; };
+		E2E989B31FD6C4C70003734B /* SPYYModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPYYModel.m; sourceTree = "<group>"; };
+		E2E989B81FD701270003734B /* SPXValueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPXValueModel.h; sourceTree = "<group>"; };
+		E2E989B91FD701270003734B /* SPXValueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPXValueModel.m; sourceTree = "<group>"; };
+		E2E989BD1FD7E74C0003734B /* SPPopUpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPopUpView.h; sourceTree = "<group>"; };
+		E2E989BE1FD7E74C0003734B /* SPPopUpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPopUpView.m; sourceTree = "<group>"; };
+		FF0DBFF36D24FE167407080C /* libPods-SmartPlug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartPlug.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +520,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2C92A9A1FAF560C0011246E /* HomeKit.framework in Frameworks */,
+				6521F456D024DAFEB27C70A9 /* libPods-SmartPlug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +541,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		809A51730C339C771B509953 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				841D39E5296FFFE9ECE548E7 /* Pods-SmartPlug.debug.xcconfig */,
+				D4AD6208AF3F8D1B3A546368 /* Pods-SmartPlug.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E206F5AB1FD4F63D000CD7C5 /* powerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E206F5AC1FD4F6B9000CD7C5 /* SPPowerDayController.h */,
+				E206F5AD1FD4F6B9000CD7C5 /* SPPowerDayController.m */,
+				E206F5AE1FD4F6B9000CD7C5 /* SPPowerDayController.xib */,
+				E206F5B11FD4F6EE000CD7C5 /* SPPowerWeekController.h */,
+				E206F5B21FD4F6EE000CD7C5 /* SPPowerWeekController.m */,
+				E206F5B31FD4F6EE000CD7C5 /* SPPowerWeekController.xib */,
+				E206F5B61FD4F706000CD7C5 /* SPPowerMonthController.h */,
+				E206F5B71FD4F706000CD7C5 /* SPPowerMonthController.m */,
+				E206F5B81FD4F706000CD7C5 /* SPPowerMonthController.xib */,
+				E206F5BB1FD4F71F000CD7C5 /* SPPowerYearController.h */,
+				E206F5BC1FD4F71F000CD7C5 /* SPPowerYearController.m */,
+				E206F5BD1FD4F71F000CD7C5 /* SPPowerYearController.xib */,
+			);
+			path = powerInfo;
+			sourceTree = "<group>";
+		};
 		E21C1C461FC54AF00057B748 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +596,41 @@
 				E21C1C561FC551610057B748 /* SPShowGuideController.m */,
 			);
 			path = Guide;
+			sourceTree = "<group>";
+		};
+		E22C6BFF1FCFDE1300EEF8F5 /* AccessoryInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E206F5AB1FD4F63D000CD7C5 /* powerInfo */,
+				E2CD36A71FB1E2410013FA50 /* SPAccessoryDetailController.h */,
+				E2CD36A81FB1E2410013FA50 /* SPAccessoryDetailController.m */,
+				E2CD36A91FB1E2410013FA50 /* SPAccessoryDetailController.xib */,
+				E2CD36B21FB27CFF0013FA50 /* SPAccessoryDataSource.h */,
+				E2CD36B31FB27CFF0013FA50 /* SPAccessoryDataSource.m */,
+				E22C6C031FD04F3500EEF8F5 /* SPSettingController.h */,
+				E22C6C041FD04F3500EEF8F5 /* SPSettingController.m */,
+				E22C6C051FD04F3500EEF8F5 /* SPSettingController.xib */,
+				E22C6C191FD15A4800EEF8F5 /* SPSettingDataSource.h */,
+				E22C6C1A1FD15A4800EEF8F5 /* SPSettingDataSource.m */,
+				E22C6C081FD04F8300EEF8F5 /* SPStatisticalController.h */,
+				E22C6C091FD04F8300EEF8F5 /* SPStatisticalController.m */,
+				E22C6C0A1FD04F8300EEF8F5 /* SPStatisticalController.xib */,
+				E206F5A61FD4E6F0000CD7C5 /* SPPowerController.h */,
+				E206F5A71FD4E6F0000CD7C5 /* SPPowerController.m */,
+				E206F5A81FD4E6F0000CD7C5 /* SPPowerController.xib */,
+				E2E9899C1FD679DC0003734B /* SPPowerDataSource.h */,
+				E2E9899D1FD679DC0003734B /* SPPowerDataSource.m */,
+			);
+			path = AccessoryInfo;
+			sourceTree = "<group>";
+		};
+		E22C6C241FD42FC500EEF8F5 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				E22C6C2A1FD432B400EEF8F5 /* SPDataManager.h */,
+				E22C6C2B1FD432B400EEF8F5 /* SPDataManager.m */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		E271F4D61FB30D66002488BB /* Configure */ = {
@@ -526,6 +702,7 @@
 		E2889CED1FAF0E3400590DD2 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				E22C6C241FD42FC500EEF8F5 /* DB */,
 				E21C1C4D1FC54DBF0057B748 /* Helper */,
 				E21C1C461FC54AF00057B748 /* Setting */,
 				E2D30DBD1FBFE03A000A088A /* MJRefresh */,
@@ -539,6 +716,10 @@
 		E2889CF01FAF0E5A00590DD2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E22C6C171FD132DE00EEF8F5 /* NSDate+Extensions.h */,
+				E22C6C161FD132DE00EEF8F5 /* NSDate+Extensions.m */,
+				E22C6C131FD1325F00EEF8F5 /* PPNSString+NSDate.h */,
+				E22C6C141FD1325F00EEF8F5 /* PPNSString+NSDate.m */,
 				E271F5191FB498D3002488BB /* UIView+Extensions.h */,
 				E271F51A1FB498D3002488BB /* UIView+Extensions.m */,
 				E2C92AB71FB1326E0011246E /* PPUIFont.h */,
@@ -564,14 +745,10 @@
 		E2889CF51FAF10C800590DD2 /* Accessory */ = {
 			isa = PBXGroup;
 			children = (
+				E22C6BFF1FCFDE1300EEF8F5 /* AccessoryInfo */,
 				E2C92A9E1FB0AA6B0011246E /* SPAccessoryController.h */,
 				E2C92A9F1FB0AA6B0011246E /* SPAccessoryController.m */,
 				E2C92AA01FB0AA6B0011246E /* SPAccessoryController.xib */,
-				E2CD36A71FB1E2410013FA50 /* SPAccessoryDetailController.h */,
-				E2CD36A81FB1E2410013FA50 /* SPAccessoryDetailController.m */,
-				E2CD36A91FB1E2410013FA50 /* SPAccessoryDetailController.xib */,
-				E2CD36B21FB27CFF0013FA50 /* SPAccessoryDataSource.h */,
-				E2CD36B31FB27CFF0013FA50 /* SPAccessoryDataSource.m */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -641,6 +818,7 @@
 				E2A948281FAF02C000922445 /* SmartPlugUITests */,
 				E2A948031FAF02C000922445 /* Products */,
 				E2C92A981FAF560C0011246E /* Frameworks */,
+				809A51730C339C771B509953 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -711,6 +889,16 @@
 				E2C9F9EB1FB88A6700859BDD /* SPHelpTableViewInfo.m */,
 				E2C9FA031FB9931C00859BDD /* SPTriggerTableViewInfo.h */,
 				E2C9FA041FB9931C00859BDD /* SPTriggerTableViewInfo.m */,
+				E22C6C1C1FD15ABF00EEF8F5 /* SPSettingTableViewInfo.h */,
+				E22C6C1D1FD15ABF00EEF8F5 /* SPSettingTableViewInfo.m */,
+				E22C6C271FD430B700EEF8F5 /* SPSynchTimeModel.h */,
+				E22C6C281FD430B700EEF8F5 /* SPSynchTimeModel.m */,
+				E2E989AF1FD6C4990003734B /* SPPowerTableViewInfo.h */,
+				E2E989B01FD6C4990003734B /* SPPowerTableViewInfo.m */,
+				E2E989B21FD6C4C70003734B /* SPYYModel.h */,
+				E2E989B31FD6C4C70003734B /* SPYYModel.m */,
+				E2E989B81FD701270003734B /* SPXValueModel.h */,
+				E2E989B91FD701270003734B /* SPXValueModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -718,6 +906,7 @@
 		E2A9483E1FAF06BD00922445 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2E989BC1FD7E70D0003734B /* popUp */,
 				E2C9F9F01FB93AB600859BDD /* About */,
 				E271F5051FB45F97002488BB /* Scenes */,
 				E271F4D61FB30D66002488BB /* Configure */,
@@ -794,6 +983,9 @@
 		E2A948451FAF06EB00922445 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				E2E989951FD6768F0003734B /* PPTabPage */,
+				E206F5C71FD51F61000CD7C5 /* SPScrollSegmentControl.h */,
+				E206F5C61FD51F61000CD7C5 /* SPScrollSegmentControl.m */,
 				E2CD36B51FB27D220013FA50 /* SPTableViewDataSource.h */,
 				E2CD36B61FB27D220013FA50 /* SPTableViewDataSource.m */,
 				E2889CE31FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.h */,
@@ -802,6 +994,8 @@
 				E2A948471FAF071500922445 /* SPBaseController.m */,
 				E2889CEA1FAF0D6E00590DD2 /* SPBaseNavigationController.h */,
 				E2889CEB1FAF0D6E00590DD2 /* SPBaseNavigationController.m */,
+				E21C1C5C1FC59EA30057B748 /* SPTabBarController.h */,
+				E21C1C5D1FC59EA30057B748 /* SPTabBarController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -809,7 +1003,12 @@
 		E2C92A981FAF560C0011246E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E22C6C331FD43ACD00EEF8F5 /* libz.1.2.5.tbd */,
+				E22C6C311FD4395700EEF8F5 /* libxml2.tbd */,
+				E22C6C2F1FD4392E00EEF8F5 /* libsqlite3.0.tbd */,
+				E22C6C2D1FD4388E00EEF8F5 /* libsqlite3.tbd */,
 				E2C92A991FAF560C0011246E /* HomeKit.framework */,
+				FF0DBFF36D24FE167407080C /* libPods-SmartPlug.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -827,6 +1026,11 @@
 				E2C92AAE1FB0B29B0011246E /* SPAccessoryCell.h */,
 				E2C92AAF1FB0B29B0011246E /* SPAccessoryCell.m */,
 				E2C92AB01FB0B29B0011246E /* SPAccessoryCell.xib */,
+				E22C6C0D1FD0F29F00EEF8F5 /* SPGaugeView.h */,
+				E22C6C0E1FD0F29F00EEF8F5 /* SPGaugeView.m */,
+				E2E989AA1FD6BED40003734B /* SPPowerInfoCell.h */,
+				E2E989AB1FD6BED40003734B /* SPPowerInfoCell.m */,
+				E2E989AC1FD6BED40003734B /* SPPowerInfoCell.xib */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -879,6 +1083,9 @@
 				E2CD36CA1FB285490013FA50 /* SPAccessoryRecognizeCell.xib */,
 				E271F4C81FB2E13C002488BB /* SPAccessoryDetailHeadView.h */,
 				E271F4C91FB2E13C002488BB /* SPAccessoryDetailHeadView.m */,
+				E22C6C1F1FD3C00100EEF8F5 /* SPSettingNormalCell.h */,
+				E22C6C201FD3C00100EEF8F5 /* SPSettingNormalCell.m */,
+				E22C6C211FD3C00100EEF8F5 /* SPSettingNormalCell.xib */,
 			);
 			path = AccessoryDetail;
 			sourceTree = "<group>";
@@ -978,6 +1185,33 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		E2E989951FD6768F0003734B /* PPTabPage */ = {
+			isa = PBXGroup;
+			children = (
+				E2E989A71FD6A4580003734B /* PPHUDView.h */,
+				E2E989A81FD6A4580003734B /* PPHUDView.m */,
+				E2E989A21FD6A3FD0003734B /* PPLoadingView.h */,
+				E2E989A41FD6A3FE0003734B /* PPLoadingView.m */,
+				E2E989A31FD6A3FD0003734B /* PPLoadingView.xib */,
+				E2E989961FD6768F0003734B /* SPTabPageScrollView.h */,
+				E2E989971FD6768F0003734B /* SPTabPageScrollView.m */,
+				E2E989981FD6768F0003734B /* PPTabPageView.h */,
+				E2E989991FD6768F0003734B /* PPTabPageView.m */,
+				E2E9899F1FD67A340003734B /* SPPowerListPageView.h */,
+				E2E989A01FD67A340003734B /* SPPowerListPageView.m */,
+			);
+			path = PPTabPage;
+			sourceTree = "<group>";
+		};
+		E2E989BC1FD7E70D0003734B /* popUp */ = {
+			isa = PBXGroup;
+			children = (
+				E2E989BD1FD7E74C0003734B /* SPPopUpView.h */,
+				E2E989BE1FD7E74C0003734B /* SPPopUpView.m */,
+			);
+			path = popUp;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -985,9 +1219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2A9482E1FAF02C000922445 /* Build configuration list for PBXNativeTarget "SmartPlug" */;
 			buildPhases = (
+				553BE34F9ECC9C661D67B47E /* [CP] Check Pods Manifest.lock */,
 				E2A947FE1FAF02C000922445 /* Sources */,
 				E2A947FF1FAF02C000922445 /* Frameworks */,
 				E2A948001FAF02C000922445 /* Resources */,
+				6D0DD1B05624065932C8FAEA /* [CP] Embed Pods Frameworks */,
+				941629D9A93D71071FF1EDE0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1092,18 +1329,24 @@
 				E2CD36AB1FB1E2410013FA50 /* SPAccessoryDetailController.xib in Resources */,
 				E2C9FA1A1FBA6CF800859BDD /* SPTriggerSettingView.xib in Resources */,
 				E2C9F9FA1FB945D100859BDD /* SPHelpHeaderView.xib in Resources */,
+				E22C6C231FD3C00100EEF8F5 /* SPSettingNormalCell.xib in Resources */,
+				E206F5AA1FD4E6F1000CD7C5 /* SPPowerController.xib in Resources */,
 				E2889D181FAF438000590DD2 /* SPShowHomeCell.xib in Resources */,
+				E206F5B51FD4F6EE000CD7C5 /* SPPowerWeekController.xib in Resources */,
 				E2C9F9E91FB833AE00859BDD /* SPHelpController.xib in Resources */,
 				E2CD36C21FB284540013FA50 /* SPAccessoryCommonCell.xib in Resources */,
 				E2C92AB21FB0B29B0011246E /* SPAccessoryCell.xib in Resources */,
 				E2C9F9DA1FB7E2F100859BDD /* WarningController.xib in Resources */,
+				E22C6C0C1FD04F8300EEF8F5 /* SPStatisticalController.xib in Resources */,
 				E2C9F9DF1FB82A3E00859BDD /* SPAboutUSController.xib in Resources */,
 				E271F4E01FB30DD1002488BB /* SPConfigureZonesCell.xib in Resources */,
 				E2C9FA0A1FB999A200859BDD /* SPTriggerNormalCell.xib in Resources */,
 				E271F5041FB453FC002488BB /* SPScenesController.xib in Resources */,
 				E27714641FB52AB600279426 /* SPSceneSetActionController.xib in Resources */,
+				E2E989A51FD6A3FE0003734B /* PPLoadingView.xib in Resources */,
 				E2CD36CC1FB285490013FA50 /* SPAccessoryRecognizeCell.xib in Resources */,
 				E2889D121FAF3FA100590DD2 /* SPHomeController.xib in Resources */,
+				E206F5B01FD4F6B9000CD7C5 /* SPPowerDayController.xib in Resources */,
 				E2889D1D1FAF439800590DD2 /* SPAddHomeCell.xib in Resources */,
 				E271F5121FB460BA002488BB /* SPScenesActionCell.xib in Resources */,
 				E2C9FA151FBA6B2D00859BDD /* SPTriggerNameView.xib in Resources */,
@@ -1111,16 +1354,20 @@
 				E2CD36C71FB2850F0013FA50 /* SPAccessoryTypeCell.xib in Resources */,
 				E2C9F9D51FB7DBA200859BDD /* SPAboutController.xib in Resources */,
 				E2CD36BD1FB2842F0013FA50 /* SPAccessoryStatusCell.xib in Resources */,
+				E22C6C071FD04F3500EEF8F5 /* SPSettingController.xib in Resources */,
 				E2C9F9FF1FB98FD000859BDD /* SPSetTriggerController.xib in Resources */,
 				E2A9480F1FAF02C000922445 /* Assets.xcassets in Resources */,
 				E271F4DB1FB30DB8002488BB /* SPConfigureUserCell.xib in Resources */,
+				E2E989AE1FD6BED40003734B /* SPPowerInfoCell.xib in Resources */,
 				E271F4FF1FB44916002488BB /* SPConfigureChooseServiceController.xib in Resources */,
 				E271F4CF1FB2FE92002488BB /* SPConfigureController.xib in Resources */,
 				E271F4E51FB30DF2002488BB /* SPConfigureServiceCell.xib in Resources */,
 				E2C9F9F51FB9426200859BDD /* SPHelpDetailsCell.xib in Resources */,
+				E206F5BA1FD4F706000CD7C5 /* SPPowerMonthController.xib in Resources */,
 				E271F4EA1FB30E0C002488BB /* SPConfigureTriggersCell.xib in Resources */,
 				E2C92AA21FB0AA6B0011246E /* SPAccessoryController.xib in Resources */,
 				E2C9FA1F1FBA6D2F00859BDD /* SPTriggerNormalView.xib in Resources */,
+				E206F5BF1FD4F71F000CD7C5 /* SPPowerYearController.xib in Resources */,
 				E2C9FA0F1FB9E4E400859BDD /* SPTriggerPickDateCell.xib in Resources */,
 				E2DB22731FB5F70000AEA6A9 /* SPSceneSetCell.xib in Resources */,
 				E271F4F71FB3F75B002488BB /* SPConfigureChooseRoomController.xib in Resources */,
@@ -1146,33 +1393,93 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		553BE34F9ECC9C661D67B47E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartPlug-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D0DD1B05624065932C8FAEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartPlug/Pods-SmartPlug-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		941629D9A93D71071FF1EDE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartPlug/Pods-SmartPlug-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2A947FE1FAF02C000922445 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22C6C2C1FD432B400EEF8F5 /* SPDataManager.m in Sources */,
 				E2D30DEC1FBFE1F2000A088A /* MJRefreshAutoFooter.m in Sources */,
 				E2D30DED1FBFE1F2000A088A /* MJRefreshBackFooter.m in Sources */,
+				E2E989A61FD6A3FE0003734B /* PPLoadingView.m in Sources */,
 				E2D30DEE1FBFE1F2000A088A /* MJRefreshComponent.m in Sources */,
 				E2D30DEF1FBFE1F2000A088A /* MJRefreshFooter.m in Sources */,
+				E22C6C0B1FD04F8300EEF8F5 /* SPStatisticalController.m in Sources */,
 				E2D30DF01FBFE1F2000A088A /* MJRefreshHeader.m in Sources */,
+				E22C6C181FD132DE00EEF8F5 /* NSDate+Extensions.m in Sources */,
 				E2D30DF11FBFE1F2000A088A /* MJRefreshAutoGifFooter.m in Sources */,
 				E2D30DF21FBFE1F2000A088A /* MJRefreshAutoNormalFooter.m in Sources */,
 				E2D30DF31FBFE1F2000A088A /* MJRefreshAutoStateFooter.m in Sources */,
 				E21C1C531FC54EB60057B748 /* SFHFKeychainUtils.m in Sources */,
+				E22C6C291FD430B700EEF8F5 /* SPSynchTimeModel.m in Sources */,
 				E21C1C491FC54B120057B748 /* SPSetting.m in Sources */,
 				E2D30DF41FBFE1F2000A088A /* MJRefreshBackGifFooter.m in Sources */,
 				E2D30DF51FBFE1F2000A088A /* MJRefreshBackNormalFooter.m in Sources */,
 				E21C1C501FC54E190057B748 /* SPStoreHelper.m in Sources */,
 				E2D30DF61FBFE1F2000A088A /* MJRefreshBackStateFooter.m in Sources */,
+				E22C6C0F1FD0F29F00EEF8F5 /* SPGaugeView.m in Sources */,
 				E2D30DF71FBFE1F2000A088A /* MJRefreshGifHeader.m in Sources */,
+				E2E9899B1FD6768F0003734B /* PPTabPageView.m in Sources */,
 				E2D30DF81FBFE1F2000A088A /* MJRefreshNormalHeader.m in Sources */,
 				E2D30DF91FBFE1F2000A088A /* MJRefreshStateHeader.m in Sources */,
+				E22C6C151FD1325F00EEF8F5 /* PPNSString+NSDate.m in Sources */,
 				E2D30DFA1FBFE1F2000A088A /* MJRefreshConst.m in Sources */,
 				E2D30DFB1FBFE1F2000A088A /* NSBundle+MJRefresh.m in Sources */,
 				E2D30DFC1FBFE1F2000A088A /* UIScrollView+MJExtension.m in Sources */,
 				E2D30DFD1FBFE1F2000A088A /* UIScrollView+MJRefresh.m in Sources */,
 				E2D30DFE1FBFE1F2000A088A /* UIView+MJExtension.m in Sources */,
+				E2E989B11FD6C4990003734B /* SPPowerTableViewInfo.m in Sources */,
 				E2C9F9F41FB9426200859BDD /* SPHelpDetailsCell.m in Sources */,
 				E21C1C4C1FC54BCC0057B748 /* SPPopUpManager.m in Sources */,
 				E2C9FA051FB9931C00859BDD /* SPTriggerTableViewInfo.m in Sources */,
@@ -1181,8 +1488,14 @@
 				E2A948481FAF071500922445 /* SPBaseController.m in Sources */,
 				E2C92AB51FB0B53C0011246E /* SPAccessoryInfo.m in Sources */,
 				E2CD36B41FB27CFF0013FA50 /* SPAccessoryDataSource.m in Sources */,
+				E22C6C221FD3C00100EEF8F5 /* SPSettingNormalCell.m in Sources */,
 				E2C9F9E31FB82F7B00859BDD /* SPVersionController.m in Sources */,
+				E22C6C1E1FD15ABF00EEF8F5 /* SPSettingTableViewInfo.m in Sources */,
 				E2C92AA71FB0B1830011246E /* SPAddRoomCell.m in Sources */,
+				E2E989BA1FD701270003734B /* SPXValueModel.m in Sources */,
+				E206F5B41FD4F6EE000CD7C5 /* SPPowerWeekController.m in Sources */,
+				E2E989A91FD6A4590003734B /* PPHUDView.m in Sources */,
+				E2E989AD1FD6BED40003734B /* SPPowerInfoCell.m in Sources */,
 				E271F4DF1FB30DD1002488BB /* SPConfigureZonesCell.m in Sources */,
 				E2889D1C1FAF439800590DD2 /* SPAddHomeCell.m in Sources */,
 				E2C9F9F81FB945B600859BDD /* SPHelpHeaderView.m in Sources */,
@@ -1192,8 +1505,10 @@
 				E2C9FA021FB9927300859BDD /* SPTriggerDataSource.m in Sources */,
 				E2C92AAC1FB0B25C0011246E /* SPRoomCell.m in Sources */,
 				E271F4FE1FB44916002488BB /* SPConfigureChooseServiceController.m in Sources */,
+				E22C6C061FD04F3500EEF8F5 /* SPSettingController.m in Sources */,
 				E2C9F9FE1FB98FD000859BDD /* SPSetTriggerController.m in Sources */,
 				E271F50D1FB4604C002488BB /* SPBaseCollectionCell.m in Sources */,
+				E2E989B41FD6C4C70003734B /* SPYYModel.m in Sources */,
 				E2CD36CB1FB285490013FA50 /* SPAccessoryRecognizeCell.m in Sources */,
 				E2C92AA11FB0AA6B0011246E /* SPAccessoryController.m in Sources */,
 				E271F4E91FB30E0C002488BB /* SPConfigureTriggersCell.m in Sources */,
@@ -1205,26 +1520,35 @@
 				E271F4FA1FB3FD08002488BB /* SPConfigureZoneModel.m in Sources */,
 				E271F5111FB460BA002488BB /* SPScenesActionCell.m in Sources */,
 				E2889CEC1FAF0D6E00590DD2 /* SPBaseNavigationController.m in Sources */,
+				E2E989A11FD67A340003734B /* SPPowerListPageView.m in Sources */,
 				E2CD36C11FB284540013FA50 /* SPAccessoryCommonCell.m in Sources */,
 				E271F5151FB476C3002488BB /* SPActionSetModel.m in Sources */,
 				E2C9FA181FBA6CEC00859BDD /* SPTriggerSettingView.m in Sources */,
 				E276E6C51FBD55DF00A23796 /* SPDatePicker.m in Sources */,
 				E2C9FA0E1FB9E4E400859BDD /* SPTriggerPickDateCell.m in Sources */,
 				E271F5181FB483F6002488BB /* SPSceneButton.m in Sources */,
+				E2E9899A1FD6768F0003734B /* SPTabPageScrollView.m in Sources */,
 				E2889D111FAF3FA100590DD2 /* SPHomeController.m in Sources */,
 				E2889D171FAF438000590DD2 /* SPShowHomeCell.m in Sources */,
 				E2CD36C61FB2850F0013FA50 /* SPAccessoryTypeCell.m in Sources */,
+				E22C6C1B1FD15A4800EEF8F5 /* SPSettingDataSource.m in Sources */,
 				E2DB226E1FB5F4E100AEA6A9 /* SPSceneSetActionDataSource.m in Sources */,
+				E206F5A91FD4E6F1000CD7C5 /* SPPowerController.m in Sources */,
+				E21C1C5E1FC59EA30057B748 /* SPTabBarController.m in Sources */,
 				E271F4CA1FB2E13C002488BB /* SPAccessoryDetailHeadView.m in Sources */,
 				E2C92AB11FB0B29B0011246E /* SPAccessoryCell.m in Sources */,
+				E206F5BE1FD4F71F000CD7C5 /* SPPowerYearController.m in Sources */,
 				E2C9F9D41FB7DBA200859BDD /* SPAboutController.m in Sources */,
+				E2E989BF1FD7E74C0003734B /* SPPopUpView.m in Sources */,
 				E271F4DA1FB30DB8002488BB /* SPConfigureUserCell.m in Sources */,
 				E271F4CE1FB2FE92002488BB /* SPConfigureController.m in Sources */,
 				E2CD36AA1FB1E2410013FA50 /* SPAccessoryDetailController.m in Sources */,
 				E2C9F9E81FB833AE00859BDD /* SPHelpController.m in Sources */,
 				E2889D231FAF444400590DD2 /* SPCell.m in Sources */,
 				E2A948151FAF02C000922445 /* main.m in Sources */,
+				E2E9899E1FD679DC0003734B /* SPPowerDataSource.m in Sources */,
 				E271F4D51FB30081002488BB /* SPConfigureTableViewInfo.m in Sources */,
+				E206F5B91FD4F706000CD7C5 /* SPPowerMonthController.m in Sources */,
 				E27714631FB52AB600279426 /* SPSceneSetActionController.m in Sources */,
 				E271F5031FB453FC002488BB /* SPScenesController.m in Sources */,
 				E21C1C571FC551610057B748 /* SPShowGuideController.m in Sources */,
@@ -1232,6 +1556,7 @@
 				E2C9F9EF1FB8903D00859BDD /* SPHelpDataSource.m in Sources */,
 				E276E6C81FBD561000A23796 /* SPDatePicker_DateModel.m in Sources */,
 				E2C9FA1D1FBA6D2300859BDD /* SPTriggerNormalView.m in Sources */,
+				E206F5AF1FD4F6B9000CD7C5 /* SPPowerDayController.m in Sources */,
 				E271F4F61FB3F75B002488BB /* SPConfigureChooseRoomController.m in Sources */,
 				E2DB22721FB5F6FF00AEA6A9 /* SPSceneSetCell.m in Sources */,
 				E2DB226B1FB5F36900AEA6A9 /* SPActionSetTableViewInfo.m in Sources */,
@@ -1240,6 +1565,7 @@
 				E271F4D21FB2FFEB002488BB /* SPConfigureDataSource.m in Sources */,
 				E2A948071FAF02C000922445 /* AppDelegate.m in Sources */,
 				E21C1C5A1FC551CC0057B748 /* NSObject+SPURLRoute.m in Sources */,
+				E206F5C81FD51F61000CD7C5 /* SPScrollSegmentControl.m in Sources */,
 				E2889CE51FAF0AE500590DD2 /* UIViewController+SPUIViewControllerExtensions.m in Sources */,
 				E2C9F9D91FB7E2F100859BDD /* WarningController.m in Sources */,
 				E271F4ED1FB31D72002488BB /* SPConfigureHeadView.m in Sources */,
@@ -1326,7 +1652,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1375,8 +1701,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1384,17 +1711,22 @@
 		};
 		E2A9482F1FAF02C000922445 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 841D39E5296FFFE9ECE548E7 /* Pods-SmartPlug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SmartPlug/SmartPlug.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AJP77DB44;
 				INFOPLIST_FILE = SmartPlug/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cc.SmartPlug;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.SmartPlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -1402,17 +1734,22 @@
 		};
 		E2A948301FAF02C000922445 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4AD6208AF3F8D1B3A546368 /* Pods-SmartPlug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SmartPlug/SmartPlug.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AJP77DB44;
 				INFOPLIST_FILE = SmartPlug/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cc.SmartPlug;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.SmartPlu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -1484,7 +1821,7 @@
 				E2A9482D1FAF02C000922445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E2A9482E1FAF02C000922445 /* Build configuration list for PBXNativeTarget "SmartPlug" */ = {
 			isa = XCConfigurationList;
@@ -1493,7 +1830,7 @@
 				E2A948301FAF02C000922445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E2A948311FAF02C000922445 /* Build configuration list for PBXNativeTarget "SmartPlugTests" */ = {
 			isa = XCConfigurationList;
@@ -1502,7 +1839,7 @@
 				E2A948331FAF02C000922445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E2A948341FAF02C000922445 /* Build configuration list for PBXNativeTarget "SmartPlugUITests" */ = {
 			isa = XCConfigurationList;
@@ -1511,7 +1848,7 @@
 				E2A948361FAF02C000922445 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

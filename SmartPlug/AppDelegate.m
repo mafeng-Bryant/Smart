@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "SPSetting.h"
+#import "NSObject+SPURLRoute.h"
+#import "Help.h"
+#import "SPTabBarController.h"
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -19,34 +22,40 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    UIImage* homeImage = Image(@"home");
     _homeController = [[SPHomeController alloc]initWithNibName:@"SPHomeController" bundle:nil];
     SPBaseNavigationController *featureNav = [[SPBaseNavigationController alloc]initWithRootViewController:_homeController];
-    UITabBarItem *tabItem = [[UITabBarItem alloc]initWithTitle:@"主页" image:nil selectedImage:nil];
+    UITabBarItem *tabItem = [[UITabBarItem alloc]initWithTitle:@"主页" image:homeImage selectedImage:homeImage];
     featureNav.tabBarItem = tabItem;
     
+    UIImage* accessImage = Image(@"accessory");
     _accessoryController = [[SPAccessoryController alloc]initWithNibName:@"SPAccessoryController" bundle:nil];
     SPBaseNavigationController *categoryNav = [[SPBaseNavigationController alloc]initWithRootViewController:_accessoryController];
-    tabItem = [[UITabBarItem alloc]initWithTitle:@"设备" image:nil selectedImage:nil];
+    tabItem = [[UITabBarItem alloc]initWithTitle:@"设备" image:accessImage selectedImage:accessImage];
     categoryNav.tabBarItem = tabItem;
     
+    UIImage* scenesImage = Image(@"scenes");
     _scenesController = [[SPScenesController alloc]initWithNibName:@"SPScenesController" bundle:nil];
     SPBaseNavigationController *lifeNav = [[SPBaseNavigationController alloc]initWithRootViewController:_scenesController];
-    tabItem = [[UITabBarItem alloc]initWithTitle:@"场景" image:nil selectedImage:nil];
+    tabItem = [[UITabBarItem alloc]initWithTitle:@"场景" image:scenesImage selectedImage:scenesImage];
     lifeNav.tabBarItem = tabItem;
     
+    UIImage* configImage = Image(@"config");
    _configreCartController = [[SPConfigureController alloc] initWithNibName:@"SPConfigureController" bundle:nil];
     SPBaseNavigationController *accountNav = [[SPBaseNavigationController alloc]initWithRootViewController:_configreCartController];
-    tabItem = [[UITabBarItem alloc]initWithTitle:@"配置" image:nil selectedImage:nil];
+    tabItem = [[UITabBarItem alloc]initWithTitle:@"配置" image:configImage selectedImage:configImage];
     accountNav.tabBarItem = tabItem;
-    
+
+    UIImage* aboutImage = Image(@"about");
     _aboutController = [[SPAboutController alloc] initWithNibName:@"SPAboutController" bundle:nil];
     SPBaseNavigationController *cartNav = [[SPBaseNavigationController alloc]initWithRootViewController:_aboutController];
-    tabItem = [[UITabBarItem alloc]initWithTitle:@"关于" image:nil selectedImage:nil];
+    tabItem = [[UITabBarItem alloc]initWithTitle:@"关于" image:aboutImage selectedImage:aboutImage];
     cartNav.tabBarItem = tabItem;
     
     _tabBarController = [[UITabBarController alloc]init];
-    [_tabBarController.tabBar setTintColor:[UIColor redColor]];
+    [_tabBarController.tabBar setTintColor:[UIColor whiteColor]];
     _tabBarController.delegate = self;
+    _tabBarController.tabBar.backgroundImage = Image(@"tabbarbg");
     _tabBarController.tabBar.layer.borderWidth = 0.25;
     _tabBarController.tabBar.layer.borderColor = [UIColor blackColor].CGColor;
     [_tabBarController.tabBar setClipsToBounds:YES];
@@ -75,7 +84,7 @@
 
 + (void)dismiss
 {
-    [[UIApplication sharedApplication].keyWindow.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    [[self rootViewController] dismissViewControllerAnimated:YES completion:nil];
 }
 
 + (void)currentNavPushViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -83,7 +92,6 @@
     UINavigationController *nav = [AppDelegate appDelegate].tabBarController.selectedViewController;
     [nav pushViewController:viewController animated:animated];
 }
-
 
 #pragma mark UITabBarControllerDelegate
 

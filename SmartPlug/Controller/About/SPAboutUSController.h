@@ -9,5 +9,7 @@
 #import "SPBaseController.h"
 
 @interface SPAboutUSController : SPBaseController
+@property (weak, nonatomic) IBOutlet UIButton *moreAction;
+- (IBAction)moreBtnAction:(id)sender;
 
 @end

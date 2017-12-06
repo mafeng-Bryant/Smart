@@ -16,7 +16,7 @@ typedef enum {
 }SPAccessoryTableViewSectionType;
 
 typedef enum {
-    SPAccessoryTableViewRowTypeStatus,//状态
+     SPAccessoryTableViewRowTypeStatus,//状态
      SPAccessoryTableViewRowTypePower,
     SPAccessoryTableViewRowTypeCommon,
     SPAccessoryTableViewRowTypeAccessory,//设备

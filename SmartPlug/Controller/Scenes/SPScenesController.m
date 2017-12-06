@@ -152,9 +152,9 @@
     [btn setTitle:@"添加" forState:UIControlStateNormal];
     btn.frame = CGRectMake(0, 0, 21, 21);
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:10];
+    btn.titleLabel.font = [UIFont systemFontOfSize:16];
     [btn addTarget:self action:@selector(addAccessory:) forControlEvents:UIControlEventTouchUpInside];
-    btn.backgroundColor = [UIColor blackColor];
+    btn.backgroundColor = [UIColor clearColor];
     ViewRadius(btn, 10);
     UIBarButtonItem* rightItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.rightBarButtonItem = rightItem;

@@ -15,6 +15,9 @@ SINGLETON_GCD(SPSetting);
 -(id) init
 {
     if (self = [super init]){
+        _currencySymbol = @"￥";
+        _numberOne = @"1";
+        _numberTwo = @"00";
     }
     return self;
 }
@@ -30,5 +33,17 @@ SINGLETON_GCD(SPSetting);
     return _popUpControllerManager;
 }
 
+-(void)setCurrencySymbol:(NSString *)currencySymbol
+{
+    _currencySymbol = currencySymbol;
+}
+
+-(NSString *)chooseCharge
+{
+    if (isValidString(_numberOne) && isValidString(_numberTwo)) {
+        return [NSString stringWithFormat:@"%@.%@",_numberOne,_numberTwo];
+    }
+    return @"0.00";
+}
 
 @end

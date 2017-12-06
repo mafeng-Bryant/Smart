@@ -11,6 +11,10 @@
 #import "PPSwitch.h"
 #import <HomeKit/HomeKit.h>
 
+typedef enum {
+  SPAcceessoryStatesTypePower = 0,
+  SPAcceessoryStatesTypeAppliance = 1
+}SPAcceessoryStatesType;
 
 @protocol SPAccessoryStatusCellDelegate <NSObject>
 
@@ -27,7 +31,7 @@
 @property (nonatomic,strong) HMCharacteristic* chaRx;//读特征
 @property (nonatomic,weak) id<SPAccessoryStatusCellDelegate>delegate;
 
-- (void)configureData:(HMAccessory*)accessory;
+- (void)configureData:(HMAccessory*)accessory type:(SPAcceessoryStatesType)type;
 
 
 @end
