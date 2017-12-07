@@ -242,13 +242,13 @@
 {
     if (time > 0) {
         //format of day
-        NSString *str_day = [NSString stringWithFormat:@"%02ld",time/3600*24];
+        NSString *str_day = [NSString stringWithFormat:@"%02ld",time/(3600*24)];
         NSInteger day = 0;
         NSInteger hour = 0;
         NSInteger minutes = 0;
         NSInteger seconds = 0;
         if (isValidString(str_day)) {
-             day = [str_day integerValue];
+            day = [str_day integerValue]>0?[str_day integerValue]:0;
         }
         
         //format of hour

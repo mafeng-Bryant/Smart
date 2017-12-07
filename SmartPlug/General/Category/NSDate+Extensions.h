@@ -26,6 +26,10 @@
 - (NSString *)formatHMSYMD;
 - (NSString *)formatMM;
 - (NSString *)formatYY;
+- (NSString *)formatHH;
+- (NSString *)formatDD;
+
+
 
 // Relative dates from the current date
 + (NSDate *) dateTomorrow;

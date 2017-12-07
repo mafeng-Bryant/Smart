@@ -64,6 +64,16 @@
     return [self formatWithStyle:@"yyyy"];
 }
 
+- (NSString *)formatHH
+{
+    return [self formatWithStyle:@"HH"];
+}
+
+- (NSString *)formatDD
+{
+    return [self formatWithStyle:@"dd"];
+}
+
 - (NSString *)formatMD
 {
     return [self formatWithStyle:@"MM-dd"];

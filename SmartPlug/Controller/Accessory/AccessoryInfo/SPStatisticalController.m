@@ -12,10 +12,15 @@
 #import "PPNSString+NSDate.h"
 #import "SPPowerController.h"
 #import "SPBaseNavigationController.h"
+#import "SPPowerDataModel.h"
+#import "SPDataManager.h"
 
 @interface SPStatisticalController ()
 {
     NSTimer* _timer;
+    CGFloat _historyHourDataValue;
+    NSDate *_historyDate;
+    
 }
 @property (nonatomic,strong) HMCharacteristic* runTimeCharacteristic;//在线时间特征
 @property (nonatomic,strong) HMCharacteristic* realtimeEnergyCharacteristic;//功率
@@ -89,9 +94,6 @@
                 if ([properites containsObject:HMCharacteristicPropertyReadable] && [properites containsObject:HMCharacteristicPropertySupportsEventNotification]) {
                     self.runTimeCharacteristic = cha;
                     [self.runTimeCharacteristic enableNotification:YES completionHandler:^(NSError * _Nullable error) {
-                        if (!error) {
-                            NSLog(@"error = nil");
-                        }
                     }];
                 }
             }else if ([cha.characteristicType isEqualToString:kAccessoryRealTime_Energy]){
@@ -99,9 +101,6 @@
                 if ([properites containsObject:HMCharacteristicPropertyReadable] && [properites containsObject:HMCharacteristicPropertySupportsEventNotification]) {
                     self.realtimeEnergyCharacteristic = cha;
                     [self.realtimeEnergyCharacteristic enableNotification:YES completionHandler:^(NSError * _Nullable error) {
-                        if (!error) {
-                            NSLog(@"error = nil");
-                        }
                     }];
                 }
             }else if ([cha.characteristicType isEqualToString:kAccessoryCurrentHourData]){
@@ -109,9 +108,6 @@
                 if ([properites containsObject:HMCharacteristicPropertyReadable] && [properites containsObject:HMCharacteristicPropertySupportsEventNotification]) {
                     self.currentHourDataCharacteristic = cha;
                     [self.currentHourDataCharacteristic enableNotification:YES completionHandler:^(NSError * _Nullable error) {
-                        if (!error) {
-                            NSLog(@"error = nil");
-                        }
                     }];
                 }
            }
@@ -138,9 +134,47 @@
     if (self.currentHourDataCharacteristic) {
         id value = self.currentHourDataCharacteristic.value; //负载的功率
         CGFloat dataEneygy = [(NSNumber*)value floatValue];
-        NSString* dataEneygyString = [NSString stringWithFormat:@"%.2f",dataEneygy];
-        dataEneygyString = [NSString stringWithFormat:@"    当前小时电量:%@瓦时    ",dataEneygyString];
-        [_currentLowerLbl setTitle:dataEneygyString forState:UIControlStateNormal];
+        if (dataEneygy < _historyHourDataValue) {
+            //表示当前小时数据结束
+            if ([[NSDate date] timeIntervalSinceNow] > [_historyDate timeIntervalSinceNow]) { //表示确实结束当前整点数据统计
+                _historyHourDataValue = 0.0;
+                _historyDate = nil;
+            }
+        }else {
+            NSString* dataEneygyString = [NSString stringWithFormat:@"%.2f",dataEneygy];
+            //获取当前整点的时间
+            NSInteger hour = [[[NSDate date] formatHH] integerValue];
+           //存储数据到数据库，按小时存储数据
+            if (![SPDataManager sharedSPDataManager].hasCurrentDayData) {
+             //创建存储对象
+                SPPowerDataModel* model = [[SPPowerDataModel alloc]init];
+                model.date = [NSDate date];
+                model.day = [[NSDate date] formatYMD];
+                //get current hour model
+                for (SPPowerHourModel* hourModel in model.datas) {
+                    if (hourModel.hour == hour) {
+                        hourModel.value = dataEneygyString;
+                    }
+                }
+                [[SPDataManager sharedSPDataManager] savePowerDataModel:model];
+            }else {
+                //更新数据源
+                SPPowerDataModel* model = [[SPDataManager sharedSPDataManager] getCurrentDayModel];
+                if (model) {
+                    //get current hour model
+                    for (SPPowerHourModel* hourModel in model.datas) {
+                        if (hourModel.hour == hour) {
+                            hourModel.value = dataEneygyString;
+                        }
+                    }
+                   [[SPDataManager sharedSPDataManager] updateCurrentDayModel:model];
+                }
+            }
+            dataEneygyString = [NSString stringWithFormat:@"    当前小时电量:%@瓦时    ",dataEneygyString];
+            [_currentLowerLbl setTitle:dataEneygyString forState:UIControlStateNormal];
+            _historyDate = [NSDate date];
+      }
+        _historyHourDataValue = dataEneygy;
     }
 }
 

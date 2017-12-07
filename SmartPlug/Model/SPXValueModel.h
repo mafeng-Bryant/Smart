@@ -15,8 +15,10 @@ typedef enum
 }SPXValueModelType;
 
 @interface SPXValueModel : NSObject
+@property (nonatomic,assign) NSInteger day;
 @property (nonatomic,strong) NSString* value;//0.001
 @property (nonatomic,assign) NSInteger hour;//0->0.001
 @property (nonatomic,assign) SPXValueModelType type;
+
 
 @end

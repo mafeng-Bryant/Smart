@@ -9,10 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "SPYYModel.h"
 #import "SPXValueModel.h"
+#import "SPPowerDataSource.h"
 
 @interface SPPowerTableViewInfo : NSObject
 @property (nonatomic,strong) SPYYModel* yyModel;//y数据
 @property (nonatomic,strong) NSMutableArray* valueDatas;
 @property (nonatomic,strong) NSDate* date;
+
+-(instancetype)initWithType:(SPPowerDataSourceSegmentType)type date:(NSDate*)date;
+
+
 
 @end

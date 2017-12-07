@@ -39,6 +39,9 @@
 		E22C6C231FD3C00100EEF8F5 /* SPSettingNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22C6C211FD3C00100EEF8F5 /* SPSettingNormalCell.xib */; };
 		E22C6C291FD430B700EEF8F5 /* SPSynchTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C281FD430B700EEF8F5 /* SPSynchTimeModel.m */; };
 		E22C6C2C1FD432B400EEF8F5 /* SPDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E22C6C2B1FD432B400EEF8F5 /* SPDataManager.m */; };
+		E23BAD881FD82341008FD1DB /* SPPowerDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E23BAD871FD82341008FD1DB /* SPPowerDataModel.m */; };
+		E23BAD8B1FD82452008FD1DB /* SPPowerHourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E23BAD8A1FD82452008FD1DB /* SPPowerHourModel.m */; };
+		E2646CC51FD851D000A72426 /* NSObject+WHC_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E2646CC41FD851D000A72426 /* NSObject+WHC_Model.m */; };
 		E271F4CA1FB2E13C002488BB /* SPAccessoryDetailHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4C91FB2E13C002488BB /* SPAccessoryDetailHeadView.m */; };
 		E271F4CE1FB2FE92002488BB /* SPConfigureController.m in Sources */ = {isa = PBXBuildFile; fileRef = E271F4CC1FB2FE92002488BB /* SPConfigureController.m */; };
 		E271F4CF1FB2FE92002488BB /* SPConfigureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E271F4CD1FB2FE92002488BB /* SPConfigureController.xib */; };
@@ -259,6 +262,12 @@
 		E22C6C2F1FD4392E00EEF8F5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		E22C6C311FD4395700EEF8F5 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		E22C6C331FD43ACD00EEF8F5 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		E23BAD861FD82341008FD1DB /* SPPowerDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerDataModel.h; sourceTree = "<group>"; };
+		E23BAD871FD82341008FD1DB /* SPPowerDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerDataModel.m; sourceTree = "<group>"; };
+		E23BAD891FD82452008FD1DB /* SPPowerHourModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPPowerHourModel.h; sourceTree = "<group>"; };
+		E23BAD8A1FD82452008FD1DB /* SPPowerHourModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPPowerHourModel.m; sourceTree = "<group>"; };
+		E2646CC31FD851D000A72426 /* NSObject+WHC_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WHC_Model.h"; sourceTree = "<group>"; };
+		E2646CC41FD851D000A72426 /* NSObject+WHC_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WHC_Model.m"; sourceTree = "<group>"; };
 		E271F4C81FB2E13C002488BB /* SPAccessoryDetailHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAccessoryDetailHeadView.h; sourceTree = "<group>"; };
 		E271F4C91FB2E13C002488BB /* SPAccessoryDetailHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAccessoryDetailHeadView.m; sourceTree = "<group>"; };
 		E271F4CB1FB2FE92002488BB /* SPConfigureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPConfigureController.h; sourceTree = "<group>"; };
@@ -602,7 +611,6 @@
 			isa = PBXGroup;
 			children = (
 				E206F5AB1FD4F63D000CD7C5 /* powerInfo */,
-				E2CD36A71FB1E2410013FA50 /* SPAccessoryDetailController.h */,
 				E2CD36A81FB1E2410013FA50 /* SPAccessoryDetailController.m */,
 				E2CD36A91FB1E2410013FA50 /* SPAccessoryDetailController.xib */,
 				E2CD36B21FB27CFF0013FA50 /* SPAccessoryDataSource.h */,
@@ -611,6 +619,7 @@
 				E22C6C041FD04F3500EEF8F5 /* SPSettingController.m */,
 				E22C6C051FD04F3500EEF8F5 /* SPSettingController.xib */,
 				E22C6C191FD15A4800EEF8F5 /* SPSettingDataSource.h */,
+				E2CD36A71FB1E2410013FA50 /* SPAccessoryDetailController.h */,
 				E22C6C1A1FD15A4800EEF8F5 /* SPSettingDataSource.m */,
 				E22C6C081FD04F8300EEF8F5 /* SPStatisticalController.h */,
 				E22C6C091FD04F8300EEF8F5 /* SPStatisticalController.m */,
@@ -716,6 +725,8 @@
 		E2889CF01FAF0E5A00590DD2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E2646CC31FD851D000A72426 /* NSObject+WHC_Model.h */,
+				E2646CC41FD851D000A72426 /* NSObject+WHC_Model.m */,
 				E22C6C171FD132DE00EEF8F5 /* NSDate+Extensions.h */,
 				E22C6C161FD132DE00EEF8F5 /* NSDate+Extensions.m */,
 				E22C6C131FD1325F00EEF8F5 /* PPNSString+NSDate.h */,
@@ -899,6 +910,10 @@
 				E2E989B31FD6C4C70003734B /* SPYYModel.m */,
 				E2E989B81FD701270003734B /* SPXValueModel.h */,
 				E2E989B91FD701270003734B /* SPXValueModel.m */,
+				E23BAD861FD82341008FD1DB /* SPPowerDataModel.h */,
+				E23BAD871FD82341008FD1DB /* SPPowerDataModel.m */,
+				E23BAD891FD82452008FD1DB /* SPPowerHourModel.h */,
+				E23BAD8A1FD82452008FD1DB /* SPPowerHourModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1495,6 +1510,7 @@
 				E2E989BA1FD701270003734B /* SPXValueModel.m in Sources */,
 				E206F5B41FD4F6EE000CD7C5 /* SPPowerWeekController.m in Sources */,
 				E2E989A91FD6A4590003734B /* PPHUDView.m in Sources */,
+				E23BAD8B1FD82452008FD1DB /* SPPowerHourModel.m in Sources */,
 				E2E989AD1FD6BED40003734B /* SPPowerInfoCell.m in Sources */,
 				E271F4DF1FB30DD1002488BB /* SPConfigureZonesCell.m in Sources */,
 				E2889D1C1FAF439800590DD2 /* SPAddHomeCell.m in Sources */,
@@ -1550,6 +1566,7 @@
 				E271F4D51FB30081002488BB /* SPConfigureTableViewInfo.m in Sources */,
 				E206F5B91FD4F706000CD7C5 /* SPPowerMonthController.m in Sources */,
 				E27714631FB52AB600279426 /* SPSceneSetActionController.m in Sources */,
+				E2646CC51FD851D000A72426 /* NSObject+WHC_Model.m in Sources */,
 				E271F5031FB453FC002488BB /* SPScenesController.m in Sources */,
 				E21C1C571FC551610057B748 /* SPShowGuideController.m in Sources */,
 				E2CD36B71FB27D220013FA50 /* SPTableViewDataSource.m in Sources */,
@@ -1560,6 +1577,7 @@
 				E271F4F61FB3F75B002488BB /* SPConfigureChooseRoomController.m in Sources */,
 				E2DB22721FB5F6FF00AEA6A9 /* SPSceneSetCell.m in Sources */,
 				E2DB226B1FB5F36900AEA6A9 /* SPActionSetTableViewInfo.m in Sources */,
+				E23BAD881FD82341008FD1DB /* SPPowerDataModel.m in Sources */,
 				E2889CE91FAF0BEF00590DD2 /* UIView+Extensions.m in Sources */,
 				E2C9FA091FB999A200859BDD /* SPTriggerNormalCell.m in Sources */,
 				E271F4D21FB2FFEB002488BB /* SPConfigureDataSource.m in Sources */,

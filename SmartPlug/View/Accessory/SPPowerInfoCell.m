@@ -61,7 +61,7 @@
     
    //set xx data
     if ( isValidArray(info.valueDatas)) {
-        CGFloat xSpace = 15.0f;
+        CGFloat xSpace = 20.0f;
         for (SPXValueModel* model in info.valueDatas) {
             NSInteger index = [info.valueDatas indexOfObject:model];
             SPXValueModel* model = info.valueDatas[index];
@@ -73,7 +73,7 @@
             xLabel.frame = CGRectMake(xSpace, 258 - xLabel.height, xLabel.width, xLabel.height);
             [_scrollView addSubview:xLabel];
             if (index < info.valueDatas.count-1) {
-                xSpace+=40+xLabel.width;
+                xSpace+=50+xLabel.width;
             }
             
             if ([model.value floatValue]>0) {
@@ -86,16 +86,16 @@
         
                 UILabel* xValueLbl = [[UILabel alloc]initWithFrame:CGRectZero];
                 xValueLbl.textColor = PPC3;
-                xValueLbl.font = [UIFont systemFontOfSize:14];
                 if (costType == SPXValueModelTypeCost) {
                     CGFloat chooseCharge = [[SPSetting sharedSPSetting].chooseCharge floatValue];
                     chooseCharge = chooseCharge*[model.value floatValue];
-                    xValueLbl.text = [NSString stringWithFormat:@"%.3f",chooseCharge];
+                    xValueLbl.text = [NSString stringWithFormat:@"%.3f(%@)",chooseCharge,[SPSetting sharedSPSetting].currencySymbol];
                     CGFloat viewHeight = chooseCharge*((300-59)/4)/0.5;
                     viewPoint.y = xLabel.origin.y - VMargin20 - viewHeight + xLabel.height;
                     view.origin = viewPoint;
                     view.size = CGSizeMake([self getTextWidth], viewHeight);
                     view.centerX = xLabel.centerX;
+                    xValueLbl.font = [UIFont systemFontOfSize:11];
                 }else {
                     CGFloat viewHeight = [model.value floatValue]*((300-59)/4)/0.5;
                     viewPoint.y = xLabel.origin.y - VMargin20 - viewHeight + xLabel.height;
@@ -103,6 +103,7 @@
                     view.size = CGSizeMake([self getTextWidth], viewHeight);
                     view.centerX = xLabel.centerX;
                     xValueLbl.text = model.value;
+                    xValueLbl.font = [UIFont systemFontOfSize:14];
                 }
                 [xValueLbl sizeToFit];
                 xValueLbl.centerX = xLabel.centerX;
@@ -110,27 +111,31 @@
                 point.y = view.origin.y - VMargin20;
                 xValueLbl.origin = point;
                 [_scrollView addSubview:xValueLbl];
-                
             }else {
-                
                 UILabel* xValueLbl = [[UILabel alloc]initWithFrame:CGRectZero];
                 xValueLbl.textColor = PPC3;
-                xValueLbl.font = [UIFont systemFontOfSize:14];
-                xValueLbl.text = model.value;
-                [xValueLbl sizeToFit];
+                if (costType == SPXValueModelTypeCost) {
+                    CGFloat chooseCharge = [[SPSetting sharedSPSetting].chooseCharge floatValue];
+                    chooseCharge = chooseCharge*[model.value floatValue];
+                       xValueLbl.text = [NSString stringWithFormat:@"%.3f(%@)",chooseCharge,[SPSetting sharedSPSetting].currencySymbol];
+                    xValueLbl.font = [UIFont systemFontOfSize:11];
+                    [xValueLbl sizeToFit];
+                }else {
+                    xValueLbl.font = [UIFont systemFontOfSize:14];
+                    xValueLbl.text = model.value;
+                    [xValueLbl sizeToFit];
+                }
                 xValueLbl.centerX = xLabel.centerX;
                 CGPoint point = xValueLbl.origin;
                 point.y = xLabel.origin.y - VMargin20;
                 xValueLbl.origin = point;
                 [_scrollView addSubview:xValueLbl];
-                
             }
         }
-        _scrollView.contentSize = CGSizeMake(xSpace+VMargin80, _scrollView.height);
+        CGFloat value = (costType == SPXValueModelTypeCost)?VMargin100:VMargin80;
+        _scrollView.contentSize = CGSizeMake(xSpace+value, _scrollView.height);
     }
 }
-
-
 
 - (CGFloat)getTextWidth
 {
