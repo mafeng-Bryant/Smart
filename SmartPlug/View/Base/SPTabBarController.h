@@ -10,6 +10,5 @@
 
 @interface SPTabBarController : UITabBarController
 
-- (void)changeTabBarSelectedIndex:(NSUInteger)currentSelectedIndex;
 
 @end

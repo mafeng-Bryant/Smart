@@ -64,6 +64,13 @@
         _titleLbl.textAlignment = NSTextAlignmentCenter;
         [_boxView addSubview:_titleLbl];
         
+        _messageLbl = [[UILabel alloc]initWithFrame:CGRectZero];
+        _messageLbl.textColor = PPC3;
+        _messageLbl.font = [UIFont systemFontOfSize:16];
+        _messageLbl.textAlignment = NSTextAlignmentCenter;
+        _messageLbl.numberOfLines = 0;
+        [_boxView addSubview:_messageLbl];
+        
         // 初始化pickerView
         _pickView = [[UIPickerView alloc]initWithFrame:CGRectMake(0, _titleLbl.bottom,kAlertStyleViewWidth, 200)];
         //指定数据源和委托
@@ -135,6 +142,7 @@
     _titleLbl.text = @"电价(kw.h)";
     [_titleLbl sizeToFit];
     _titleLbl.origin = CGPointMake((_boxView.width - _titleLbl.width)/2.0, VMargin20);
+    _messageLbl.hidden = YES;
     
     _lineLbl.origin = CGPointMake(0, 190);
     _lineLbl.width = _boxView.width;
@@ -158,6 +166,63 @@
         [_okBtn setTitle:okButtonTitle forState:UIControlStateNormal];
     }
     _boxView.center = self.center;
+}
+
+- (void)setTitle:(NSString*)title
+         message:(NSString*)message
+         okButtonTitle:(NSString *)okButtonTitle
+          cancelButtonTitle:(NSString *)cancelButtonTitle
+        clickBlock:(SPPopUpViewStyleBlock)block
+{
+    _clickBlock = block;
+    _titleLbl.text = title;
+    [_titleLbl sizeToFit];
+    _titleLbl.origin = CGPointMake((_boxView.width - _titleLbl.width)/2.0, VMargin20);
+    
+    _messageLbl.width = _boxView.width-2*VMargin20;
+    _messageLbl.text = message;
+    [_messageLbl sizeToFit];
+    CGFloat msgHeight = MAX(VMargin10, _messageLbl.height);
+    _messageLbl.height = MIN(msgHeight, kAlertStyleViewWidth);
+    _messageLbl.origin = CGPointMake(VMargin20, _titleLbl.bottom+VMargin10);
+    _messageLbl.centerX = _boxView.centerX;
+    _pickView.hidden = YES;
+    
+    _lineLbl.origin = CGPointMake(0, _messageLbl.bottom+VMargin20);
+    _lineLbl.width = _boxView.width;
+    _lineLbl.height = 0.5;
+    _okBtn.y = _lineLbl.bottom+VMargin2;
+    _boxView.height = _okBtn.y+_okBtn.height+VMargin2;
+    
+    if (isValidString(cancelButtonTitle)) {
+        _okBtn.x = _boxView.width/2;
+        _cancelBtn.y = _lineLbl.bottom+VMargin2;
+        _cancelBtn.width = _boxView.width/2;
+        _okBtn.width = _cancelBtn.width;
+        _btnLineLel.hidden = NO;
+        _cancelBtn.hidden = NO;
+        _btnLineLel.origin = CGPointMake(_boxView.centerX, _okBtn.y);
+        _btnLineLel.height = _okBtn.height;
+        _btnLineLel.width = VMargin1;
+        [_cancelBtn setTitle:cancelButtonTitle forState:UIControlStateNormal];
+    }
+    if (isValidString(okButtonTitle)) {
+        [_okBtn setTitle:okButtonTitle forState:UIControlStateNormal];
+    }
+    _boxView.frame = CGRectMake(0, 0, 300, 200);
+    _boxView.center = self.center;
+}
+
++ (void)showAlertStyleWithTitle:(NSString*)title
+                        message:(NSString*)message
+                  okButtonTitle:(NSString *)okButtonTitle
+              cancelButtonTitle:(NSString *)cancelButtonTitle
+                     clickBlock:(SPPopUpViewStyleBlock)block
+{
+    UIView *view =  [UIApplication sharedApplication].keyWindow.rootViewController.view;
+    SPPopUpView* alertView = [[SPPopUpView alloc]initWithFrame:view.bounds];
+    [alertView setTitle:title message:message okButtonTitle:okButtonTitle cancelButtonTitle:cancelButtonTitle clickBlock:block];
+    [[UIApplication sharedApplication].keyWindow addSubview:alertView];
 }
 
 - (void)gestureRecognizerDidTap:(UITapGestureRecognizer *)tapGesture

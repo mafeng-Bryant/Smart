@@ -16,6 +16,9 @@
 @property (nonatomic,strong) NSString* numberOne;
 @property (nonatomic,strong) NSString* numberTwo;
 @property (nonatomic,strong) NSString* chooseCharge;
+@property (nonatomic,assign) BOOL updateVersion;
+@property (nonatomic,strong) NSString* otaUrl;
+
 
 + (SPSetting *)sharedSPSetting;
 

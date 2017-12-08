@@ -101,7 +101,7 @@
 - (void)setLeftItem
 {
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 24, 24);
+    btn.frame = CGRectMake(0, 0, 30, 30);
     [btn addTarget:self action:@selector(closeAction:)
   forControlEvents:UIControlEventTouchUpInside];
     [btn setTitle:@"关闭" forState:UIControlStateNormal];
@@ -138,7 +138,7 @@
 - (UIView*)headerView
 {
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,self.view.frame.size.width, 80)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 80)];
         _headerView.backgroundColor = [UIColor clearColor];
         UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setTitle:@"服务名称" forState:UIControlStateNormal];

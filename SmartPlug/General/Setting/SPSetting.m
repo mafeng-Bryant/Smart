@@ -18,6 +18,7 @@ SINGLETON_GCD(SPSetting);
         _currencySymbol = @"￥";
         _numberOne = @"1";
         _numberTwo = @"00";
+        _updateVersion = NO;
     }
     return self;
 }

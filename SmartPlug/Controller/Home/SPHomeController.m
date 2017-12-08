@@ -27,13 +27,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.homeArray = [NSMutableArray array];
-    self.navigationItem.titleView = [[SPTitleView alloc]initWithFrame:CGRectZero title:@"家"];
     self.tableView.tableHeaderView = [self headerView];
     [SPShowHomeCell registerNibToTableView:self.tableView];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [SPAddHomeCell registerNibToTableView:self.tableView];
     [self getAllHomes];
     [self setRefrefesh];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)setRefrefesh
@@ -225,15 +229,16 @@
 - (void)homeManagerDidUpdateHomes:(HMHomeManager *)manager
 {
     NSLog(@"更新了home");
+    self.navigationItem.titleView = [[SPTitleView alloc]initWithFrame:CGRectZero title:@"家"];
     [self getAllHomes];
 }
 
 - (void)homeManagerDidUpdatePrimaryHome:(HMHomeManager *)manager
 {
     NSLog(@"已经更新了primaryHome：%@",manager.primaryHome);
+    self.navigationItem.titleView = [[SPTitleView alloc]initWithFrame:CGRectZero title:@"家"];
     [self getAllHomes];
 }
-
 
 - (void)homeManager:(HMHomeManager *)manager didAddHome:(HMHome *)home
 {

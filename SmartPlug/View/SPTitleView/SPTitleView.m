@@ -65,12 +65,6 @@
     [_tipsLbl sizeToFit];
     _tipsLbl.textColor = [UIColor whiteColor];
     [self addSubview:_tipsLbl];
-   
-}
-
--(void)layoutSubviews
-{
-    [super layoutSubviews];
     CGRect rect = self.frame;
     rect.size.width = kDefaultWidth;
     rect.size.height = kDefaultHeight;
@@ -79,7 +73,13 @@
     }
     self.frame = rect;
     _imageView.frame = self.bounds;
-     _tipsLbl.frame = CGRectMake((self.frame.size.width-_tipsLbl.frame.size.width)/2.0, (self.frame.size.height-_tipsLbl.frame.size.height)/2.0, _tipsLbl.frame.size.width, _tipsLbl.frame.size.height);
+    _tipsLbl.frame = CGRectMake((self.frame.size.width-_tipsLbl.frame.size.width)/2.0, (self.frame.size.height-_tipsLbl.frame.size.height)/2.0, _tipsLbl.frame.size.width, _tipsLbl.frame.size.height);
+}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+
     
 }
 

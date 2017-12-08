@@ -4,4 +4,5 @@ inhibit_all_warnings!
 target ‘SmartPlug’ do
     pod 'WHC_ModelSqliteKit'
     pod 'Masonry'
+    pod ‘AFNetworking’
 end

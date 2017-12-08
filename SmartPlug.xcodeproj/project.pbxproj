@@ -611,6 +611,7 @@
 			isa = PBXGroup;
 			children = (
 				E206F5AB1FD4F63D000CD7C5 /* powerInfo */,
+				E2CD36A71FB1E2410013FA50 /* SPAccessoryDetailController.h */,
 				E2CD36A81FB1E2410013FA50 /* SPAccessoryDetailController.m */,
 				E2CD36A91FB1E2410013FA50 /* SPAccessoryDetailController.xib */,
 				E2CD36B21FB27CFF0013FA50 /* SPAccessoryDataSource.h */,
@@ -619,7 +620,6 @@
 				E22C6C041FD04F3500EEF8F5 /* SPSettingController.m */,
 				E22C6C051FD04F3500EEF8F5 /* SPSettingController.xib */,
 				E22C6C191FD15A4800EEF8F5 /* SPSettingDataSource.h */,
-				E2CD36A71FB1E2410013FA50 /* SPAccessoryDetailController.h */,
 				E22C6C1A1FD15A4800EEF8F5 /* SPSettingDataSource.m */,
 				E22C6C081FD04F8300EEF8F5 /* SPStatisticalController.h */,
 				E22C6C091FD04F8300EEF8F5 /* SPStatisticalController.m */,

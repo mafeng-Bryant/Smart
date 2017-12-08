@@ -165,7 +165,7 @@
 - (void)setLeftItem
 {
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 24, 24);
+    btn.frame = CGRectMake(0, 0, 30, 30);
     [btn addTarget:self action:@selector(closeAction:)
   forControlEvents:UIControlEventTouchUpInside];
     [btn setTitle:@"关闭" forState:UIControlStateNormal];
@@ -179,7 +179,7 @@
 {
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:@"保存" forState:UIControlStateNormal];
-    btn.frame = CGRectMake(0, 0, 21, 21);
+    btn.frame = CGRectMake(0, 0, 30, 30);
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont fontWithName:@"Avenir-Roman" size:14];
     [btn addTarget:self action:@selector(addTriggerAction:) forControlEvents:UIControlEventTouchUpInside];

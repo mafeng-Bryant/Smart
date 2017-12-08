@@ -14,8 +14,9 @@
 #import "SPSynchTimeModel.h"
 #import "SPDataManager.h"
 #import "NSDate+Extensions.h"
+#import "SPSetting.h"
 
-@interface SPSettingDataSource()
+@interface SPSettingDataSource()<HMAccessoryDelegate>
 {
     
     
@@ -23,6 +24,7 @@
 }
 @property (nonatomic,strong) SPSettingTableViewInfo* tableViewInfo;
 @property (nonatomic,strong) HMAccessory* accessory;
+@property (nonatomic,strong) HMCharacteristic* updateCha;//升级特征
 
 @end
 
@@ -44,6 +46,7 @@
         self.accessory = accessory;
         [self refreshUI];
         tableView.tableHeaderView = [self tableViewForHeadView];
+        [self getUpdateCharacteristicInfo];
     }
     return self;
 }
@@ -139,10 +142,15 @@
             [self refreshUI];
         }
     }else if (sectionObject.type == SPSettingTableViewRowTypeUpdataVersion){
+        if ([SPSetting sharedSPSetting].updateVersion && isValidString([SPSetting sharedSPSetting].otaUrl)) { //确实需要升级固件
+            if (self.updateCha) {
         
-        
-        
-        
+            
+                
+                
+                
+            }
+        }
     }
 }
 
@@ -192,5 +200,28 @@
     [hud hide:YES afterDelay:2];
 }
 
+
+- (void)getUpdateCharacteristicInfo
+{
+        NSArray* serviceArray = self.accessory.services;
+        self.accessory.delegate = self;
+        for (HMService* service in serviceArray) {
+            NSArray* arr = service.characteristics;
+            for (HMCharacteristic* cha in arr) {
+                if ([cha.characteristicType isEqualToString:kAccessoryUpdateUUID]) {
+                    NSArray* properites = cha.properties;
+                    if ([properites containsObject:HMCharacteristicPropertyWritable] && [properites containsObject:HMCharacteristicPropertyReadable]) {
+                        self.updateCha = cha;
+                       // [self.updateCha enableNotification:YES completionHandler:^(NSError * _Nullable error) {}];
+                    }
+                }
+            }
+        }
+}
+
+- (void)accessory:(HMAccessory *)accessory service:(HMService *)service didUpdateValueForCharacteristic:(HMCharacteristic *)characteristic
+{
+
+}
 
 @end

@@ -20,7 +20,10 @@
 #import "SPSettingController.h"
 #import "SPStatisticalController.h"
 
-@interface SPAccessoryController()<HMHomeManagerDelegate,HMAccessoryBrowserDelegate>
+@interface SPAccessoryController()<HMHomeManagerDelegate,HMAccessoryBrowserDelegate,UniversalDelegate>
+{
+    UITabBarController* _tabBarController;
+}
 @property (strong, nonatomic)HMHomeManager * homeManager;
 @property (nonatomic,strong) HMHome* currentHome;
 @property (nonatomic,strong) NSMutableArray* datasArray;
@@ -108,6 +111,7 @@
         
         SPAccessoryDetailController* detailVC = [[SPAccessoryDetailController alloc]initWithNibName:@"SPAccessoryDetailController" bundle:nil];
         detailVC.accessory = info.accessory;
+        detailVC.universalDelegate = self;
          SPBaseNavigationController* na = [[SPBaseNavigationController alloc]initWithRootViewController:detailVC];
         UIImage* homeImage = Image(@"home");
         UITabBarItem *tabItem = [[UITabBarItem alloc]initWithTitle:@"控制" image:homeImage selectedImage:homeImage];
@@ -133,7 +137,7 @@
         [tabBarController.tabBar setClipsToBounds:YES];
         [tabBarController setViewControllers:@[na,na2,na3] animated:NO];
         tabBarController.tabBar.barTintColor = [UIColor whiteColor];
-
+        _tabBarController = tabBarController;
         [self presentViewController:tabBarController animated:YES completion:nil];
     }
 }
@@ -349,7 +353,7 @@
                         if ([info.room.name isEqualToString:selectRoom.name]) {
                             return ;
                         }
-                    //将设备分配到指定房间
+                     //将设备分配到指定房间
                         [currentHome assignAccessory:info.accessory toRoom:selectRoom completionHandler:^(NSError * _Nullable error) {
                             if (!error) {
                                 [weakSelf updateCurrentHomeRooms:weakSelf.currentHome];
@@ -426,12 +430,11 @@
 {
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:@"添加" forState:UIControlStateNormal];
-    btn.frame = CGRectMake(0, 0, 21, 21);
+    btn.frame = CGRectMake(0, 0, 30, 30);
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:16];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
     [btn addTarget:self action:@selector(addAccessory:) forControlEvents:UIControlEventTouchUpInside];
     btn.backgroundColor = [UIColor clearColor];
-    ViewRadius(btn, 10);
     UIBarButtonItem* rightItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
@@ -439,11 +442,22 @@
 - (void)addAccessory:(UIButton*)btn
 {
     __weak typeof (self) weakSelf = self;
-    [self.currentHome addAndSetupAccessoriesWithCompletionHandler:^(NSError * _Nullable error) {
-        if (!error) {
-            [weakSelf updateCurrentHomeRooms:weakSelf.currentHome];
-        }
-    }];
+    if (@available(iOS 10.0, *)) {
+        [self.currentHome addAndSetupAccessoriesWithCompletionHandler:^(NSError * _Nullable error) {
+            if (!error) {
+                [weakSelf updateCurrentHomeRooms:weakSelf.currentHome];
+            }
+        }];
+    }
+}
+
+#pragma mark UniversalDelegate
+
+- (void)callBack:(id)info withObject:(id)info1
+{
+    if (info && [info isKindOfClass:[SPAccessoryDetailController class]]) {
+        _tabBarController.selectedIndex = 2;
+    }
 }
 
 #pragma mark - HMAccessoryBrowserDelegate

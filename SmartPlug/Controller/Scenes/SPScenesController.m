@@ -150,9 +150,9 @@
 {
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:@"添加" forState:UIControlStateNormal];
-    btn.frame = CGRectMake(0, 0, 21, 21);
+    btn.frame = CGRectMake(0, 0, 30, 30);
     [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:16];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
     [btn addTarget:self action:@selector(addAccessory:) forControlEvents:UIControlEventTouchUpInside];
     btn.backgroundColor = [UIColor clearColor];
     ViewRadius(btn, 10);
@@ -221,16 +221,20 @@
     if (_currentHome) {
         for (HMActionSet* set in _currentHome.actionSets) {
             SPActionSetModel* model = [[SPActionSetModel alloc]init];
-            if ([set.actionSetType isEqual:HMActionSetTypeUserDefined]) {
-                model.type = SPActionSetTypeCustom;
-            }else if ([set.actionSetType isEqual:HMActionSetTypeWakeUp]){
-                model.type = SPActionSetTypeGoodMorning;
-            }else if ([set.actionSetType isEqual:HMActionSetTypeHomeDeparture]){
-                model.type = SPActionSetTypeGoOut;
-            }else if ([set.actionSetType isEqual:HMActionSetTypeHomeArrival]){
-                model.type = SPActionSetTypeComeBack;
-            }else if ([set.actionSetType isEqual:HMActionSetTypeSleep]){
-                model.type = SPActionSetTypeGoodNight;
+            if (@available(iOS 9.0, *)) {
+                if ([set.actionSetType isEqual:HMActionSetTypeUserDefined]) {
+                    model.type = SPActionSetTypeCustom;
+                }else if ([set.actionSetType isEqual:HMActionSetTypeWakeUp]){
+                    model.type = SPActionSetTypeGoodMorning;
+                }else if ([set.actionSetType isEqual:HMActionSetTypeHomeDeparture]){
+                    model.type = SPActionSetTypeGoOut;
+                }else if ([set.actionSetType isEqual:HMActionSetTypeHomeArrival]){
+                    model.type = SPActionSetTypeComeBack;
+                }else if ([set.actionSetType isEqual:HMActionSetTypeSleep]){
+                    model.type = SPActionSetTypeGoodNight;
+                }
+            } else {
+                // Fallback on earlier versions
             }
             model.actionSet = set;
             [self.datasArray addObject:model];

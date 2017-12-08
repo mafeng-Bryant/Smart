@@ -15,16 +15,19 @@
 #import "SPPowerDataModel.h"
 #import "SPDataManager.h"
 
-@interface SPStatisticalController ()
+@interface SPStatisticalController ()<HMAccessoryDelegate>
 {
     NSTimer* _timer;
     CGFloat _historyHourDataValue;
     NSDate *_historyDate;
+    CGFloat _eneygy;
     
 }
 @property (nonatomic,strong) HMCharacteristic* runTimeCharacteristic;//在线时间特征
 @property (nonatomic,strong) HMCharacteristic* realtimeEnergyCharacteristic;//功率
 @property (nonatomic,strong) HMCharacteristic* currentHourDataCharacteristic;//当前每小时功率值
+@property (nonatomic,strong) HMCharacteristic* chaTx;//写特征
+@property (nonatomic,assign) BOOL isSuccess;
 
 @end
 
@@ -35,6 +38,7 @@
     [super loadView];
     _gaugeView.maxValue = 2400.0;
     _gaugeView.showRangeLabels = YES;
+    _isSuccess = NO;
     _gaugeView.rangeValues = @[@600,@1200,@1800,@2400.0];
     _gaugeView.rangeColors = @[RGB(255, 255,255,1.0),RGB(255, 255,255,1.0),RGB(255, 255,255,1.0),RGB(255, 255,255,1.0)];
     _gaugeView.rangeColors = @[[UIColor greenColor],[UIColor greenColor],[UIColor greenColor],[UIColor greenColor]];
@@ -61,6 +65,7 @@
     [self setTirtleViewText];
     [self setLeftItem];
     [self setRightItem];
+    [self isConnectPower];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -85,6 +90,7 @@
 
 - (void)getAccessoryInfo:(NSTimer*)timer
 {
+    [self isConnectPower];
     NSArray* serviceArray = self.accessory.services;
     for (HMService* service in serviceArray) {
         NSArray* arr = service.characteristics;
@@ -126,56 +132,98 @@
      if (self.realtimeEnergyCharacteristic) {
         id value = self.realtimeEnergyCharacteristic.value; //负载的功率
         CGFloat eneygy = [(NSNumber*)value floatValue];
+         _eneygy = eneygy;
         NSString* eneygyString = [NSString stringWithFormat:@"%.2f",eneygy];
         _gaugeView.showEnergy = eneygyString;
-         _gaugeView.value = [eneygyString floatValue];
+        _gaugeView.value = [eneygyString floatValue];
     }
     
     if (self.currentHourDataCharacteristic) {
         id value = self.currentHourDataCharacteristic.value; //负载的功率
         CGFloat dataEneygy = [(NSNumber*)value floatValue];
-        if (dataEneygy < _historyHourDataValue) {
-            //表示当前小时数据结束
-            if ([[NSDate date] timeIntervalSinceNow] > [_historyDate timeIntervalSinceNow]) { //表示确实结束当前整点数据统计
-                _historyHourDataValue = 0.0;
-                _historyDate = nil;
-            }
-        }else {
-            NSString* dataEneygyString = [NSString stringWithFormat:@"%.2f",dataEneygy];
-            //获取当前整点的时间
-            NSInteger hour = [[[NSDate date] formatHH] integerValue];
-           //存储数据到数据库，按小时存储数据
-            if (![SPDataManager sharedSPDataManager].hasCurrentDayData) {
-             //创建存储对象
-                SPPowerDataModel* model = [[SPPowerDataModel alloc]init];
-                model.date = [NSDate date];
-                model.day = [[NSDate date] formatYMD];
-                //get current hour model
-                for (SPPowerHourModel* hourModel in model.datas) {
-                    if (hourModel.hour == hour) {
-                        hourModel.value = dataEneygyString;
-                    }
+            if (dataEneygy < _historyHourDataValue) {
+                //表示当前小时数据结束
+                if ([[NSDate date] timeIntervalSinceNow] > [_historyDate timeIntervalSinceNow]) { //表示确实结束当前整点数据统计
+                    _historyHourDataValue = 0.0;
+                    _historyDate = nil;
                 }
-                [[SPDataManager sharedSPDataManager] savePowerDataModel:model];
             }else {
-                //更新数据源
-                SPPowerDataModel* model = [[SPDataManager sharedSPDataManager] getCurrentDayModel];
-                if (model) {
-                    //get current hour model
-                    for (SPPowerHourModel* hourModel in model.datas) {
-                        if (hourModel.hour == hour) {
-                            hourModel.value = dataEneygyString;
+                    NSString* dataEneygyString = [NSString stringWithFormat:@"%.2f",dataEneygy];
+                    //获取当前整点的时间
+                    NSInteger hour = [[[NSDate date] formatHH] integerValue];
+                if (_isSuccess && _eneygy >0) {
+                    //存储数据到数据库，按小时存储数据
+                    if (![SPDataManager sharedSPDataManager].hasCurrentDayData) {
+                        //创建存储对象
+                        SPPowerDataModel* model = [[SPPowerDataModel alloc]init];
+                        model.date = [NSDate date];
+                        model.day = [[NSDate date] formatYMD];
+                        //get current hour model
+                        for (SPPowerHourModel* hourModel in model.datas) {
+                            if (hourModel.hour == hour) {
+                                hourModel.value = dataEneygyString;
+                            }
+                        }
+                        [[SPDataManager sharedSPDataManager] savePowerDataModel:model];
+                    }else {
+                        //更新数据源
+                        SPPowerDataModel* model = [[SPDataManager sharedSPDataManager] getCurrentDayModel];
+                        if (model) {
+                            //get current hour model
+                            for (SPPowerHourModel* hourModel in model.datas) {
+                                if (hourModel.hour == hour) {
+                                    hourModel.value = dataEneygyString;
+                                }
+                            }
+                            [[SPDataManager sharedSPDataManager] updateCurrentDayModel:model];
                         }
                     }
-                   [[SPDataManager sharedSPDataManager] updateCurrentDayModel:model];
+                  }
+                     dataEneygyString = [NSString stringWithFormat:@"    当前小时电量:%@瓦时    ",dataEneygyString];
+                    [_currentLowerLbl setTitle:dataEneygyString forState:UIControlStateNormal];
+                    _historyDate = [NSDate date];
+                }
+                _historyHourDataValue = dataEneygy;
+            }
+}
+
+- (void)isConnectPower
+{
+    NSArray* serviceArray = self.accessory.services;
+    self.accessory.delegate = self;
+    for (HMService* service in serviceArray) {
+        NSArray* arr = service.characteristics;
+        for (HMCharacteristic* cha in arr) {
+            if ([cha.characteristicType isEqualToString:kAccessoryUseUUID]) {
+                NSArray* properites = cha.properties;
+                if ([properites containsObject:HMCharacteristicPropertyReadable] && [properites containsObject:HMCharacteristicPropertySupportsEventNotification]) {
+                    self.chaTx = cha;
+                    [self.chaTx enableNotification:YES completionHandler:^(NSError * _Nullable error) {}];
                 }
             }
-            dataEneygyString = [NSString stringWithFormat:@"    当前小时电量:%@瓦时    ",dataEneygyString];
-            [_currentLowerLbl setTitle:dataEneygyString forState:UIControlStateNormal];
-            _historyDate = [NSDate date];
-      }
-        _historyHourDataValue = dataEneygy;
+        }
     }
+    if(self.chaTx){
+         [self.chaTx readValueWithCompletionHandler:^(NSError * _Nullable error) {
+            if(!error){
+                id value = self.chaTx.value;
+                NSNumber* on = (NSNumber*)value;
+                if ([on isEqualToNumber:@0]) {
+                    _isSuccess = NO;
+                }else {
+                    _isSuccess = YES;
+                }
+            }else {
+                _isSuccess = NO;
+            }
+        }];
+    }else {
+        _isSuccess = NO;
+    }
+}
+
+- (void)accessory:(HMAccessory *)accessory service:(HMService *)service didUpdateValueForCharacteristic:(HMCharacteristic *)characteristic
+{
 }
 
 - (void)setTirtleViewText
