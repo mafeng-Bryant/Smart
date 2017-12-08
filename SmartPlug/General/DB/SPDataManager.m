@@ -87,53 +87,87 @@ SINGLETON_GCD(SPDataManager);
     return  [WHCSqlite update:model where:query];
 }
 
-- (NSDictionary*)getAllMonthData
+- (NSMutableArray*)getAllMonthData
 {
     NSInteger todayYear = [[[NSDate date] formatYY] integerValue];
+    NSMutableArray* months = [NSMutableArray array];
     NSMutableArray* monthDatas = [NSMutableArray array];
     NSMutableArray* monthsModels = [NSMutableArray array];
-    //查询往后推两年的数据
-    for (NSInteger i = 0; i < 2; i++) {
-        NSInteger year = todayYear - i;
-        NSArray* getAllDays = [WHCSqlite query:[SPPowerDataModel class] where:@""];
-        for (SPPowerDataModel* model in getAllDays) {
-            if ([[model.date formatYY] integerValue] == year) {//查询对应年份的数据
-                NSInteger month = [[model.date formatMM] integerValue];
-                if (![monthDatas containsObject:@(month)]) { //将该年的月份有数据的查出来
-                    [monthDatas addObject:@(month)];
-                    [monthsModels addObject:model];
-                }
-            }
-        }
-    }
-    return  @{@"month":@(monthDatas.count),@"datas":monthsModels};
-}
-
-- (NSDictionary*)getAllYearDatas
-{
-    NSMutableArray* yearDatas = [NSMutableArray array];
-    NSMutableArray* yearModels = [NSMutableArray array];
+    NSMutableDictionary* dic = [NSMutableDictionary dictionary];
+    NSMutableArray* totayYearDatas = [NSMutableArray array];
+    //统计今年的每一个月份的数据
     NSArray* getAllDays = [WHCSqlite query:[SPPowerDataModel class] where:@""];
-    NSArray* years = @[@2020,@2019,@2018,@2017,@2016];
-    for (NSInteger i = 0; i< years.count; i++) {
-        NSInteger year = [[years objectAtIndex:i] integerValue];
+    for (SPPowerDataModel* model in getAllDays) {
+        NSInteger year = [[model.date formatYY] integerValue];
+        if (year == todayYear) {
+            NSInteger month_number = [[model.date formatMM] integerValue];
+            if (![months containsObject:@(month_number)]) {
+                [months addObject:@(month_number)];
+            }
+            [totayYearDatas addObject:model];
+        }
+    }
+    
+    //按月去对应的每一天的数据，通过key=月份来区分
+    for (NSNumber* number in months) {
+        for (SPPowerDataModel* model in totayYearDatas) {
+            [dic setValue:number forKey:@"monthKey"];
+            if ([[model.date formatMM] integerValue] == [number integerValue]) {
+                [monthsModels addObject:model];
+            }
+         }
+        [dic setObject:monthsModels forKey:@"datas"];
+        [monthDatas addObject:dic];
+    }
+    return monthDatas;
+}
+
+- (NSMutableArray*)getAllYearDatas
+{
+    NSMutableArray* years = [NSMutableArray array];
+    NSMutableArray* months = [NSMutableArray array];
+    NSMutableArray* yearModels = [NSMutableArray array];
+    NSMutableDictionary* dic = [NSMutableDictionary dictionary];
+    NSMutableArray* yearDatas = [NSMutableArray array];
+
+    //统计年数
+    NSArray* getAllDays = [WHCSqlite query:[SPPowerDataModel class] where:@""];
+    for (SPPowerDataModel* model in getAllDays) {
+         NSInteger year = [[model.date formatYY] integerValue];
+            if (![years containsObject:@(year)]) {
+                [years addObject:@(year)];
+            }
+    }
+    
+    for (NSNumber* year in years) {
+        [dic setValue:year forKey:@"key"];
         for (SPPowerDataModel* model in getAllDays) {
-            if ([[model.date formatYY] integerValue] == year) {
-                NSInteger currentYear = [[model.date formatYY] integerValue];
-                if (![yearDatas containsObject:@(currentYear)]) {
-                    [yearDatas addObject:@(currentYear)];
-                    [yearModels addObject:model];
+            if ([[model.date formatYY] integerValue] == [year integerValue]) {
+                [yearModels addObject:model];
+                NSInteger month = [[model.date formatMM] integerValue];
+                if (![months containsObject:@(month)]) {
+                    [months addObject:@(month)];
                 }
             }
         }
+        NSMutableDictionary* monthDic = [NSMutableDictionary dictionary];
+        NSMutableArray* month_models = [NSMutableArray array];
+        NSMutableArray* month_datas = [NSMutableArray array];
+        //在按照月份分组
+        for (NSNumber* number in months) {
+            for (SPPowerDataModel* model in yearModels) {
+                [monthDic setValue:number forKey:@"key"];
+                if ([[model.date formatMM] integerValue] == [number integerValue]) {
+                    [month_models addObject:model];
+                }
+            }
+            [monthDic setObject:month_models forKey:@"datas"];
+            [month_datas addObject:monthDic];
+        }
+        [dic setObject:month_datas forKey:@"datas"];
+        [yearDatas addObject:dic];
     }
-    return @{@"year":@(yearDatas.count),@"datas":yearModels};
+    return yearDatas;
 }
-
-
-
-
-
-
 
 @end

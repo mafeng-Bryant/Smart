@@ -85,56 +85,73 @@
         }
    }else if (_segmentType == SPPowerDataSourceSegmentTypeMonth){ //查询每月的数据源
        //首先查询数据库中记录多少月的数据,通过月份分组记录
-       NSDictionary* info = [[SPDataManager sharedSPDataManager] getAllMonthData];
-       NSArray* datas = info[@"datas"];
-       for (NSInteger i = 0; i < [info[@"month"] integerValue]; i++) {
-           SPPowerDataModel* model = datas[i];//每一天的对象
-           SPPowerTableViewInfo* info = [[SPPowerTableViewInfo alloc]initWithType:SPPowerDataSourceSegmentTypeMonth date:model.date];
-           info.date  = model.date;
-           [self.dataSource addObject:info];
-           //计算每一个月每一天对应的数据,根据日期统计数据
-           NSInteger num = [[model.date formatDD] integerValue];
-           CGFloat totalValue = 0.0f;
-           for ( SPPowerHourModel* hourModel in model.datas)
-           {
-               CGFloat value = [hourModel.value floatValue];
-               NSString* lastValue = [NSString stringWithFormat:@"%.3f",value/1000];
-               totalValue+=[lastValue floatValue];
-            }
-           for (SPXValueModel* valueModel in info.valueDatas) {
-               if (valueModel.hour == num) {//取对应日期
-                 valueModel.value =  [NSString stringWithFormat:@"%.3f",totalValue];
-            }
+       NSMutableArray* datas = [[SPDataManager sharedSPDataManager] getAllMonthData];
+       if (isValidArray(datas)) {
+           //有多少个月就创建多少个对象，这里面每一个对象代表一个月的数据
+           for (NSDictionary* info in datas) {
+               NSArray* models = info[@"datas"];
+               SPPowerDataModel* model = [models firstObject];
+               SPPowerTableViewInfo* rowObject = [[SPPowerTableViewInfo alloc]initWithType:SPPowerDataSourceSegmentTypeMonth date:model.date];
+               rowObject.date = model.date;
+              [self.dataSource addObject:rowObject];
+               for (SPPowerDataModel* day_model in models) {
+                   //号数
+                   NSInteger num = [[day_model.date formatDD] integerValue];
+                   CGFloat totalValue = 0.0f;
+                   for ( SPPowerHourModel* hourModel in day_model.datas)
+                   {
+                       CGFloat value = [hourModel.value floatValue];
+                       NSString* lastValue = [NSString stringWithFormat:@"%.3f",value/1000];
+                       totalValue+=[lastValue floatValue];
+                   }
+                   for (SPXValueModel* valueModel in rowObject.valueDatas) {
+                       if (valueModel.hour == num) {//取对应日期
+                           valueModel.value =  [NSString stringWithFormat:@"%.3f",totalValue];
+                       }
+                   }
+              }
            }
        }
     }else if (_segmentType == SPPowerDataSourceSegmentTypeYear){ //查询每年的数据源
-    //首先查询数据库记录了多少个年，即记录了几年的数据,按照年份分组记录
-        NSDictionary* info = [[SPDataManager sharedSPDataManager] getAllYearDatas];
-        NSArray* datas = info[@"datas"];
-        for (NSInteger i = 0; i < [info[@"year"] integerValue]; i++) {
-            SPPowerDataModel* model = datas[i];//每一个月的对象
-            SPPowerTableViewInfo* info = [[SPPowerTableViewInfo alloc]initWithType:SPPowerDataSourceSegmentTypeYear date:model.date];
-            info.date  = model.date;
-            [self.dataSource addObject:info];
-            //月份
-            NSInteger month = [[model.date formatMM] integerValue];
-            CGFloat totalValue = 0.0f;
-            for ( SPPowerHourModel* hourModel in model.datas)
-            {
-                CGFloat value = [hourModel.value floatValue];
-                NSString* lastValue = [NSString stringWithFormat:@"%.3f",value/1000];
-                totalValue+=[lastValue floatValue];
-            }
-            for (SPXValueModel* valueModel in info.valueDatas) {
-                if (valueModel.hour == month) {//取对应日期
-                    valueModel.value =  [NSString stringWithFormat:@"%.3f",totalValue];
+     //首先查询数据库记录了多少个年，即记录了几年的数据,按照年份分组记录
+        NSMutableArray* datas = [[SPDataManager sharedSPDataManager] getAllYearDatas];
+        if (isValidArray(datas)) {
+            for (NSDictionary* info in datas) {
+                NSArray* models = info[@"datas"];
+                if (isValidArray(models)) {
+                    NSDictionary* monthInfo = [models firstObject];
+                    NSArray* monthDatas = monthInfo[@"datas"];
+                    SPPowerDataModel* model = [monthDatas firstObject];
+                    SPPowerTableViewInfo* rowObject = [[SPPowerTableViewInfo alloc]initWithType:SPPowerDataSourceSegmentTypeYear date:model.date];
+                    rowObject.date = model.date;
+                    [self.dataSource addObject:rowObject];
+                    CGFloat totalValue = 0.0f;
+                    for (SPPowerDataModel* month_model in monthDatas) {
+                        NSInteger num = [[month_model.date formatMM] integerValue];
+                        for ( SPPowerHourModel* hourModel in month_model.datas)
+                        {
+                            CGFloat value = [hourModel.value floatValue];
+                            NSString* lastValue = [NSString stringWithFormat:@"%.3f",value/1000];
+                            totalValue+=[lastValue floatValue];
+                        }
+                        for (SPXValueModel* valueModel in rowObject.valueDatas) {
+                            if (valueModel.hour == num) {//取对应日期
+                                valueModel.value =  [NSString stringWithFormat:@"%.3f",totalValue];
+                            }
+                        }
+                    }
                 }
             }
-        }
+         }
     }
-    [self.tableView animationShow];
-    [self.tableView reloadData];
+    [self performSelector:@selector(showDatas:) withObject:block afterDelay:1.2];
+}
+
+- (void)showDatas:(void(^)(BOOL result))block
+{
     if (block) {
+        [self.tableView animationShow];
+        [self.tableView reloadData];
         block(YES);
     }
 }

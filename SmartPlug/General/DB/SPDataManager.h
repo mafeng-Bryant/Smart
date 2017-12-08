@@ -40,10 +40,10 @@
 - (SPPowerDataModel*)getEveryDayModel:(NSString*)dayString;
 
 //获取记录的所有月份，按照月份分组
-- (NSDictionary*)getAllMonthData;
+- (NSMutableArray*)getAllMonthData;
 
 //获取记录的所有年份，按照年份分组
-- (NSDictionary*)getAllYearDatas;
+- (NSMutableArray*)getAllYearDatas;
 
 
 @end
