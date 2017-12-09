@@ -63,6 +63,7 @@ typedef enum {
 #define kAccessoryRealTime_Energy @"4AAAF931-0DEC-11E5-B939-0800200C9A66"
 #define kAccessoryCurrentHourData @"4AAAF932-0DEC-11E5-B939-0800200C9A66"
 #define kAccessoryUpdateUUID @"151909D7-3802-11E4-916C-0800200C9A66"
+#define kAccessoryUpdateWriteUUID @"151909D4-3802-11E4-916C-0800200C9A66"
 
 
 //沙盒路径

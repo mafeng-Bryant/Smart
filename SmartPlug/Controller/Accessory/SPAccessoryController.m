@@ -105,10 +105,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  //  self.hidesBottomBarWhenPushed = YES;
     SPAccessoryInfo* info = self.datasArray[indexPath.row];
     if ([info.type isEqualToString:kTypeAccessory]) {
-        
         SPAccessoryDetailController* detailVC = [[SPAccessoryDetailController alloc]initWithNibName:@"SPAccessoryDetailController" bundle:nil];
         detailVC.accessory = info.accessory;
         detailVC.universalDelegate = self;

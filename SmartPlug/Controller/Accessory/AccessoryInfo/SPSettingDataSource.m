@@ -25,6 +25,7 @@
 @property (nonatomic,strong) SPSettingTableViewInfo* tableViewInfo;
 @property (nonatomic,strong) HMAccessory* accessory;
 @property (nonatomic,strong) HMCharacteristic* updateCha;//升级特征
+@property (nonatomic,strong) HMCharacteristic* updateWriteCha;//升级特征
 
 @end
 
@@ -144,11 +145,16 @@
     }else if (sectionObject.type == SPSettingTableViewRowTypeUpdataVersion){
         if ([SPSetting sharedSPSetting].updateVersion && isValidString([SPSetting sharedSPSetting].otaUrl)) { //确实需要升级固件
             if (self.updateCha) {
-        
-            
-                
-                
-                
+               NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[SPSetting sharedSPSetting].otaUrl]];
+                [self.updateCha updateAuthorizationData:data completionHandler:^(NSError * _Nullable error) {
+                    if (!error) {
+                        [self.updateWriteCha writeValue:@(1) completionHandler:^(NSError * _Nullable error) {
+                            if (!error) {
+                                NSLog(@"升级固件成功");
+                            }
+                        }];
+                    }
+                }];
             }
         }
     }
@@ -213,6 +219,12 @@
                     if ([properites containsObject:HMCharacteristicPropertyWritable] && [properites containsObject:HMCharacteristicPropertyReadable]) {
                         self.updateCha = cha;
                        // [self.updateCha enableNotification:YES completionHandler:^(NSError * _Nullable error) {}];
+                    }
+                }else if ([cha.characteristicType isEqualToString:kAccessoryUpdateWriteUUID]){
+                    NSArray* properites = cha.properties;
+                    if ([properites containsObject:HMCharacteristicPropertyWritable] && [properites containsObject:HMCharacteristicPropertyReadable]) {
+                        self.updateWriteCha = cha;
+                         [self.updateWriteCha enableNotification:YES completionHandler:^(NSError * _Nullable error) {}];
                     }
                 }
             }
