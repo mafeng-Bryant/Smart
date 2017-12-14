@@ -12,6 +12,7 @@
 #import "Help.h"
 #import "SPTabBarController.h"
 #import <Bugly/Bugly.h>
+#import <Mixpanel/Mixpanel.h>
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -22,7 +23,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Bugly startWithAppId:kBuglyAppId];
     UIImage* homeImage = Image(@"home");
     _homeController = [[SPHomeController alloc]initWithNibName:@"SPHomeController" bundle:nil];
     SPBaseNavigationController *featureNav = [[SPBaseNavigationController alloc]initWithRootViewController:_homeController];
@@ -75,7 +75,14 @@
     self.window.rootViewController = _tabBarController;
     [self.window makeKeyAndVisible];
     [[SPSetting sharedSPSetting].popUpControllerManager showIntroduceSlides];//显示引导页
+    [self initTrackAndCrachInfo];
     return YES;
+}
+
+- (void)initTrackAndCrachInfo
+{
+    [Bugly startWithAppId:kBuglyAppId];
+    [Mixpanel sharedInstanceWithToken:@"854400b378ca3846e2f04a4ccb730d48"];
 }
 
 +(AppDelegate *)appDelegate

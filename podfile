@@ -6,4 +6,5 @@ target ‘SmartPlug’ do
     pod 'Masonry'
     pod ‘AFNetworking’
     pod 'Bugly' 
+    pod ‘Mixpanel’,’3.2.3’
 end
