@@ -24,6 +24,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## Bugly
+
+Copyright 2017 Bugly Tencent. All rights reserved.
+
+
 ## Masonry
 
 Copyright (c) 2011-2012 Masonry Team - https://github.com/Masonry

@@ -11,6 +11,7 @@
 #import "NSObject+SPURLRoute.h"
 #import "Help.h"
 #import "SPTabBarController.h"
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
@@ -21,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+    [Bugly startWithAppId:kBuglyAppId];
     UIImage* homeImage = Image(@"home");
     _homeController = [[SPHomeController alloc]initWithNibName:@"SPHomeController" bundle:nil];
     SPBaseNavigationController *featureNav = [[SPBaseNavigationController alloc]initWithRootViewController:_homeController];

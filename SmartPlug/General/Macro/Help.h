@@ -65,6 +65,8 @@ typedef enum {
 #define kAccessoryUpdateUUID @"151909D7-3802-11E4-916C-0800200C9A66"
 #define kAccessoryUpdateWriteUUID @"151909D4-3802-11E4-916C-0800200C9A66"
 
+//奔溃BuglyAppId
+#define   kBuglyAppId @"e42e881f78"
 
 //沙盒路径
 #define PATH_OF_APP_HOME    NSHomeDirectory()

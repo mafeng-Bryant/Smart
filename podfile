@@ -5,4 +5,5 @@ target ‘SmartPlug’ do
     pod 'WHC_ModelSqliteKit'
     pod 'Masonry'
     pod ‘AFNetworking’
+    pod 'Bugly' 
 end
